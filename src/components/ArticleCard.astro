@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categories, authors, type Lang } from '../data/site';
+import { ui, formatDate } from '../i18n/ui';
+import Cover from './Cover.astro';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  lang: Lang;
+  variant?: 'grid' | 'wide';
+}
+
+const { article, lang, variant = 'grid' } = Astro.props;
+const t = ui[lang];
+const cat = categories[article.data.category];
+const author = authors[article.data.author];
+const slug = article.id.split('/').pop();
+const href = `/${lang}/articles/${slug}`;
+---
+<article class="group h-full overflow-hidden rounded-2xl border border-stone-200 bg-white transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-stone-900/5 dark:border-stone-800 dark:bg-stone-900 dark:hover:shadow-black/30">
+  <a href={href} class="flex h-full flex-col">
+    <Cover article={article} lang={lang} class={variant === 'wide' ? 'aspect-[16/8]' : 'aspect-[16/10]'}>
+      <span class="absolute end-3 top-3 rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
+        {cat[lang]}
+      </span>
+    </Cover>
+    <div class="flex flex-1 flex-col p-5">
+      <h3 class="font-display text-lg leading-snug text-stone-900 transition group-hover:text-teal-700 dark:text-white dark:group-hover:text-teal-400">
+        {article.data.title}
+      </h3>
+      <p class="mt-2 line-clamp-2 text-sm leading-6 text-stone-500 dark:text-stone-400">
+        {article.data.description}
+      </p>
+      <div class="mt-auto flex items-center justify-between pt-4 text-xs text-stone-400 dark:text-stone-500">
+        <span class="font-semibold text-stone-600 dark:text-stone-300">{t.by} {author.name[lang]}</span>
+        <span>{formatDate(article.data.date, lang)}</span>
+      </div>
+    </div>
+  </a>
+</article>

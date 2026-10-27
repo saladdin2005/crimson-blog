@@ -1,0 +1,127 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import ArticleCard from '../../../components/ArticleCard.astro';
+import Cover from '../../../components/Cover.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
+import ReadingToolbar from '../../../components/ReadingToolbar.astro';
+import { categories, authors, type Lang } from '../../../data/site';
+import { ui, formatDate } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { lang: article.id.split('/')[0], slug: article.id.split('/').pop() },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+}
+
+const { article } = Astro.props;
+const { lang } = Astro.params as { lang: Lang };
+const { Content } = await render(article);
+const t = ui[lang];
+const cat = categories[article.data.category];
+const author = authors[article.data.author];
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://crimson.example.com').href;
+
+const related = (await getCollection('articles'))
+  .filter((a) => a.id.startsWith(`${lang}/`) && a.data.category === article.data.category && a.id !== article.id)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+<Base lang={lang} title={article.data.title} description={article.data.description}>
+  <article data-article class="mx-auto max-w-3xl">
+    <!-- بانر كلاسيكي علوي: صورة المقال إن وُجدت، وإلا لوحة القراءة العامة -->
+    <div class="mb-8 overflow-hidden rounded-2xl border border-stone-200/70 shadow-sm dark:border-white/10">
+      <img
+        src={article.data.banner ?? '/images/reading.jpg'}
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="h-48 w-full object-cover object-[center_45%] sm:h-64"
+      />
+    </div>
+
+    <!-- مسار التنقل -->
+    <nav class="flex items-center gap-2 text-xs font-semibold text-stone-400 dark:text-stone-500">
+      <a href={`/${lang}/`} class="inline-flex min-h-6 items-center transition hover:text-teal-700 dark:hover:text-teal-400">{t.home}</a>
+      <span>/</span>
+      <a href={`/${lang}/category/${article.data.category}`} class="inline-flex min-h-6 items-center transition hover:text-teal-700 dark:hover:text-teal-400">
+        {cat[lang]}
+      </a>
+    </nav>
+
+    <div class="mt-5">
+      <span
+        class="inline-block rounded-full px-4 py-1.5 text-xs font-bold text-white"
+        style={`background:${cat.gradient}`}
+      >
+        {cat[lang]}
+      </span>
+      <h1 class="font-display mt-4 text-3xl leading-tight text-stone-900 sm:text-4xl lg:text-[2.75rem] dark:text-white">
+        {article.data.title}
+      </h1>
+      <p class="article-lead mt-4 text-lg leading-9 text-stone-500 dark:text-stone-400">{article.data.description}</p>
+
+      <!-- بيانات الكاتب -->
+      <div class="mt-7 flex flex-wrap items-center gap-4">
+        <span
+          class="grid h-12 w-12 shrink-0 place-items-center rounded-full text-lg font-black text-white"
+          style={`background:${cat.gradient}`}
+        >
+          {author.name[lang].charAt(0)}
+        </span>
+        <div class="flex-1">
+          <p class="text-sm font-bold text-stone-900 dark:text-white">{author.name[lang]}</p>
+          <p class="text-xs text-stone-500 dark:text-stone-400">{author.role[lang]}</p>
+        </div>
+        <div class="text-xs text-stone-400 dark:text-stone-500">
+          <p>{formatDate(article.data.date, lang)}</p>
+          <p class="mt-0.5">{article.data.readTime} {t.minRead}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- صورة المقال -->
+    <Cover article={article} lang={lang} class="mt-8 aspect-[2/1] rounded-3xl" />
+
+    <!-- نص المقال -->
+    <div class="article-body mt-10">
+      <Content />
+    </div>
+
+    <!-- الوسوم + الحفظ + المشاركة -->
+    <div class="mt-12">
+      {article.data.tags.length > 0 && (
+        <div class="mb-6 flex flex-wrap items-center gap-2">
+          <span class="text-sm font-bold text-stone-700 dark:text-stone-300">{t.tags}:</span>
+          {article.data.tags.map((tag) => (
+            <span class="rounded-full bg-stone-100 px-3.5 py-1.5 text-xs font-semibold text-stone-600 dark:bg-stone-800 dark:text-stone-300">
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+      <ShareButtons lang={lang} title={article.data.title} url={pageUrl} />
+    </div>
+  </article>
+
+  <!-- مقالات ذات صلة -->
+  {related.length > 0 && (
+    <section data-related class="reveal mx-auto mt-16 max-w-5xl">
+      <h2 class="font-display mb-5 text-2xl text-stone-900 dark:text-white">{t.related}</h2>
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {related.map((a) => <ArticleCard article={a} lang={lang} />)}
+      </div>
+    </section>
+  )}
+
+  <!-- شريط أدوات القراءة (وضع مريح + حجم الخط) -->
+  <ReadingToolbar lang={lang} />
+</Base>

@@ -1,0 +1,274 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<!-- واجهة البحث: تغطّي الشاشة على الهاتف، ونافذة منبثقة على الحاسوب -->
+<div
+  data-search-overlay
+  hidden
+  class="fixed inset-0 z-[95] flex items-start justify-center sm:items-center sm:p-6"
+  role="dialog"
+  aria-modal="true"
+  aria-label={t.searchPlaceholder}
+>
+  <!-- خلفية معتمة -->
+  <button
+    data-search-backdrop
+    type="button"
+    aria-label={lang === 'ar' ? 'إغلاق البحث' : 'Close search'}
+    class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm"
+  ></button>
+
+  <!-- اللوحة -->
+  <div
+    data-search-panel
+    class="relative flex h-full w-full flex-col overflow-hidden bg-white shadow-2xl dark:bg-stone-900 sm:h-auto sm:max-h-[80vh] sm:max-w-2xl sm:rounded-3xl sm:border sm:border-stone-200/70 dark:sm:border-white/10"
+  >
+    <!-- رأس: حقل بحث + زر إغلاق -->
+    <div class="flex items-center gap-2 border-b border-stone-200/70 px-4 py-3 dark:border-white/10 sm:px-5" style="padding-top:calc(0.75rem + env(safe-area-inset-top))">
+      <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-stone-100 text-stone-500 dark:bg-white/10 dark:text-stone-300">
+        <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </span>
+      <input
+        data-search-input
+        type="text"
+        enterkeyhint="search"
+        autocomplete="off"
+        autocorrect="off"
+        spellcheck="false"
+        placeholder={t.searchPlaceholder}
+        class="h-11 w-full bg-transparent text-base text-stone-800 outline-none placeholder:text-stone-400 dark:text-stone-100 dark:placeholder:text-stone-500"
+      />
+      <!-- بحث صوتي (يظهر فقط إن دعمه المتصفح) -->
+      <button
+        data-voice-search
+        type="button"
+        hidden
+        aria-label={t.voiceSearch}
+        title={t.voiceSearch}
+        class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-stone-500 transition hover:bg-stone-100 hover:text-teal-700 dark:hover:bg-white/10 dark:hover:text-teal-400"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>
+      </button>
+      <button
+        data-search-close
+        type="button"
+        aria-label={lang === 'ar' ? 'إغلاق البحث' : 'Close search'}
+        class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-stone-500 transition hover:bg-stone-100 hover:text-teal-700 dark:hover:bg-white/10 dark:hover:text-teal-400"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- حالة الاستماع/العدّاد -->
+    <p
+      data-search-status
+      data-voice-status={t.voiceStart}
+      data-voice-unsupported={t.voiceUnsupported}
+      class="border-b border-stone-100 px-5 py-2 text-xs font-semibold text-stone-400 dark:border-white/5 dark:text-stone-500"
+    ></p>
+
+    <!-- النتائج -->
+    <div data-search-results class="flex-1 overflow-y-auto overscroll-contain px-3 py-3"></div>
+
+    <!-- تذييل تلميحي -->
+    <div class="border-t border-stone-200/70 px-5 py-2.5 text-center text-[11px] text-stone-400 dark:border-white/10 dark:text-stone-500">
+      {lang === 'ar' ? 'اكتب للبحث في كل المقالات' : 'Type to search all articles'}
+    </div>
+  </div>
+</div>
+
+<script>
+  interface SearchItem {
+    lang: string;
+    title: string;
+    description: string;
+    tags: string[];
+    catLabel: string;
+    accent: string;
+    date: string;
+    url: string;
+    image: string;
+  }
+
+  const overlay = document.querySelector<HTMLElement>('[data-search-overlay]');
+  const panel = document.querySelector<HTMLElement>('[data-search-panel]');
+  const input = document.querySelector<HTMLInputElement>('[data-search-input]');
+  const results = document.querySelector<HTMLElement>('[data-search-results]');
+  const status = document.querySelector<HTMLElement>('[data-search-status]');
+  const closeBtn = document.querySelector<HTMLElement>('[data-search-close]');
+  const backdrop = document.querySelector<HTMLElement>('[data-search-backdrop]');
+
+  const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  const strings = {
+    ar: { count: (n: number) => `${n} نتيجة`, none: 'لا توجد نتائج مطابقة.', hint: 'ابحث في كل المقالات' },
+    en: { count: (n: number) => `${n} results`, none: 'No matching results.', hint: 'Search all articles' },
+  }[lang];
+
+  let index: SearchItem[] | null = null;
+  let loading = false;
+  let debounce = 0;
+
+  const loadIndex = async () => {
+    if (index || loading) return;
+    loading = true;
+    try {
+      const res = await fetch('/api/search.json');
+      const all: SearchItem[] = await res.json();
+      index = all.filter((i) => i.lang === lang);
+    } catch {
+      index = [];
+    } finally {
+      loading = false;
+    }
+  };
+
+  const normalize = (s: string) =>
+    s.toLowerCase().normalize('NFKD').replace(/[\u064B-\u0652\u0640]/g, '').trim();
+
+  // ترميز الرموز الخاصة لمنع كسر علامات HTML بأي عنوان/وصف
+  const esc = (s: string) =>
+    s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string);
+
+  const render = () => {
+    if (!results || !status || !input || !index) return;
+    const q = normalize(input.value);
+
+    if (!q) {
+      status.textContent = strings.hint;
+      results.innerHTML = '';
+      return;
+    }
+
+    const matches = index.filter((i) => {
+      const hay = normalize(`${i.title} ${i.description} ${i.catLabel} ${i.tags.join(' ')}`);
+      return q.split(/\s+/).every((word) => hay.includes(word));
+    });
+
+    status.textContent = matches.length ? strings.count(matches.length) : strings.none;
+
+    results.innerHTML = matches
+      .map(
+        (i) => `
+      <a href="${esc(i.url)}" class="group flex items-center gap-3 rounded-2xl p-2.5 transition hover:bg-stone-50 dark:hover:bg-white/5">
+        <span class="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800">
+          <img src="${esc(i.image)}" alt="" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.style.display='none'">
+          <span class="absolute inset-0" style="background:${i.accent};opacity:.25"></span>
+        </span>
+        <span class="min-w-0 flex-1">
+          <span class="line-clamp-2 text-sm font-bold leading-snug text-stone-800 group-hover:text-teal-700 dark:text-stone-100 dark:group-hover:text-teal-400">${esc(i.title)}</span>
+          <span class="mt-1 flex items-center gap-2 text-xs text-stone-400 dark:text-stone-500">
+            <span class="shrink-0 rounded-full px-2 py-0.5 text-[10px] font-bold text-white" style="background:${i.accent}">${esc(i.catLabel)}</span>
+            <span>${esc(i.date)}</span>
+          </span>
+        </span>
+      </a>`,
+      )
+      .join('');
+  };
+
+  const open = async () => {
+    if (!overlay) return;
+    overlay.hidden = false;
+    document.body.classList.add('overflow-hidden');
+    await loadIndex();
+    render();
+    // تركيز آمن بعد إظهار العناصر
+    requestAnimationFrame(() => input?.focus());
+  };
+
+  const close = () => {
+    if (!overlay) return;
+    overlay.hidden = true;
+    document.body.classList.remove('overflow-hidden');
+    if (input) input.value = '';
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-search-open]').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      open();
+    });
+  });
+  closeBtn?.addEventListener('click', close);
+  backdrop?.addEventListener('click', close);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay && !overlay.hidden) close();
+  });
+  input?.addEventListener('input', () => {
+    window.clearTimeout(debounce);
+    debounce = window.setTimeout(render, 120);
+  });
+  input?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const first = results?.querySelector<HTMLAnchorElement>('a');
+      if (first) {
+        e.preventDefault();
+        first.click();
+      }
+    }
+  });
+
+  // ===== البحث الصوتي (Web Speech API) =====
+  const voiceBtn = document.querySelector<HTMLButtonElement>('[data-voice-search]');
+  const SpeechRec = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+  if (voiceBtn && SpeechRec) {
+    voiceBtn.hidden = false;
+    let rec: any = null;
+    let listening = false;
+
+    const setStatus = (text: string, accent = false) => {
+      if (!status) return;
+      status.textContent = text;
+      status.classList.toggle('text-teal-600', accent);
+      status.classList.toggle('dark:text-teal-400', accent);
+    };
+
+    voiceBtn.addEventListener('click', () => {
+      if (listening && rec) {
+        rec.stop();
+        return;
+      }
+      rec = new SpeechRec();
+      rec.lang = lang === 'ar' ? 'ar-SA' : 'en-US';
+      rec.interimResults = true;
+      rec.continuous = false;
+
+      rec.onstart = () => {
+        listening = true;
+        voiceBtn.classList.add('is-listening');
+        setStatus(status?.dataset.voiceStart || '...', true);
+      };
+      rec.onresult = (event: any) => {
+        let transcript = '';
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+          transcript += event.results[i][0].transcript;
+        }
+        if (input) input.value = transcript.trim();
+        render();
+      };
+      rec.onerror = () => {
+        listening = false;
+        voiceBtn.classList.remove('is-listening');
+        render();
+      };
+      rec.onend = () => {
+        listening = false;
+        voiceBtn.classList.remove('is-listening');
+        render();
+      };
+
+      try {
+        rec.start();
+      } catch {
+        setStatus(status?.dataset.voiceUnsupported || '');
+      }
+    });
+  }
+</script>

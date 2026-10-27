@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categories, coverUrl, type Lang } from '../data/site';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  lang: Lang;
+  class?: string;
+  /** الصورة الأولى فوق الطية: تحميل فوري وأولوية عالية */
+  priority?: boolean;
+}
+
+const { article, lang, class: className = '', priority = false } = Astro.props;
+const cat = categories[article.data.category];
+const slug = article.id.split('/').pop() ?? article.id;
+// صورة حقيقية عبر picsum — لو فشل التحميل يظهر التدرج اللوني بالأسفل
+const src = article.data.image ?? coverUrl(slug);
+---
+<div
+  class={`relative overflow-hidden ${className}`}
+  style={`background:${cat.gradient}`}
+>
+  <img
+    src={src}
+    alt=""
+    loading={priority ? 'eager' : 'lazy'}
+    fetchpriority={priority ? 'high' : 'auto'}
+    decoding="async"
+    class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+    onerror="this.style.display='none'"
+  />
+  <slot />
+</div>

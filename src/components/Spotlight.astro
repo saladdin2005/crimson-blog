@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { categories, authors, type Lang } from '../data/site';
+import { ui, formatDate } from '../i18n/ui';
+import Cover from './Cover.astro';
+
+interface Props {
+  article: CollectionEntry<'articles'>;
+  lang: Lang;
+}
+
+const { article, lang } = Astro.props;
+const t = ui[lang];
+const cat = categories[article.data.category];
+const author = authors[article.data.author];
+const slug = article.id.split('/').pop();
+const href = `/${lang}/articles/${slug}`;
+---
+<section class="reveal mb-10">
+  <a
+    href={href}
+    class="group relative block overflow-hidden rounded-3xl shadow-xl shadow-stone-900/10 dark:shadow-black/30"
+  >
+    <!-- صورة كاملة مع التدرج اللوني للقسم -->
+    <Cover article={article} lang={lang} class="aspect-[16/11] sm:aspect-[21/9] lg:aspect-[2.8/1]" />
+
+    <!-- تراكب داكن للتباين ووضوح النص -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/88 via-black/50 to-black/20"></div>
+
+    <!-- شكل زخرفي -->
+    <span class="absolute -top-24 -end-24 h-64 w-64 rounded-full bg-white/5"></span>
+
+    <!-- المحتوى -->
+    <div class="absolute inset-0 flex flex-col justify-end p-6 sm:p-10">
+      <!-- شارة "نوصي بها" -->
+      <span class="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold text-white backdrop-blur-md">
+        <span class="h-1.5 w-1.5 rounded-full bg-teal-300"></span>
+        {t.spotlight}
+      </span>
+
+      <h2 class="font-display max-w-3xl text-2xl leading-tight text-white drop-shadow-lg sm:text-3xl lg:text-4xl">
+        {article.data.title}
+      </h2>
+      <p class="mt-3 line-clamp-2 max-w-2xl text-sm leading-6 text-white/85 sm:text-base">
+        {article.data.description}
+      </p>
+
+      <div class="mt-5 flex flex-wrap items-center gap-4">
+        <span class="inline-flex items-center gap-2 rounded-full bg-teal-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg transition group-hover:bg-teal-500">
+          {t.readMore}
+          <span aria-hidden="true">{lang === 'ar' ? '←' : '→'}</span>
+        </span>
+        <div class="flex items-center gap-2 text-xs text-white/75">
+          <span class="grid h-7 w-7 place-items-center rounded-full bg-white/20 text-[11px] font-black text-white">
+            {author.name[lang].charAt(0)}
+          </span>
+          <span class="font-semibold">{author.name[lang]}</span>
+          <span aria-hidden="true">·</span>
+          <span>{formatDate(article.data.date, lang)}</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</section>

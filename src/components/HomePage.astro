@@ -1,0 +1,244 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Cover from '../components/Cover.astro';
+import Newsletter from '../components/Newsletter.astro';
+import { site, categories, partners, type Lang } from '../data/site';
+import { ui, formatDate } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+
+const all = (await getCollection('articles'))
+  .filter((a) => a.id.startsWith(`${lang}/`))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// الهيرو: أول 4 مقالات كبطاقات طويلة (نمط أراجيك)
+const hero = all.slice(0, 4);
+// عدد الأعمدة يتكيّف مع عدد البطاقات كي لا تبقى فجوة فارغة
+const heroCols =
+  hero.length >= 4
+    ? 'md:grid-cols-4'
+    : hero.length === 3
+      ? 'md:grid-cols-3'
+      : hero.length === 2
+        ? 'md:grid-cols-2'
+        : 'md:grid-cols-1';
+// قائمة «أخبار اليوم»: كل المقالات مرتّبة زمنياً
+const feed = all;
+---
+
+<Base lang={lang} title={site.name[lang]} description={site.tagline[lang]}>
+  <!-- ===== الهيرو: بطاقات طويلة بزوايا دائرية (نمط أراجيك) ===== -->
+  {hero.length > 0 && (
+    <section class={`grid grid-cols-2 gap-3 ${heroCols}`} aria-label={lang === 'ar' ? 'أبرز الأخبار' : 'Top stories'}>
+      {hero.map((a, i) => {
+        const cat = categories[a.data.category];
+        const slug = a.id.split('/').pop();
+        // بطاقة أخيرة مفردة في صفّ من عمودين: تمتدّ بعرض الصف على الهاتف
+        const wide = i === hero.length - 1 && hero.length % 2 === 1;
+        const wideAspect = hero.length === 1 ? 'aspect-[16/9]' : 'aspect-[16/9] md:aspect-[3/4]';
+        return (
+          <a
+            href={`/${lang}/articles/${slug}`}
+            class={`group relative block overflow-hidden rounded-t-2xl shadow-sm ring-1 ring-black/5 transition duration-300 hover:shadow-xl hover:shadow-stone-900/10 ${
+              wide ? 'col-span-2 md:col-span-1' : ''
+            }`}
+          >
+            <Cover
+              article={a}
+              lang={lang}
+              priority={i === 0}
+              class={`w-full ${wide ? wideAspect : 'aspect-[3/4]'}`}
+            />
+            <div class="pointer-events-none absolute inset-0 flex flex-col justify-end p-3 sm:p-3.5">
+              <span class="mb-2 w-fit rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm">
+                {cat[lang]}
+              </span>
+              <h2
+                class={`font-display line-clamp-3 font-bold leading-snug text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] ${
+                  wide ? 'text-lg md:text-base lg:text-lg' : 'text-base sm:text-lg'
+                }`}
+              >
+                {a.data.title}
+              </h2>
+            </div>
+          </a>
+        );
+      })}
+    </section>
+  )}
+
+  <!-- ===== شريط الشركاء/العلامات ===== -->
+  <div
+    class="no-scrollbar -mx-5 mt-5 flex gap-2 overflow-x-auto px-5 py-1 sm:mx-0 sm:px-0"
+    aria-label={lang === 'ar' ? 'شركاؤنا' : 'Our partners'}
+  >
+    {partners.map((p) => (
+      <span class="shrink-0 rounded-full border border-stone-200/70 bg-stone-100/80 px-4 py-2 text-xs font-bold text-stone-600 dark:border-white/10 dark:bg-white/5 dark:text-stone-300 sm:px-5 sm:py-2.5 sm:text-sm">
+        {p}
+      </span>
+    ))}
+  </div>
+
+  <!-- ===== أخبار اليوم: قائمة أخبار + بحث ===== -->
+  <section class="mt-10" aria-labelledby="today-news">
+    <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200/70 pb-3 dark:border-white/10">
+      <h2 id="today-news" class="font-display flex items-center gap-2 text-2xl text-stone-900 dark:text-white">
+        <span aria-hidden="true">🚀</span>
+        {t.todayNews}
+      </h2>
+      <div class="flex min-h-[52px] w-full items-center gap-2 rounded-full border border-stone-200/70 bg-white/70 px-4 py-1 transition focus-within:border-teal-400 focus-within:ring-2 focus-within:ring-teal-500/20 dark:border-white/10 dark:bg-white/5 sm:w-auto">
+        <svg class="h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg>
+        <input
+          data-feed-search
+          type="text"
+          enterkeyhint="search"
+          autocomplete="off"
+          placeholder={t.feedSearch}
+          aria-label={t.feedSearch}
+          class="h-11 w-full min-w-0 bg-transparent text-base text-stone-700 outline-none placeholder:text-stone-400 dark:text-stone-200 sm:w-48 sm:flex-none"
+        />
+        <button
+          type="button"
+          data-voice-search
+          data-feed-voice
+          hidden
+          aria-label={t.voiceSearch}
+          title={t.voiceSearch}
+          aria-pressed="false"
+          class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-stone-500 transition hover:bg-stone-100 hover:text-teal-700 dark:text-stone-400 dark:hover:bg-white/10 dark:hover:text-teal-400"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+            <line x1="12" x2="12" y1="19" y2="22"/>
+          </svg>
+        </button>
+      </div>
+      <p data-feed-voice-status class="sr-only" aria-live="polite"></p>
+    </div>
+
+    <div class="divide-y divide-stone-200/70 dark:divide-white/10">
+      {feed.map((a) => {
+        const cat = categories[a.data.category];
+        const slug = a.id.split('/').pop();
+        const searchable = `${a.data.title} ${a.data.description} ${cat[lang]}`;
+        return (
+          <a
+            href={`/${lang}/articles/${slug}`}
+            data-card={searchable}
+            data-feed
+            class="group flex items-center gap-3 py-4 sm:gap-4"
+          >
+            <div class="min-w-0 flex-1">
+              <h3 class="font-display line-clamp-2 text-base font-bold leading-snug text-stone-800 transition group-hover:text-teal-700 dark:text-stone-100 dark:group-hover:text-teal-400 sm:text-lg">
+                {a.data.title}
+              </h3>
+              <p class="mt-1.5 flex items-center gap-2 text-xs text-stone-400 dark:text-stone-500">
+                <span class="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] font-bold text-stone-500 dark:bg-white/10 dark:text-stone-400">
+                  {cat[lang]}
+                </span>
+                <span>{formatDate(a.data.date, lang)}</span>
+              </p>
+            </div>
+            <Cover article={a} lang={lang} class="h-20 w-28 shrink-0 rounded-xl sm:w-32" />
+          </a>
+        );
+      })}
+    </div>
+
+    <p data-empty hidden class="py-12 text-center text-sm font-semibold text-stone-400 dark:text-stone-500">
+      {t.noResults}
+    </p>
+  </section>
+
+  <div class="mt-12">
+    <Newsletter lang={lang} />
+  </div>
+
+  <script>
+    // تصفية قائمة الأخبار + إظهار رسالة «لا نتائج»
+    const feedInput = document.querySelector<HTMLInputElement>('[data-feed-search]');
+    const emptyMsg = document.querySelector<HTMLElement>('[data-empty]');
+    const voiceBtn = document.querySelector<HTMLButtonElement>('[data-feed-voice]');
+    const voiceStatus = document.querySelector<HTMLElement>('[data-feed-voice-status]');
+    const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+
+    const applyFilter = (query: string, selector: string) => {
+      const items = Array.from(document.querySelectorAll<HTMLElement>(selector));
+      if (items.length === 0) return;
+      const q = query.trim().toLowerCase();
+      items.forEach((el) => {
+        const hay = (el.dataset.card || '').toLowerCase();
+        el.style.display = !q || hay.includes(q) ? '' : 'none';
+      });
+      if (emptyMsg) emptyMsg.hidden = items.some((el) => el.style.display !== 'none');
+    };
+
+    if (feedInput) {
+      feedInput.addEventListener('input', () => applyFilter(feedInput.value, '[data-feed]'));
+    }
+
+    // البحث الصوتي في حقل أخبار اليوم (Web Speech API)
+    const RecognitionCtor =
+      (window as unknown as { SpeechRecognition?: new () => any }).SpeechRecognition ??
+      (window as unknown as { webkitSpeechRecognition?: new () => any }).webkitSpeechRecognition;
+
+    if (voiceBtn) {
+      if (!RecognitionCtor) {
+        voiceBtn.hidden = true;
+      } else {
+        voiceBtn.hidden = false;
+        const recognition = new RecognitionCtor();
+        recognition.lang = lang === 'ar' ? 'ar-SA' : 'en-US';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        const setListening = (on: boolean) => {
+          voiceBtn.classList.toggle('is-listening', on);
+          voiceBtn.setAttribute('aria-pressed', String(on));
+        };
+
+        voiceBtn.addEventListener('click', () => {
+          if (voiceBtn.getAttribute('aria-pressed') === 'true') {
+            recognition.stop();
+            return;
+          }
+          try {
+            recognition.start();
+          } catch {
+            /* بدأ الاستماع بالفعل */
+          }
+        });
+
+        recognition.addEventListener('start', () => {
+          setListening(true);
+          if (voiceStatus) voiceStatus.textContent = lang === 'ar' ? 'جارٍ الاستماع…' : 'Listening…';
+          feedInput?.focus();
+        });
+        recognition.addEventListener('result', (event: any) => {
+          const transcript = String(event.results?.[0]?.[0]?.transcript ?? '').trim();
+          if (transcript && feedInput) {
+            feedInput.value = transcript;
+            feedInput.dispatchEvent(new Event('input', { bubbles: true }));
+            if (voiceStatus) voiceStatus.textContent = transcript;
+          }
+        });
+        recognition.addEventListener('error', () => {
+          if (voiceStatus) {
+            voiceStatus.textContent = lang === 'ar' ? 'تعذّر التعرف على الصوت.' : 'Voice recognition failed.';
+          }
+        });
+        recognition.addEventListener('end', () => setListening(false));
+      }
+    }
+  </script>
+</Base>

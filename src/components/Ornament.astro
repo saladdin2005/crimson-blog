@@ -1,0 +1,48 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+<div class={`ornament ${className}`} aria-hidden="true">
+  <span class="ornament-line"></span>
+  <span class="ornament-mark">❦</span>
+  <span class="ornament-line"></span>
+</div>
+
+<style>
+  .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    margin-block: 2.25rem;
+    color: #a61830;
+  }
+  .ornament-line {
+    height: 1px;
+    width: min(180px, 30vw);
+    background: linear-gradient(
+      to var(--tw-gradient-dir, right),
+      transparent,
+      rgba(166, 24, 48, 0.45) 50%,
+      transparent
+    );
+  }
+  .ornament-mark {
+    font-size: 1.4rem;
+    line-height: 1;
+    opacity: 0.85;
+  }
+  html.dark .ornament {
+    color: #dd8b99;
+  }
+  html.dark .ornament-line {
+    background: linear-gradient(
+      to var(--tw-gradient-dir, right),
+      transparent,
+      rgba(221, 139, 153, 0.5) 50%,
+      transparent
+    );
+  }
+</style>

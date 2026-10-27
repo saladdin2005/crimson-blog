@@ -1,0 +1,23 @@
+# التبعيات
+node_modules/
+
+# مبنى Astro والسجلات
+.astro/
+dist/
+dev.log
+
+# بيئة العمل
+.env
+.env.*
+!.env.example
+
+# ملفات النظام
+.DS_Store
+Thumbs.db
+
+# ملفات المحرر
+.vscode/*
+!.vscode/extensions.json
+
+# سجل npm
+npm-debug.log*

@@ -1,0 +1,53 @@
+---
+import Base from '../../layouts/Base.astro';
+import { site, authors, type Lang } from '../../data/site';
+import { ui } from '../../i18n/ui';
+
+export async function getStaticPaths() {
+  return [{ params: { lang: 'ar' } }, { params: { lang: 'en' } }];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = ui[lang];
+const content = {
+  ar: {
+    title: 'من نحن',
+    paragraphs: [
+      `${site.name.ar} مجلة رقمية مستقلة تُصدر منذ ٢٠٢٦، نجمع فيها بين الشغف بالمحتوى الجيد والحاجة إلى مساحة هادئة للقراءة.`,
+      'نفتح الملفات الغامضة بفضول صادق، ونقرأ صفحات من التاريخ بتبصّر، ونتابع العلم وأدوات العصر بعقلية عملية. كل مقال يمرّ على محرّر قبل النشر — لا نشر آلي، ولا محتوى منسوخ.',
+      'المجلة حالياً تجريبية (v0.1)، ونضيف تدريجياً ما يستحق الإضافة فقط.',
+    ],
+  },
+  en: {
+    title: 'About Us',
+    paragraphs: [
+      `${site.name.en} is an independent digital magazine launched in 2026, combining a passion for good content with a need for a calm reading space.`,
+      'We open mystery files with genuine curiosity, read pages from history with care, and follow science and tools of the era with a practical mindset. Every article is reviewed by an editor before publishing — no automated posts, no copied content.',
+      'The magazine is currently in beta (v0.1), and we only add what is worth adding.',
+    ],
+  },
+}[lang];
+---
+<Base lang={lang} title={`${content.title} · ${site.name[lang]}`}>
+  <article class="mx-auto max-w-2xl">
+    <h1 class="font-display text-3xl text-stone-900 dark:text-white sm:text-4xl">{content.title}</h1>
+    <div class="article-body mt-6">
+      {content.paragraphs.map((p) => <p>{p}</p>)}
+    </div>
+
+    <div class="mt-10 grid gap-4 sm:grid-cols-2">
+      {Object.values(authors).map((author) => (
+        <div class="flex items-center gap-4 rounded-2xl border border-stone-200 bg-white p-5 dark:border-stone-800 dark:bg-stone-900">
+          <span class="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-gradient-to-br from-teal-500 to-cyan-700 text-xl font-black text-white">
+            {author.name[lang].charAt(0)}
+          </span>
+          <div>
+            <p class="font-bold text-stone-900 dark:text-white">{author.name[lang]}</p>
+            <p class="text-sm font-medium text-teal-700 dark:text-teal-400">{author.role[lang]}</p>
+            <p class="mt-1 text-[13px] leading-5 text-stone-500 dark:text-stone-400">{author.bio[lang]}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </article>
+</Base>

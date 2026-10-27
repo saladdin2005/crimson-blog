@@ -1,0 +1,70 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import PinCard from '../../../components/PinCard.astro';
+import { categories, site, type Lang } from '../../../data/site';
+import { ui } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  return Object.keys(categories).flatMap((category) => [
+    { params: { lang: 'ar', category } },
+    { params: { lang: 'en', category } },
+  ]);
+}
+
+const { lang, category } = Astro.params as { lang: Lang; category: keyof typeof categories };
+const t = ui[lang];
+const cat = categories[category];
+
+const posts = (await getCollection('articles'))
+  .filter((a) => a.id.startsWith(`${lang}/`) && a.data.category === category)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const ratios = ['aspect-[3/4]', 'aspect-[1/1]', 'aspect-[4/5]', 'aspect-[2/3]', 'aspect-[16/11]', 'aspect-[3/5]', 'aspect-[5/6]', 'aspect-[4/3]'];
+---
+<Base lang={lang} title={`${cat[lang]} · ${site.name[lang]}`} description={cat[lang]}>
+  <!-- ترويسة القسم (صورة الغلاف إن وُجدت، وإلا التدرّج اللوني) -->
+  <div class="noise relative mb-8 overflow-hidden rounded-3xl p-8 text-white sm:p-10" style={`background:${cat.gradient}`}>
+    {'image' in cat && cat.image && (
+      <img
+        src={cat.image}
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+        class="absolute inset-0 h-full w-full object-cover object-center"
+      />
+    )}
+    {'image' in cat && cat.image && (
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/35"></div>
+    )}
+    <div class="absolute -top-16 -end-12 h-52 w-52 rounded-full bg-white/10"></div>
+    <a href={`/${lang}/`} class="relative inline-flex min-h-6 items-center text-xs font-semibold text-white/70 transition hover:text-white">
+      {t.home}
+    </a>
+    <h1 class="font-display relative mt-3 text-3xl sm:text-4xl">{cat[lang]}</h1>
+    <p class="relative mt-2 text-sm text-white/80">
+      {posts.length} {lang === 'ar' ? 'مقال' : 'articles'}
+    </p>
+  </div>
+
+  <!-- شبكة Masonry (نمط Pinterest) + حالة فارغة -->
+  {posts.length === 0 ? (
+    <div class="classic-frame rounded-3xl px-6 py-16 text-center">
+      <p class="text-4xl" aria-hidden="true">🗂️</p>
+      <p class="font-display mt-4 text-xl text-stone-700 dark:text-stone-200">{t.emptyCategory}</p>
+      <a
+        href={`/${lang}/`}
+        class="mt-6 inline-flex min-h-11 items-center gap-2 rounded-full bg-teal-700 px-6 py-3 text-sm font-bold text-white transition hover:bg-teal-600 active:scale-95"
+      >
+        {t.backHome}
+      </a>
+    </div>
+  ) : (
+    <div class="masonry">
+      {posts.map((article, i) => (
+        <PinCard article={article} lang={lang} ratio={ratios[i % ratios.length]} />
+      ))}
+    </div>
+  )}
+</Base>

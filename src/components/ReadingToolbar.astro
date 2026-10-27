@@ -1,0 +1,122 @@
+---
+import { ui, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+---
+<!-- شريط أدوات القراءة: وضع مريح + تكبير/تصغير الخط (يظهر في صفحات المقالات) -->
+<div
+  data-reading-toolbar
+  class="fixed bottom-[calc(1rem_+_env(safe-area-inset-bottom,0px))] left-1/2 z-50 flex -translate-x-1/2 items-center gap-1 rounded-full border border-stone-200/70 bg-white/90 p-1.5 shadow-xl shadow-stone-900/10 backdrop-blur-xl dark:border-white/10 dark:bg-stone-900/90"
+  role="toolbar"
+  aria-label={t.readingMode}
+>
+  <!-- زر الرجوع: يظهر في وضع القراءة فقط -->
+  <button
+    type="button"
+    data-read-exit
+    aria-label={t.readingModeOn}
+    title={t.back}
+    class="reading-only flex h-11 items-center gap-1.5 rounded-full px-3 text-xs font-bold text-stone-600 transition hover:bg-stone-100 hover:text-teal-700 dark:text-stone-300 dark:hover:bg-white/10 dark:hover:text-teal-400"
+  >
+    <svg class="h-4 w-4 rtl:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg>
+    <span class="hidden sm:inline">{t.back}</span>
+  </button>
+  <span class="reading-only mx-0.5 h-6 w-px bg-stone-200 dark:bg-stone-700"></span>
+
+  <!-- تكبير/تصغير الخط -->
+  <button
+    type="button"
+    data-font-dec
+    aria-label={t.decreaseSize}
+    title={t.decreaseSize}
+    class="grid h-11 w-11 place-items-center rounded-full text-stone-600 transition hover:bg-stone-100 hover:text-teal-700 dark:text-stone-300 dark:hover:bg-white/10 dark:hover:text-teal-400"
+  >
+    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14"/></svg>
+  </button>
+  <span data-font-value class="min-w-8 text-center text-xs font-black tabular-nums text-stone-500 dark:text-stone-400">100%</span>
+  <button
+    type="button"
+    data-font-inc
+    aria-label={t.increaseSize}
+    title={t.increaseSize}
+    class="grid h-11 w-11 place-items-center rounded-full text-stone-600 transition hover:bg-stone-100 hover:text-teal-700 dark:text-stone-300 dark:hover:bg-white/10 dark:hover:text-teal-400"
+  >
+    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+  </button>
+
+  <span class="mx-0.5 h-6 w-px bg-stone-200 dark:bg-stone-700"></span>
+
+  <!-- وضع القراءة المريح -->
+  <button
+    type="button"
+    data-reading-toggle
+    aria-pressed="false"
+    aria-label={t.readingMode}
+    title={t.comfortHint}
+    class="flex h-11 min-w-11 items-center justify-center gap-1.5 rounded-full px-3 text-xs font-bold text-stone-600 transition hover:bg-stone-100 hover:text-teal-700 dark:text-stone-300 dark:hover:bg-white/10 dark:hover:text-teal-400"
+  >
+    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    <span data-reading-label class="hidden sm:inline">{t.readingMode}</span>
+  </button>
+</div>
+
+<script>
+  import { ui } from '../i18n/ui';
+
+  const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
+  const t = ui[lang];
+
+  const root = document.documentElement;
+  const decBtn = document.querySelector<HTMLButtonElement>('[data-font-dec]');
+  const incBtn = document.querySelector<HTMLButtonElement>('[data-font-inc]');
+  const valEl = document.querySelector<HTMLElement>('[data-font-value]');
+  const toggleBtn = document.querySelector<HTMLButtonElement>('[data-reading-toggle]');
+  const labelEl = document.querySelector<HTMLElement>('[data-reading-label]');
+  const exitBtn = document.querySelector<HTMLButtonElement>('[data-read-exit]');
+
+  const STEPS = [0.9, 1, 1.15, 1.3, 1.5];
+  const FONT_KEY = 'crimson-read-scale';
+  const MODE_KEY = 'crimson-reading-mode';
+
+  let idx = 1;
+  try {
+    const saved = Number(localStorage.getItem(FONT_KEY));
+    const found = STEPS.indexOf(saved);
+    idx = found >= 0 ? found : 1;
+  } catch { /* تجاهل */ }
+
+  const applyFont = () => {
+    root.style.setProperty('--read-scale', String(STEPS[idx]));
+    if (valEl) valEl.textContent = `${Math.round(STEPS[idx] * 100)}%`;
+    try { localStorage.setItem(FONT_KEY, String(STEPS[idx])); } catch { /* تجاهل */ }
+  };
+
+  const applyMode = (on: boolean) => {
+    root.classList.toggle('reading-mode', on);
+    toggleBtn?.setAttribute('aria-pressed', String(on));
+    if (labelEl) labelEl.textContent = on ? t.readingModeOn : t.readingMode;
+    try { localStorage.setItem(MODE_KEY, on ? '1' : '0'); } catch { /* تجاهل */ }
+  };
+
+  // استرجاع الحالة المحفوظة (بلا وميض: يُطبَّق مباشرة)
+  applyFont();
+  let modeOn = false;
+  try { modeOn = localStorage.getItem(MODE_KEY) === '1'; } catch { /* تجاهل */ }
+  applyMode(modeOn);
+
+  incBtn?.addEventListener('click', () => {
+    if (idx < STEPS.length - 1) { idx++; applyFont(); }
+  });
+  decBtn?.addEventListener('click', () => {
+    if (idx > 0) { idx--; applyFont(); }
+  });
+  toggleBtn?.addEventListener('click', () => applyMode(!root.classList.contains('reading-mode')));
+  exitBtn?.addEventListener('click', () => applyMode(false));
+
+  // الشريط يبقى ظاهراً دائماً أثناء التمرير (إخفاؤه كان يمنع الضغط على الأزرار أثناء القراءة)
+</script>
