@@ -70,11 +70,11 @@ const links: NavLink[] = [
   <!-- الشعار أعلى القائمة (نمط أراجيك) -->
   <a href={home} class="mb-5 flex items-center gap-2.5" aria-label={site.name[lang]}>
     <img
-      src="/images/logo-icon.png"
+      src="/images/logo-crimson.png"
       alt=""
       width="44"
       height="44"
-      class="h-11 w-11 rounded-full object-cover shadow-md shadow-teal-700/25 transition hover:shadow-lg hover:shadow-teal-700/40"
+      class="h-11 w-11 object-contain drop-shadow-md drop-shadow-teal-700/20 transition hover:drop-shadow-lg"
     />
     <span class="flex flex-col leading-none">
       <span class="font-display text-xl tracking-tight text-stone-900 dark:text-white">{site.name[lang]}</span>

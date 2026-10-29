@@ -34,11 +34,11 @@ const otherLangLabel = otherLang === 'ar' ? 'عربي' : 'EN';
     <!-- الشعار -->
     <a href={home} class="group flex shrink-0 items-center gap-2" aria-label={site.name[lang]}>
       <img
-        src="/images/logo-icon.png"
+        src="/images/logo-crimson.png"
         alt=""
         width="44"
         height="44"
-        class="h-11 w-11 rounded-full object-cover shadow-md shadow-teal-700/25 transition group-hover:shadow-lg group-hover:shadow-teal-700/40"
+        class="h-11 w-11 object-contain drop-shadow-md drop-shadow-teal-700/20 transition group-hover:drop-shadow-lg"
       />
       <span class="font-display hidden items-baseline gap-1.5 text-xl tracking-tight text-stone-900 dark:text-white sm:flex">
         {site.name[lang]}

@@ -21,3 +21,6 @@ Thumbs.db
 
 # سجل npm
 npm-debug.log*
+
+# Local Netlify folder
+.netlify
