@@ -112,6 +112,11 @@ export const ui = {
 } as const satisfies Record<Lang, Record<string, string | number>>;
 
 export function formatDate(date: Date, lang: Lang): string {
-  const locale = lang === 'ar' ? 'ar-EG-u-nu-latn-ca-gregory' : 'en-US';
-  return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeZone: 'UTC' }).format(date);
+  const fmt = new Intl.DateTimeFormat(lang === 'ar' ? 'ar-EG-u-ca-gregory-nu-latn' : 'en-US', {
+    year: 'numeric',
+    month: 'long',   // اسم الشهر كاملاً — أوضح رقمياً في سياق RTL
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+  return fmt.format(date);
 }

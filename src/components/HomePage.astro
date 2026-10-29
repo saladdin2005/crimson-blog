@@ -55,12 +55,13 @@ const feed = all;
               priority={i === 0}
               class={`w-full ${wide ? wideAspect : 'aspect-[3/4]'}`}
             />
-            <div class="pointer-events-none absolute inset-0 flex flex-col justify-end p-3 sm:p-3.5">
+            <div class="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/35 to-transparent" aria-hidden="true"></div>
+            <div class="pointer-events-none absolute inset-0 flex flex-col justify-end p-3 pb-7 sm:p-3.5 sm:pb-8">
               <span class="mb-2 w-fit rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm">
                 {cat[lang]}
               </span>
               <h2
-                class={`font-display line-clamp-3 font-bold leading-snug text-white [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] ${
+                class={`font-display line-clamp-3 font-bold leading-[1.8] text-white ${
                   wide ? 'text-lg md:text-base lg:text-lg' : 'text-base sm:text-lg'
                 }`}
               >
