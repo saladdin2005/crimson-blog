@@ -156,15 +156,18 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
     }
   }
 
-  /* ===== إظهار البطاقة وتمركزها في الهامش الأيسر ===== */
+  /* ===== إظهار البطاقة: هامش أيسر على الشاشات العريضة، شباكة سفلية على اللمس ===== */
   let curSpan: HTMLElement | null = null;
   let hideTimer = 0;
+  let autoTimer = 0;
   let raf = 0;
 
   function hide() {
     curSpan = null;
     root.style.opacity = '0';
     hideTimer = 0;
+    window.clearTimeout(autoTimer);
+    autoTimer = 0;
   }
 
   function position() {
@@ -177,6 +180,8 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
     if (w < 220) return hide(); // شاشة ضيقة: لا هامش يكفي
 
     root.style.width = `${w}px`;
+    root.style.transform = '';
+    root.style.bottom = 'auto';
     const r = curSpan.getBoundingClientRect();
     const cardH = root.offsetHeight || 160;
     const top = Math.max(12, Math.min(r.top - 10, window.innerHeight - cardH - 12));
@@ -186,6 +191,8 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
 
   function show(tr: string, span: HTMLElement) {
     window.clearTimeout(hideTimer);
+    window.clearTimeout(autoTimer);
+    autoTimer = 0;
     curSpan = span;
     textEl.textContent = tr;
     textEl.dir = /^[\u0600-\u06FF]/.test(tr) ? 'rtl' : 'ltr';
@@ -194,7 +201,17 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
     box.style.background = getComputedStyle(document.body).backgroundColor;
     root.style.display = 'flex';
     root.setAttribute('aria-hidden', 'false');
-    if (!raf) raf = requestAnimationFrame(position);
+    if (FINE.matches) {
+      if (!raf) raf = requestAnimationFrame(position);
+    } else {
+      // وضع اللمس: بطاقة بأسفل الشاشة فوق شريط أدوات القراءة
+      root.style.width = `${Math.min(320, window.innerWidth - 40)}px`;
+      root.style.left = '50%';
+      root.style.top = 'auto';
+      root.style.bottom = 'calc(5.25rem + env(safe-area-inset-bottom, 0px))';
+      root.style.transform = 'translateX(-50%)';
+      autoTimer = window.setTimeout(hide, 4500);
+    }
     requestAnimationFrame(() => {
       root.style.opacity = '1';
     });
@@ -202,37 +219,50 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
 
   /* ===== الأحداث ===== */
   function bind() {
-    if (!FINE.matches) return; // أجهزة اللمس لا هامش لها ولا تمرير فأرة
+    if (FINE.matches) {
+      document.addEventListener('mouseover', (e) => {
+        const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
+        if (!t) return;
+        const g = Number(t.dataset.sid ?? -1);
+        const tr = g >= 0 ? gtrans[g] : null;
+        if (tr) show(tr, t);
+        else hide();
+      });
 
-    document.addEventListener('mouseover', (e) => {
+      document.addEventListener('mouseout', (e) => {
+        const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
+        if (!t) return;
+        if (!hideTimer) hideTimer = window.setTimeout(hide, 160);
+      });
+
+      window.addEventListener(
+        'scroll',
+        () => {
+          if (curSpan && !raf) raf = requestAnimationFrame(position);
+        },
+        { passive: true },
+      );
+
+      window.addEventListener('resize', hide);
+      return;
+    }
+
+    // وضع اللمس والجوال: نقرة على الجملة تُظهِر البطاقة، ونقر خارجها يخفيها
+    document.addEventListener('click', (e) => {
       const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
-      if (!t) return;
+      if (!t) return hide();
+      if (t.closest('a')) return; // الروابط تتنقل طبيعياً
+      if (t === curSpan) return hide(); // نقرة ثانية على الجملة نفسها = إخفاء
       const g = Number(t.dataset.sid ?? -1);
       const tr = g >= 0 ? gtrans[g] : null;
       if (tr) show(tr, t);
       else hide();
     });
-
-    document.addEventListener('mouseout', (e) => {
-      const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
-      if (!t) return;
-      if (!hideTimer) hideTimer = window.setTimeout(hide, 160);
-    });
-
-    window.addEventListener(
-      'scroll',
-      () => {
-        if (curSpan && !raf) raf = requestAnimationFrame(position);
-      },
-      { passive: true },
-    );
-
-    window.addEventListener('resize', hide);
   }
 
   function init() {
     if (!document.querySelector('.article-body')) return;
-    if (FINE.matches) wrapSentences();
+    wrapSentences();
     bind();
   }
 
