@@ -1,0 +1,240 @@
+---
+import type { Lang } from '../data/site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const label = lang === 'ar' ? 'الترجمة' : 'Translation';
+---
+
+<div
+  id="sentence-card"
+  aria-hidden="true"
+  class="pointer-events-none fixed z-40 hidden flex-col items-start opacity-0"
+>
+  <div
+    id="sentence-card-box"
+    class="sent-card-box rounded-[1.4rem] border-2 border-[#a61830] p-4 shadow-lg shadow-stone-900/10 dark:shadow-black/40"
+    style="background:#faf7ee"
+  >
+    <div class="mb-1.5 flex items-center gap-1.5" dir="ltr">
+      <span class="h-1.5 w-1.5 rounded-full bg-[#a61830]"></span>
+      <span class="text-[10px] font-black uppercase tracking-[0.22em] text-[#a61830]">{label}</span>
+    </div>
+    <p
+      id="sentence-card-text"
+      class="text-[13.5px] leading-relaxed text-stone-700 dark:text-stone-300"
+    ></p>
+  </div>
+  <img
+    src="/images/logo-crimson.png"
+    alt=""
+    width="40"
+    height="40"
+    class="crem-sent-logo mx-auto mt-3 h-10 w-10 object-contain drop-shadow"
+  />
+</div>
+
+<style>
+  /* إبراز الجملة المرّ عليها بلون رمزي شفاف */
+  :global(.sent) {
+    border-radius: 0.4rem;
+    transition: background-color 0.15s ease;
+  }
+  :global(.sent:hover) {
+    background-color: color-mix(in srgb, #a61830 9%, transparent);
+  }
+</style>
+
+<script>
+  import { normSentence } from '../utils/sentence';
+
+  const FINE = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const END_CHARS = /[.!؟?…]/;
+
+  let map: Record<string, string> = {};
+  try {
+    map = JSON.parse(document.getElementById('sentence-tl-map')?.textContent ?? '{}');
+  } catch {
+    /* الأمانة: بلا خريطة لا بطاقة */
+  }
+
+  const root = document.getElementById('sentence-card') as HTMLElement;
+  const box = document.getElementById('sentence-card-box') as HTMLElement;
+  const textEl = document.getElementById('sentence-card-text') as HTMLElement;
+
+  /* ===== تقطيع الفقرات إلى جمل متصلة عبر العناصر الداخلية (`` חזק וغيرها ===== */
+  const gtrans: Array<string | null> = [];
+
+  function collectBlocks(): HTMLElement[] {
+    const out = new Set<HTMLElement>();
+    document.querySelectorAll<HTMLElement>('.article-lead').forEach((el) => out.add(el));
+    document
+      .querySelectorAll<HTMLElement>('.article-body > p, .article-body > h2, .article-body > h3, .article-body blockquote > p, .article-body li')
+      .forEach((el) => out.add(el));
+    return [...out];
+  }
+
+  function wrapPieces(node: Text, pieces: Array<{ from: number; to: number; gid: number }>) {
+    pieces.sort((a, b) => b.from - a.from); // من العمق الأقصى إلى الأدنى كي تبقى مواضع الاستقطاع صحيحة
+    let cur: Text = node;
+    for (const pc of pieces) {
+      if ((cur.nodeValue ?? '').length > pc.to) cur.splitText(pc.to); // الذيل يُنشأ ويُتخلى عنه — الرأس يبقى عندنا
+      const piece = pc.from > 0 ? (cur.splitText(pc.from) as Text) : cur;
+      if (pc.from === 0) cur = piece as unknown as Text; // الرأس نفسه يُغلَّف — لا مقاطع لاحقة بعده
+      const sp = document.createElement('span');
+      sp.className = 'sent';
+      sp.dataset.sid = String(pc.gid);
+      piece.replaceWith(sp);
+      sp.append(piece);
+    }
+  }
+
+  function wrapSentences() {
+    let gid = 0;
+    for (const block of collectBlocks()) {
+      const walker = document.createTreeWalker(block, NodeFilter.SHOW_TEXT, {
+        acceptNode(n) {
+          if (!n.nodeValue || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+          if ((n.parentElement as HTMLElement)?.closest('code, button, style, script, sup')) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        },
+      });
+      const nodes: Text[] = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode as Text);
+      if (!nodes.length) continue;
+
+      let virt = '';
+      const spans: Array<{ n: Text; start: number }> = [];
+      for (const n of nodes) {
+        spans.push({ n, start: virt.length });
+        virt += n.nodeValue;
+      }
+
+      // اكتشاف الحدود
+      const cuts: Array<[number, number]> = [];
+      let s = 0;
+      for (let i = 0; i < virt.length; i++) {
+        if (END_CHARS.test(virt[i])) {
+          let j = i + 1;
+          while (j < virt.length && /[»"'”’…]/.test(virt[j])) j++;
+          if (j >= virt.length || /\s/.test(virt[j])) {
+            cuts.push([s, j]);
+            s = j;
+            while (s < virt.length && /\s/.test(virt[s])) s++;
+            i = s - 1;
+          } else {
+            i = j - 1;
+          }
+        }
+      }
+      if (s < virt.length) cuts.push([s, virt.length]);
+
+      // الخريطة + تجميع القطع لكل عقدة نصية
+      const byNode = new Map<Text, Array<{ from: number; to: number; gid: number }>>();
+      for (const [cs, ce] of cuts) {
+        const raw = virt.slice(cs, ce);
+        if (!raw.trim()) continue;
+        const tr = map[normSentence(raw)] ?? null;
+        const g = gid++;
+        gtrans[g] = tr;
+        for (const { n, start } of spans) {
+          const nodeEnd = start + (n.nodeValue?.length ?? 0);
+          const from = Math.max(cs, start);
+          const to = Math.min(ce, nodeEnd);
+          if (from < to) {
+            const arr = byNode.get(n) ?? [];
+            arr.push({ from: from - start, to: to - start, gid: g });
+            byNode.set(n, arr);
+          }
+        }
+      }
+
+      for (const [n, pieces] of byNode) wrapPieces(n, pieces);
+    }
+  }
+
+  /* ===== إظهار البطاقة وتمركزها في الهامش الأيسر ===== */
+  let curSpan: HTMLElement | null = null;
+  let hideTimer = 0;
+  let raf = 0;
+
+  function hide() {
+    curSpan = null;
+    root.style.opacity = '0';
+    hideTimer = 0;
+  }
+
+  function position() {
+    raf = 0;
+    if (!curSpan) return;
+    const art = document.querySelector('[data-article]');
+    if (!art) return hide();
+    const artL = art.getBoundingClientRect().left;
+    const w = Math.round(Math.min(300, artL - 20));
+    if (w < 220) return hide(); // شاشة ضيقة: لا هامش يكفي
+
+    root.style.width = `${w}px`;
+    const r = curSpan.getBoundingClientRect();
+    const cardH = root.offsetHeight || 160;
+    const top = Math.max(12, Math.min(r.top - 10, window.innerHeight - cardH - 12));
+    root.style.top = `${top}px`;
+    root.style.left = `${Math.max(10, artL - w - 18)}px`;
+  }
+
+  function show(tr: string, span: HTMLElement) {
+    window.clearTimeout(hideTimer);
+    curSpan = span;
+    textEl.textContent = tr;
+    textEl.dir = /^[\u0600-\u06FF]/.test(tr) ? 'rtl' : 'ltr';
+    textEl.style.textAlign = textEl.dir === 'rtl' ? 'right' : 'left';
+    // لون البطاقة = لون الموقع نفسه (يتكيّف مع الوضع الداكن أيضاً)
+    box.style.background = getComputedStyle(document.body).backgroundColor;
+    root.style.display = 'flex';
+    root.setAttribute('aria-hidden', 'false');
+    if (!raf) raf = requestAnimationFrame(position);
+    requestAnimationFrame(() => {
+      root.style.opacity = '1';
+    });
+  }
+
+  /* ===== الأحداث ===== */
+  function bind() {
+    if (!FINE.matches) return; // أجهزة اللمس لا هامش لها ولا تمرير فأرة
+
+    document.addEventListener('mouseover', (e) => {
+      const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
+      if (!t) return;
+      const g = Number(t.dataset.sid ?? -1);
+      const tr = g >= 0 ? gtrans[g] : null;
+      if (tr) show(tr, t);
+      else hide();
+    });
+
+    document.addEventListener('mouseout', (e) => {
+      const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
+      if (!t) return;
+      if (!hideTimer) hideTimer = window.setTimeout(hide, 160);
+    });
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (curSpan && !raf) raf = requestAnimationFrame(position);
+      },
+      { passive: true },
+    );
+
+    window.addEventListener('resize', hide);
+  }
+
+  function init() {
+    if (!document.querySelector('.article-body')) return;
+    if (FINE.matches) wrapSentences();
+    bind();
+  }
+
+  init();
+</script>

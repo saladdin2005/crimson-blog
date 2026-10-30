@@ -6,8 +6,11 @@ import ArticleCard from '../../../components/ArticleCard.astro';
 import Cover from '../../../components/Cover.astro';
 import ShareButtons from '../../../components/ShareButtons.astro';
 import ReadingToolbar from '../../../components/ReadingToolbar.astro';
+import SentenceCard from '../../../components/SentenceCard.astro';
 import { categories, authors, type Lang } from '../../../data/site';
 import { ui, formatDate } from '../../../i18n/ui';
+import { sentenceTl } from '../../../data/sentenceTl';
+import { normSentence } from '../../../utils/sentence';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -33,6 +36,12 @@ const related = (await getCollection('articles'))
   .filter((a) => a.id.startsWith(`${lang}/`) && a.data.category === article.data.category && a.id !== article.id)
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
+
+// خريطة جمل المقال (= slug) مفاتيحها مضغوطة بنفس التوحيد المستخدم في المتصفح
+const slug = article.id.split('/').pop() ?? '';
+const rawMap = sentenceTl[lang]?.[slug] ?? {};
+const normMap: Record<string, string> = {};
+for (const [k, v] of Object.entries(rawMap)) normMap[normSentence(k)] = v;
 ---
 <Base lang={lang} title={article.data.title} description={article.data.description}>
   <article data-article class="mx-auto max-w-3xl">
@@ -124,4 +133,7 @@ const related = (await getCollection('articles'))
 
   <!-- شريط أدوات القراءة (وضع مريح + حجم الخط) -->
   <ReadingToolbar lang={lang} />
+  <!-- بطاقة ترجمة الجُمل على الهامش الأيسر -->
+  <script type="application/json" is:inline id="sentence-tl-map" set:html={JSON.stringify(normMap)} />
+  <SentenceCard lang={lang} />
 </Base>
