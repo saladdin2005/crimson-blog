@@ -6,10 +6,13 @@ import { categories, site, type Lang } from '../../../data/site';
 import { ui } from '../../../i18n/ui';
 
 export async function getStaticPaths() {
-  return Object.keys(categories).flatMap((category) => [
-    { params: { lang: 'ar', category } },
-    { params: { lang: 'en', category } },
-  ]);
+  // قسم برامج اللغة له صفحة خاصة (قيد الإنشاء) — لا حاجة لقائمة مقالات له
+  return Object.keys(categories)
+    .filter((category) => category !== 'langprogs')
+    .flatMap((category) => [
+      { params: { lang: 'ar', category } },
+      { params: { lang: 'en', category } },
+    ]);
 }
 
 const { lang, category } = Astro.params as { lang: Lang; category: keyof typeof categories };

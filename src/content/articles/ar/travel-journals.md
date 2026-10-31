@@ -2,7 +2,7 @@
 title: "دفاتر الرحلة: كتب السفر التي علّمت العالم كيف ينظر"
 description: "قبل أن تُقاس المسافات بالطائرات، قيست بحبر دفتر. من ابن بطوطة إلى همنغواي، وكيف صنعت كتب الرحلات نظرة الإنسان إلى العالم."
 lang: ar
-category: history
+category: art
 date: 2026-10-13
 image: "/images/wanderer.jpg"
 author: you

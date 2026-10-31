@@ -2,7 +2,7 @@
 title: "فنّ الاحتفاظ بالذكريات: لماذا ما زال الدفتر الورقي حيّاً"
 description: "في عصر التطبيقات والسحابة، يعود الدفتر الورقي ليذكّرنا أن أبسط الأدوات هي أحياناً الأعمق."
 lang: ar
-category: tools
+category: articles
 date: 2026-09-28
 image: "/images/book-open.jpg"
 author: you

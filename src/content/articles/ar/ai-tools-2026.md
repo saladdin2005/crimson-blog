@@ -2,7 +2,7 @@
 title: "دليلك العملي لاختيار أدوات الذكاء الاصطناعي في ٢٠٢٦"
 description: "بعد زحمة الإصدارات، هذه المعايير الخمسة ستساعدك على اختيار الأدوات التي تضيف إنتاجية حقيقية بدل أن تضيف فوضى جديدة."
 lang: ar
-category: tools
+category: articles
 date: 2026-10-12
 image: "/images/dostoevsky.jpg"
 author: you

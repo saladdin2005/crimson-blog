@@ -2,7 +2,7 @@
 title: "دليلك العملي لاختيار أدوات الذكاء الاصطناعي في ٢٠٢٦"
 description: "After the flood of releases, these five criteria will help you pick AI tools that add real productivity instead of new chaos."
 lang: en
-category: tools
+category: articles
 date: 2026-10-12
 image: "/images/dostoevsky.jpg"
 author: you

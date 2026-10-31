@@ -304,5 +304,87 @@ export const sentenceTl: Record<'ar' | 'en', Record<string, SentenceMap>> = {
       'العمق في أداة واحدة يتفوّق دائماً على الترقّب مع عشرين.':
         'Depth in one tool always beats loitering around twenty.',
     },
+
+    'anemoia': {
+      'من سلسلة «تأمّل ثقافي»: عن anemoia، الحنين إلى زمن لم نعشه — وماذا تفعل بنا الصورة التي تنتقي الأجمل من الماضي.':
+        'From the \u2018Cultural Reflection\u2019 series: about anemoia — nostalgia for a time we never lived — and what the image that curates the prettiest of the past does to us.',
+      'من سلسلة «تأمّل ثقافي»': "From the 'Cultural Reflection' series",
+      'يهبط من السيارة ببطء، كأن الأرض كانت تنتظره.':
+        'He steps out of the car slowly, as if the ground had been waiting for him.',
+      'شعر منفوش لا يعبأ بالريح، وقميص نصف مفتوح، وجينز ضيّق، ونظرة تقول إن المكان ملكه.':
+        'Wild hair that ignores the wind, a half-open shirt, tight jeans, and a look that says the place belongs to him.',
+      'ثلاث فتيات يلتفتن، وخلفهن وجوه أخرى، والكاميرا تمنحنا وقتًا كافيًا لنُعجَب نحن أيضًا.':
+        'Three girls turn around, and behind them other faces, and the camera gives us enough time to admire them too.',
+      'مشهد لا يتجاوز ثوانٍ، ومع ذلك يُعاد ملايين المرات على الشاشات.':
+        'A scene that lasts seconds, yet it is replayed millions of times on screens.',
+      'والسؤال الغريب: لماذا يهزّنا هذا الدخول ونحن لم نكن هناك؟':
+        'And the strange question: why does this entrance shake us when we were never there?',
+      'لم نقف في تلك الساحة، ولم نسمع تلك الأغاني حين صدرت، ولم تطلب منا أمهاتنا أن نُصلح هذا الشعر.':
+        'We never stood in that courtyard, never heard those songs when they came out, and our mothers never asked us to fix that hair.',
+      'ومع ذلك نشعر بشيء يشبه الاشتياق.':
+        'Yet we feel something that resembles longing.',
+      'ذاكرة بلا صاحب': 'A memory with no owner',
+      'لهذا الشعور اسم ابتكره الكاتب جون كونيغ في «معجم الأحزان الغامضة»: anemoia، أي الحنين إلى زمن لم تعشه.':
+        'This feeling has a name coined by writer John Koenig in The Dictionary of Obscure Sorrows: anemoia — nostalgia for a time you never knew.',
+      'هو شوق بلا ذكرى، كمن يفتقد بيتًا لم يسكنه.':
+        'It is longing without memory, like missing a house you never lived in.',
+      'فمن أين يأتي إذن؟': 'So where does it come from?',
+      'من الشاشة.': 'From the screen.',
+      'ذاكرتنا عن الثمانينات ليست ذاكرتنا، بل ذاكرة مستعارة صنعتها الأفلام والمسلسلات وأغلفة الأسطوانات والإعلانات القديمة.':
+        'Our memory of the eighties is not ours; it is a borrowed memory manufactured by films, series, record sleeves, and old ads.',
+      'نحن لا نتذكر ذلك العقد، بل نتذكر ما عُرض علينا عنه.':
+        'We do not remember that decade — we remember what was shown to us about it.',
+      'ما تحفظه الصورة وما تحذفه': 'What the picture keeps — and what it deletes',
+      'الشاشة لا تحفظ كل شيء، بل تحفظ الأجمل.':
+        'The screen does not keep everything; it keeps the prettiest.',
+      'الألوان الصارخة تبقى، والطوابير والقلق والأخبار الثقيلة لا تبقى.':
+        'Loud colors survive; queues, anxiety, and heavy news do not.',
+      'الموسيقى تبقى، وضجر الأيام العادية لا يبقى.':
+        'The music survives; the tedium of ordinary days does not.',
+      'وهكذا نشتاق إلى نسخة منقّحة من زمن لم يكن بهذا اللمعان.':
+        'That is how we come to miss a retouched version of a time that never shone so brightly.',
+      'وحتى بيلي نفسه مثال على ذلك.': 'Even Billy himself is an example.',
+      'دخوله لامع إلى درجة أننا ننسى أن المسلسل يكشف لاحقًا بيتًا قاسيًا خلف هذا الغرور.':
+        'His entrance is so dazzling that we forget the series later reveals a cruel home behind that swagger.',
+      'نحتفظ بالدخول ونحذف الحكاية، وهذا ما نفعله بالعقد كله.':
+        'We keep the entrance and delete the story — and that is what we do with the whole decade.',
+      'الشعر والجينز: حين كانت الهوية مرئية': 'Hair and jeans: when identity was visible',
+      'مع ذلك، ليس كل ما نشتاق إليه وهمًا.':
+        'Still, not everything we miss is an illusion.',
+      'في الثمانينات كان الشكل بيانًا: تسريحة منفوشة، أو خصلة طويلة في الخلف، أو لون لا يخجل من نفسه.':
+        'In the eighties, appearance was a statement: a teased mane, a mullet, a color unashamed of itself.',
+      'الجينز الضيّق، والأكتاف العريضة، والجاكيتات الجلدية، كلها كانت تقول للناس: أنا هنا، وأريدكم أن تلاحظوا.':
+        'Tight jeans, broad shoulders, and leather jackets all told people: I am here, and I want you to notice.',
+      'أما اليوم فالموضة تصلنا عبر خوارزمية تقترح علينا ما يشبه الجميع، ونتشابه بدقة لا يحلم بها أي عقد سابق.':
+        'Today fashion reaches us through an algorithm that suggests what resembles everyone, and we look alike with a precision no earlier decade could dream of.',
+      'فربما نحن لا نشتاق إلى القماش، بل إلى الجرأة التي كانت تلبسه.':
+        'Maybe we do not miss the fabric — we miss the audacity that wore it.',
+      'ثمانيناتنا نحن': 'Our own eighties',
+      'لكن هناك ثمانينات أخرى، ليست ثمانينات هوليوود.':
+        "But there is another eighties — not Hollywood's.",
+      'افتح ألبوم العائلة: صور بألوان باهتة، وأعمام بشوارب كثيفة، وأمهات بتسريحات منتفخة، وأشرطة كاسيت مكدّسة في زاوية الغرفة.':
+        'Open the family album: faded photographs, uncles with thick mustaches, mothers with teased hairdos, and cassette tapes piled in the corner of the room.',
+      'هذه ثمانينات نعرفها من وجوه نحبها، لا من مسلسل أجنبي.':
+        'These are the eighties we know from faces we love, not from a foreign series.',
+      'وأحيانًا أظن أن شوقنا إلى ثمانينات المسلسلات هو في الحقيقة قناع لشوق أقرب: أن نرى والدينا شابَّين، وأن نعرف من كانا قبل أن نكون.':
+        'Sometimes I think our longing for the series\u2019 eighties is really a mask for a closer longing: to see our parents young, and to know who they were before we existed.',
+      'من يبيع لنا الحنين؟': 'Who sells us the longing?',
+      'لا ينبغي أن ننسى أن للحنين اليوم سوقًا.':
+        'We should not forget that nostalgia today has a market.',
+      'فلاتر تحوّل صورنا إلى صور قديمة بنقرة واحدة، وقوائم تشغيل تعلن عن «أجمل الثمانينات»، وعلامات تجارية تعيد إصدار أحذية ومعاطف من ذلك الزمن، ومسلسلات تُصنع خصيصًا لتجعلنا نشتاق.':
+        'Filters turn our photos vintage with one tap, playlists announce \u2018the best of the eighties\u2019, brands reissue shoes and coats from that era, and series are made specifically to make us ache.',
+      'لا عيب في أن نستمتع بذلك.': 'There is no harm in enjoying it.',
+      'لكن الأجدر أن نسأل: هل هذا الشوق نابع منا، أم صُنع ليُباع لنا؟':
+        'But the worthier question is: does this longing come from us, or was it manufactured to be sold to us?',
+      'هل الشوق خيانة للحاضر؟': 'Is longing a betrayal of the present?',
+      'لا أظن ذلك.': "I don't think so.",
+      'الشوق إلى زمن لم نعشه ليس هروبًا بالضرورة، بل قد يكون مرآة تخبرنا بما ينقصنا اليوم: جرأة في الشكل، وبطء في الخطى، ووجوه تلتقي وجهًا لوجه دون شاشة بينها.':
+        'Longing for a time we never lived is not necessarily an escape; it may be a mirror telling us what we lack today: boldness in appearance, slowness in pace, and faces meeting face to face with no screen between them.',
+      'ربما السؤال الأصدق ليس لماذا نشتاق إلى الثمانينات، بل ماذا نفعل بما يخبرنا به هذا الشوق.':
+        'Perhaps the sincerest question is not why we miss the eighties, but what we do with what this longing tells us.',
+      'هل نشتري القميص ونكتفي؟': 'Do we buy the shirt and settle?',
+      'أم نسأل لماذا لا نصنع، نحن، ثمانيناتنا الجديدة بالجرأة نفسها؟':
+        'Or do we ask why we, ourselves, do not craft a new eighties of our own, with the same audacity?',
+    },
   },
 };

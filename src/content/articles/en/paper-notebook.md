@@ -2,7 +2,7 @@
 title: "The Art of Keeping Memories: Why Paper Notebooks Still Live"
 description: "In the age of apps and cloud sync, the humble notebook reminds us that the simplest tools are sometimes the deepest."
 lang: en
-category: tools
+category: articles
 date: 2026-09-28
 image: "/images/book-open.jpg"
 author: you

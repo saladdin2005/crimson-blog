@@ -1,0 +1,180 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { categories, site, type Lang } from '../../../data/site';
+import { ui } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'ar', category: 'langprogs' } },
+    { params: { lang: 'en', category: 'langprogs' } },
+  ];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+// مقطع المسار ثابت هنا، فلا يمكن قراءته من Astro.params — نستخدم المفتاح مباشرة
+const category = 'langprogs' as const;
+const t = ui[lang];
+const cat = categories[category];
+
+const copy = {
+  ar: {
+    soon: 'قريباً',
+    lead: 'نجهّز برامج لغة عملية تساعدك على تعلّم الإنجليزية خطوة بخطوة. سجّل بريدك الآن ليكون أول من يعلم عند الإطلاق، وأخبرنا عن مستواك وما يهمك.',
+    emailLabel: 'بريدك الإلكتروني',
+    levelLabel: 'مستواك في الإنجليزية',
+    levels: [
+      { value: 'beginner', label: 'مبتدئ — أبدأ من الصفر' },
+      { value: 'intermediate', label: 'متوسط — أفهم وأتحدث ببساطة' },
+      { value: 'advanced', label: 'متقدم — أريد الإتقان' },
+    ],
+    interestLabel: 'ما الذي يهمك تعلّمه؟ (اختياري)',
+    interestPlaceholder: 'مثال: محادثة يومية، كتابة رسائل العمل، تحضير اختبار آيلتس...',
+    submit: 'أرسل تسجيلي',
+    success: 'تم تسجيلك بنجاح ✓ سنوافيك بالتفاصيل عند الإطلاق إن شاء الله.',
+    successFallback: 'تم التسجيل ✓ (لم تُرسل البيانات للخادم — هذه نسخة تجريبية)',
+    error: 'حدث خطأ، حاول من فضلك مرة أخرى.',
+    backHome: 'تصفّح المقالات',
+    note: 'القسم قيد الإنشاء — سجلّ معلوماتك وسنعكف بالتفاصيل إليك أول ما ينطلق.',
+  },
+  en: {
+    soon: 'Coming Soon',
+    lead: 'We are building practical language programs that help you learn English step by step. Register your email now to be the first to know when we launch — and tell us your level and what interests you.',
+    emailLabel: 'Your email address',
+    levelLabel: 'Your English level',
+    levels: [
+      { value: 'beginner', label: 'Beginner — starting from zero' },
+      { value: 'intermediate', label: 'Intermediate — I understand and speak simple English' },
+      { value: 'advanced', label: 'Advanced — aiming for mastery' },
+    ],
+    interestLabel: 'What are you interested in learning? (optional)',
+    interestPlaceholder: 'e.g. everyday conversation, business writing, IELTS preparation...',
+    submit: 'Register my interest',
+    success: 'Registered successfully ✓ We will send you the details at launch.',
+    successFallback: 'Registered ✓ (data was not sent to the server — this is a demo build)',
+    error: 'Something went wrong, please try again.',
+    backHome: 'Browse articles',
+    note: 'This section is under construction — leave your details and we will follow up as soon as it launches.',
+  },
+}[lang];
+
+const FORM_NAME = 'langprogs-signup';
+---
+<Base lang={lang} title={`${cat[lang]} · ${site.name[lang]}`} description={copy.lead}>
+  <div class="mx-auto max-w-2xl">
+    <!-- ترويسة القسم بنفس نمط صفحات الأقسام -->
+    <div class="noise relative mb-8 overflow-hidden rounded-3xl p-8 text-white sm:p-10" style={`background:${cat.gradient}`}>
+      <div class="absolute -top-16 -end-12 h-52 w-52 rounded-full bg-white/10"></div>
+      <div class="absolute -bottom-20 -start-10 h-40 w-40 rounded-full bg-white/5"></div>
+      <a href={`/${lang}/`} class="relative inline-flex min-h-6 items-center text-xs font-semibold text-white/70 transition hover:text-white">
+        {t.home}
+      </a>
+      <h1 class="font-display relative mt-3 text-3xl sm:text-4xl">{cat[lang]}</h1>
+      <span class="relative mt-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-bold ring-1 ring-white/30">
+        <span class="inline-block h-2 w-2 animate-pulse rounded-full bg-amber-300" aria-hidden="true"></span>
+        {copy.soon}
+      </span>
+    </div>
+
+    <!-- بطاقة "قريباً" + نموذج التسجيل المسبق -->
+    <section class="classic-frame rounded-3xl px-6 py-10 sm:px-10">
+      <p class="mx-auto max-w-xl text-center text-base leading-8 text-stone-600 dark:text-stone-300">{copy.lead}</p>
+
+      <form
+        name={FORM_NAME}
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        data-preregister
+        class="mt-8 flex flex-col gap-5"
+      >
+        <input type="hidden" name="form-name" value={FORM_NAME} />
+        <p class="hidden">
+          <label>لا تملأ هذا إن كنت بشرياً: <input name="bot-field" /></label>
+        </p>
+
+        <div>
+          <label for="reg-email" class="mb-1.5 block text-[13px] font-bold text-stone-700 dark:text-stone-300">{copy.emailLabel}</label>
+          <input
+            id="reg-email"
+            type="email"
+            name="email"
+            required
+            autocomplete="email"
+            inputmode="email"
+            placeholder={t.emailPlaceholder}
+            class="flex min-h-[52px] w-full rounded-2xl border border-stone-200 bg-white px-5 py-3.5 text-base text-stone-800 shadow-sm transition focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-700/15 dark:border-stone-700 dark:bg-stone-900 dark:text-white"
+          />
+        </div>
+
+        <div>
+          <label for="reg-level" class="mb-1.5 block text-[13px] font-bold text-stone-700 dark:text-stone-300">{copy.levelLabel}</label>
+          <select
+            id="reg-level"
+            name="level"
+            required
+            class="flex min-h-[52px] w-full rounded-2xl border border-stone-200 bg-white px-4 py-3.5 text-base text-stone-800 shadow-sm transition focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-700/15 dark:border-stone-700 dark:bg-stone-900 dark:text-white"
+          >
+            {copy.levels.map((lv) => <option value={lv.value}>{lv.label}</option>)}
+          </select>
+        </div>
+
+        <div>
+          <label for="reg-interest" class="mb-1.5 block text-[13px] font-bold text-stone-700 dark:text-stone-300">{copy.interestLabel}</label>
+          <textarea
+            id="reg-interest"
+            name="interest"
+            rows="3"
+            placeholder={copy.interestPlaceholder}
+            class="w-full resize-y rounded-2xl border border-stone-200 bg-white px-5 py-3.5 text-base text-stone-800 shadow-sm transition focus:border-teal-700 focus:outline-none focus:ring-4 focus:ring-teal-700/15 dark:border-stone-700 dark:bg-stone-900 dark:text-white"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-teal-700 px-7 py-3.5 text-base font-bold text-white transition hover:bg-teal-600 active:scale-[0.98]"
+        >
+          {copy.submit}
+        </button>
+
+        <p data-preregister-msg class="mt-1 hidden text-center text-sm font-semibold text-teal-700 dark:text-teal-400"></p>
+      </form>
+
+      <p class="mt-6 text-center text-xs leading-6 text-stone-400 dark:text-stone-500">{copy.note}</p>
+    </section>
+
+    <div class="mt-8 text-center">
+      <a
+        href={`/${lang}/`}
+        class="inline-flex min-h-11 items-center gap-2 rounded-full border border-stone-200 bg-white px-6 py-3 text-sm font-bold text-stone-700 transition hover:bg-stone-100 hover:text-teal-700 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-300 dark:hover:bg-stone-800"
+      >
+        {copy.backHome}
+      </a>
+    </div>
+  </div>
+</Base>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>('[data-preregister]');
+  const msg = document.querySelector<HTMLParagraphElement>('[data-preregister-msg]');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form || !msg) return;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+    if (button) button.disabled = true;
+
+    // إرسال إلى Netlify Forms (إن كان الموقع منشوراً على Netlify)، وإلا نكمل محلياً
+    try {
+      const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
+      const res = await fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() });
+      if (!res.ok) throw new Error('bad response');
+      msg.textContent = { ar: 'تم تسجيلك بنجاح ✓ سنوافيك بالتفاصيل عند الإطلاق إن شاء الله.', en: 'Registered successfully ✓ We will send you the details at launch.' }[document.documentElement.lang as 'ar' | 'en'];
+      form.reset();
+    } catch {
+      msg.textContent = { ar: 'تم التسجيل ✓ (لم تُرسل البيانات للخادم — هذه نسخة تجريبية)', en: 'Registered ✓ (data was not sent to the server — this is a demo build)' }[document.documentElement.lang as 'ar' | 'en'];
+      form.reset();
+    }
+    msg.classList.remove('hidden');
+    if (button) button.disabled = false;
+  });
+</script>

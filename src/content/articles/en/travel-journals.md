@@ -2,7 +2,7 @@
 title: "Travel Journals: The Books That Taught the World How to Look"
 description: "Before distances were measured in flights, they were measured in ink. From Ibn Battuta to Hemingway, and how travel books shaped the way we see the world."
 lang: en
-category: history
+category: art
 date: 2026-10-13
 image: "/images/wanderer.jpg"
 author: you

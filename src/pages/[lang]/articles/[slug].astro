@@ -97,8 +97,10 @@ for (const [k, v] of Object.entries(rawMap)) normMap[normSentence(k)] = v;
       </div>
     </div>
 
-    <!-- صورة المقال -->
-    <Cover article={article} lang={lang} class="mt-8 aspect-[2/1] rounded-3xl" />
+    <!-- صورة المقال (تُخفى إن طابقت صورة البانر تفادياً للتكرار) -->
+    {!(article.data.image && article.data.image === article.data.banner) && (
+      <Cover article={article} lang={lang} class="mt-8 aspect-[2/1] rounded-3xl" />
+    )}
 
     <!-- نص المقال -->
     <div class="article-body mt-10">
