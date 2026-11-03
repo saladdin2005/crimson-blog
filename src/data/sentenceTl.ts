@@ -306,85 +306,216 @@ export const sentenceTl: Record<'ar' | 'en', Record<string, SentenceMap>> = {
     },
 
     'anemoia': {
-      'من سلسلة «تأمّل ثقافي»: عن anemoia، الحنين إلى زمن لم نعشه — وماذا تفعل بنا الصورة التي تنتقي الأجمل من الماضي.':
-        'From the \u2018Cultural Reflection\u2019 series: about anemoia — nostalgia for a time we never lived — and what the image that curates the prettiest of the past does to us.',
+      'من سلسلة «تأمّل ثقافي»: كيف جعلنا قميصٌ وتسريحةٌ وأغنيةٌ قديمة نحنّ إلى زمنٍ لم نعرفه، ولماذا يشتاق جيلٌ كامل إلى ثمانينات لم يعشوها؟':
+        "From the 'Cultural Reflection' series: how did a shirt, a hairstyle, and an old song make us long for a time we never knew — and why does a whole generation ache for an eighties it never lived?",
       'من سلسلة «تأمّل ثقافي»': "From the 'Cultural Reflection' series",
-      'يهبط من السيارة ببطء، كأن الأرض كانت تنتظره.':
-        'He steps out of the car slowly, as if the ground had been waiting for him.',
-      'شعر منفوش لا يعبأ بالريح، وقميص نصف مفتوح، وجينز ضيّق، ونظرة تقول إن المكان ملكه.':
-        'Wild hair that ignores the wind, a half-open shirt, tight jeans, and a look that says the place belongs to him.',
-      'ثلاث فتيات يلتفتن، وخلفهن وجوه أخرى، والكاميرا تمنحنا وقتًا كافيًا لنُعجَب نحن أيضًا.':
-        'Three girls turn around, and behind them other faces, and the camera gives us enough time to admire them too.',
-      'مشهد لا يتجاوز ثوانٍ، ومع ذلك يُعاد ملايين المرات على الشاشات.':
-        'A scene that lasts seconds, yet it is replayed millions of times on screens.',
-      'والسؤال الغريب: لماذا يهزّنا هذا الدخول ونحن لم نكن هناك؟':
-        'And the strange question: why does this entrance shake us when we were never there?',
-      'لم نقف في تلك الساحة، ولم نسمع تلك الأغاني حين صدرت، ولم تطلب منا أمهاتنا أن نُصلح هذا الشعر.':
-        'We never stood in that courtyard, never heard those songs when they came out, and our mothers never asked us to fix that hair.',
-      'ومع ذلك نشعر بشيء يشبه الاشتياق.':
-        'Yet we feel something that resembles longing.',
-      'ذاكرة بلا صاحب': 'A memory with no owner',
-      'لهذا الشعور اسم ابتكره الكاتب جون كونيغ في «معجم الأحزان الغامضة»: anemoia، أي الحنين إلى زمن لم تعشه.':
-        'This feeling has a name coined by writer John Koenig in The Dictionary of Obscure Sorrows: anemoia — nostalgia for a time you never knew.',
-      'هو شوق بلا ذكرى، كمن يفتقد بيتًا لم يسكنه.':
-        'It is longing without memory, like missing a house you never lived in.',
-      'فمن أين يأتي إذن؟': 'So where does it come from?',
-      'من الشاشة.': 'From the screen.',
-      'ذاكرتنا عن الثمانينات ليست ذاكرتنا، بل ذاكرة مستعارة صنعتها الأفلام والمسلسلات وأغلفة الأسطوانات والإعلانات القديمة.':
-        'Our memory of the eighties is not ours; it is a borrowed memory manufactured by films, series, record sleeves, and old ads.',
-      'نحن لا نتذكر ذلك العقد، بل نتذكر ما عُرض علينا عنه.':
-        'We do not remember that decade — we remember what was shown to us about it.',
-      'ما تحفظه الصورة وما تحذفه': 'What the picture keeps — and what it deletes',
-      'الشاشة لا تحفظ كل شيء، بل تحفظ الأجمل.':
-        'The screen does not keep everything; it keeps the prettiest.',
-      'الألوان الصارخة تبقى، والطوابير والقلق والأخبار الثقيلة لا تبقى.':
-        'Loud colors survive; queues, anxiety, and heavy news do not.',
-      'الموسيقى تبقى، وضجر الأيام العادية لا يبقى.':
-        'The music survives; the tedium of ordinary days does not.',
-      'وهكذا نشتاق إلى نسخة منقّحة من زمن لم يكن بهذا اللمعان.':
-        'That is how we come to miss a retouched version of a time that never shone so brightly.',
-      'وحتى بيلي نفسه مثال على ذلك.': 'Even Billy himself is an example.',
-      'دخوله لامع إلى درجة أننا ننسى أن المسلسل يكشف لاحقًا بيتًا قاسيًا خلف هذا الغرور.':
-        'His entrance is so dazzling that we forget the series later reveals a cruel home behind that swagger.',
-      'نحتفظ بالدخول ونحذف الحكاية، وهذا ما نفعله بالعقد كله.':
-        'We keep the entrance and delete the story — and that is what we do with the whole decade.',
-      'الشعر والجينز: حين كانت الهوية مرئية': 'Hair and jeans: when identity was visible',
-      'مع ذلك، ليس كل ما نشتاق إليه وهمًا.':
-        'Still, not everything we miss is an illusion.',
-      'في الثمانينات كان الشكل بيانًا: تسريحة منفوشة، أو خصلة طويلة في الخلف، أو لون لا يخجل من نفسه.':
-        'In the eighties, appearance was a statement: a teased mane, a mullet, a color unashamed of itself.',
-      'الجينز الضيّق، والأكتاف العريضة، والجاكيتات الجلدية، كلها كانت تقول للناس: أنا هنا، وأريدكم أن تلاحظوا.':
-        'Tight jeans, broad shoulders, and leather jackets all told people: I am here, and I want you to notice.',
-      'أما اليوم فالموضة تصلنا عبر خوارزمية تقترح علينا ما يشبه الجميع، ونتشابه بدقة لا يحلم بها أي عقد سابق.':
-        'Today fashion reaches us through an algorithm that suggests what resembles everyone, and we look alike with a precision no earlier decade could dream of.',
-      'فربما نحن لا نشتاق إلى القماش، بل إلى الجرأة التي كانت تلبسه.':
-        'Maybe we do not miss the fabric — we miss the audacity that wore it.',
+      'يهبط بيلي من سيارته ببطء.': 'Billy steps out of his car slowly.',
+      'شعر قصير من الأمام وطويل من الخلف، ونظرة واثقة، وثلاث فتيات لا يستطعن رفع أعينهن عنه.':
+        'Short hair in front, long in back, a confident look, and three girls who cannot take their eyes off him.',
+      'لحظة قصيرة، لكنك تشعر بشيء.': 'A brief moment, but you feel something.',
+      'لا تعرف اسمه بالضبط.': 'You do not know its name exactly.',
+      'ليس إعجابًا ببيلي نفسه، فهو ليس أطيب شخصيات المسلسل.':
+        'Not admiration for Billy himself — he is not the kindest character in the series.',
+      'إنه شوق غريب إلى زمن لم تعش فيه يومًا.': 'It is a strange longing for a time you never lived in.',
+      'هل جرّبت هذا من قبل؟': 'Have you tried this before?',
+      'تشاهد مسلسلًا عن عام 1985 وتتمنى لو كنت هناك.':
+        'You watch a series set in 1985 and wish you were there.',
+      'تبحث في خزانتك عن جينز واسع أو سترة بلون صارخ.':
+        'You search your closet for baggy jeans or a loud-colored jacket.',
+      'تفتح هاتفك وتبحث عن أغنية عمرها أربعون عامًا، فتجد نفسك تردد كلماتها.':
+        'You open your phone and search for a song forty years old, and find yourself singing its words.',
+      'ما هذا السحر؟': 'What is this magic?',
+      'ومن الذي صنعه؟': 'And who made it?',
+      'تعال نفتح الباب ونعرف السر.': 'Come, let us open the door and learn the secret.',
+      'شوق إلى بيت لم تسكنه': 'Longing for a house you never lived in',
+      'قبل أن نتحدث عن الأزياء، لنفهم الشعور نفسه.':
+        'Before we talk about clothing, let us understand the feeling itself.',
+      'قضت سفيتلانا بويم، أستاذة الأدب في جامعة هارفارد، سنوات طويلة تدرس الحنين، وكتبت عنه كتابًا بعنوان «مستقبل الحنين».':
+        'Svetlana Boym, a Harvard professor of literature, spent years studying nostalgia and wrote a book about it called The Future of Nostalgia.',
+      'وفيه عرّفته بجملة بسيطة ومدهشة:':
+        'In it, she defined it with a simple, astonishing sentence:',
+      '«شوق إلى بيت لم يعد موجودًا، أو لم يوجد أصلًا.»':
+        '\u201cLonging for a house that no longer exists, or never existed at all.\u201d',
+      '— سفيتلانا بويم، «مستقبل الحنين»': '\u2014 Svetlana Boym, The Future of Nostalgia',
+      'توقف عند الجزء الأخير: أو لم يوجد أصلًا.':
+        'Stop at the last part: or never existed at all.',
+      'أي أن قلبك يستطيع أن يشتاق إلى مكان لم تدخله قط.':
+        'In other words, your heart can long for a place you have never entered.',
+      'وهذا بالضبط ما يفعله بنا «Stranger Things».':
+        'And this is exactly what Stranger Things does to us.',
+      'عبقرية الأخوين دافر: صنعا شعورًا لا مسلسلًا':
+        'The genius of the Duffer brothers: they created a feeling, not a series',
+      'هناك مفارقة جميلة: صانعا المسلسل نفسيهما لم يعيشا ذلك الزمن.':
+        'There is a lovely paradox: the creators of the series themselves never lived in that time.',
+      'وُلد مات وروس دافر عام 1984، أي بعد الزمن الذي تدور فيه الحكاية بعام (Rolling Stone).':
+        'Matt and Ross Duffer were born in 1984 — a year after the time the story is set in (Rolling Stone).',
+      'كلاهما كان يشتاق إلى عالم عرفه من الأفلام أكثر مما عرفه من الواقع.':
+        'Both longed for a world they knew from films more than from reality.',
+      'فماذا فعلا؟': 'So what did they actually do?',
+      'حين أرادا إقناع الناس بفكرتهما، لم يكتبا ملخصًا طويلًا.':
+        'When they wanted to convince people of their idea, they did not write a long summary.',
+      'صنعا مقطعًا دعائيًا من نحو 30 فيلمًا قديمًا، وقصّا مشاهده ولصقاها لتحكي قصة المسلسل (NPR).':
+        'They made a promo clip from some 30 old films, cutting and pasting scenes to tell the story of the series (NPR).',
+      'لم يشرحا الفكرة بالكلمات.': 'They did not explain the idea in words.',
+      'أعطيا الناس الإحساس مباشرة.': 'They gave people the feeling directly.',
+      'وهنا تظهر عبقريتهما.': 'And here their genius shows.',
+      'هما لا ينسخان الثمانينات كما كانت، بل ينسخان شعورنا حين نشاهد أفلامها.':
+        'They do not copy the eighties as they were, but our feeling when we watch their films.',
+      'وقد قال المنتج والمخرج شون ليفي، الذي عمل في المسلسل، إنه حنين إلى أفلام الثمانينات، وربما أكثر منه حنين إلى الحياة الحقيقية في تلك الأيام (Den of Geek).':
+        'Producer and director Shawn Levy, who worked on the series, said it is nostalgia for eighties films — perhaps more than nostalgia for real life in those days (Den of Geek).',
+      'وعن تلك الأفلام يقول مات دافر إنهما حين شاهداها «شعرنا أننا انتقلنا إلى عالم آخر» (SciFiNow).':
+        'About those films, Matt Duffer says that when they watched them, \u201cwe felt we had moved to another world\u201d (SciFiNow).',
+      'وهذا ما أرادا أن يمنحاه لنا: تذكرة سفر إلى طفولة لا تخص أحدًا بعينه.':
+        'And this is what they wanted to give us: a ticket to a childhood that belongs to no one in particular.',
+      'لذلك تجد في المسلسل دراجات هوائية ومخابئ سرية وأطفالًا يتحدثون بأجهزة لاسلكية في الليل.':
+        'So you find in the series bicycles, secret hideouts, and children talking on walkie-talkies at night.',
+      'هذه ليست زينة.': 'These are not decoration.',
+      'إنها مفاتيح تفتح باب الطفولة عند كل مشاهد، سواء وُلد عام 1975 أو عام 2005.':
+        'They are keys that open the door of childhood for every viewer, whether born in 1975 or 2005.',
+      'الملابس: قطعة قماش تحمل ذكرى': 'Clothing: a piece of fabric that carries a memory',
+      'لننتقل إلى ما جئنا من أجله: الأزياء.': 'Let us move on to what we came for: fashion.',
+      'وسأبدأ بقصة تلخص كل شيء.': 'And I will start with a story that sums it all up.',
+      'في الموسم الثاني ظهر الطفل دستن بسترة بنفسجية عليها صورة ديناصور.':
+        'In season two, the child Dustin appears in a purple jacket with a dinosaur on it.',
+      'لم تكن تصميمًا جديدًا، بل سترة حقيقية باعها متحف العلوم في ولاية مينيسوتا في أوائل الثمانينات.':
+        'It was not a new design, but a real jacket sold by the Science Museum of Minnesota in the early eighties.',
+      'وجدتها مصممة الأزياء كيم ويلكوكس وهي تبحث عن إلهام، وقالت إن الفريق «وجد نسخة قديمة على الإنترنت» (WGN).':
+        'Costume designer Kim Wilcox found it while looking for inspiration, and said the team \u201cfound an old copy online\u201d (WGN).',
+      'والنتيجة؟': 'And the result?',
+      'أغرق المشاهدون موقع المتحف بالطلبات حتى تعطّل، فقرر المتحف أن يعيد بيع هذه السترات (NME، CNBC).':
+        'Viewers flooded the museum\u2019s website with orders until it crashed, so the museum decided to resell the jackets (NME, CNBC).',
+      'فكّر في هذا لحظة: قطعة قماش ظهرت دقائق على الشاشة، فجعلت الآلاف يريدون امتلاك الماضي.':
+        'Think about it for a moment: a piece of fabric that appeared for minutes on screen made thousands of people want to own the past.',
+      'والتفاصيل أعمق من ذلك.': 'And the details go deeper.',
+      'في الموسم الأول اهتمت المصممة كيمبرلي آدمز بعمر الملابس نفسه.':
+        'In season one, designer Kimberly Adams cared about the age of the clothes themselves.',
+      'ملابس ويل بدت قديمة ومتوارثة، أما ملابس مايك فكانت أحدث لأن أمه اشترتها له مع بداية العام الدراسي (Tyranny of Style).':
+        'Will\u2019s clothes looked old and handed down, while Mike\u2019s were newer because his mother bought them for the start of the school year (Tyranny of Style).',
+      'أنت لا تلاحظ هذا بوعي، لكن عقلك يلتقطه ويفهم قصة كل طفل دون كلمة.':
+        'You do not notice this consciously, but your mind picks it up and understands each child\u2019s story without a word.',
+      'وفي حلقة الهالوين، صُنعت أزياء صائدي الأشباح يدويًا لكل شخصية على حدة (Bloody Disgusting).':
+        'In the Halloween episode, the Ghostbusters outfits were made by hand for each character separately (Bloody Disgusting).',
+      'أما إيمي باريس، مصممة الأزياء في المواسم اللاحقة، فتستعين بمراجع حقيقية من الثمانينات، منها كتب الذكرى المدرسية القديمة (Parade).':
+        'Amy Paris, costume designer for the later seasons, turns to real eighties references, including old school yearbooks (Parade).',
+      'وصممت لشخصية إيدي قميصًا يعبّر عن روح الميتال والتمرد في ذلك العقد (V&A).':
+        'She designed a shirt for the character Eddie that expresses the spirit of metal and rebellion in that decade (V&A).',
+      'الفكرة واحدة: لا أحد هنا يرتدي «زيًّا».':
+        'The idea is one: no one here wears a \u201ccostume\u201d.',
+      'كل قطعة تتذكّر معنا.': 'Every piece remembers along with us.',
+      'التسريحات: شعر يعلن من أنت': 'Hairstyles: hair that announces who you are',
+      'وعدتك بالعودة إلى بيلي، فشعره هو النجم الثاني في المشهد.':
+        'I promised to bring us back to Billy, and his hair is the second star of the scene.',
+      'اسمه «موليت» (Mullet).': 'It is called the mullet.',
+      'وبعد الموسم الرابع عاد هذا الشعر إلى الشوارع، كما لاحظ الأكاديميان توم فان لير من جامعة سيدني وديفيد كريستيان أورازي من جامعة موناش.':
+        'After season four this hair returned to the streets, as noted by academics Tom van Laer of the University of Sydney and David Christian Orazi of Monash University.',
+      'وعاد معه تجعيد الشعر الذي ظهرت به نانسي وكارين ويلر، وعاد مشبك الشعر الصغير الشهير على شكل موزة (Daily Maverick / The Conversation).':
+        'With it came the curled hair worn by Nancy and Karen Wheeler, and the famous small banana-shaped hair clip (Daily Maverick / The Conversation).',
+      'لماذا تؤثر فينا التسريحة إلى هذا الحد؟': 'Why does a hairstyle affect us this much?',
+      'لأن الشعر أول ما نراه في أي وجه.': 'Because hair is the first thing we see in any face.',
+      'وفي الثمانينات كان الشعر إعلانًا: أنا متمرد، أنا هادئ، أنا من جمهور الروك.':
+        'And in the eighties hair was a statement: I am rebellious, I am quiet, I am with the rock crowd.',
+      'ولهذا يبدو شعر بيلي أكبر من قصة شعر.':
+        'That is why Billy\u2019s hair seems bigger than a haircut.',
+      'إنه جملة كاملة يقولها قبل أن ينطق.':
+        'It is a complete sentence he speaks before he opens his mouth.',
+      'الأجواء: حين يعود صوت الماضي': 'Atmosphere: when the sound of the past returns',
+      'وللأجواء موسيقاها.': 'And the atmosphere has its music.',
+      'بعد الموسم الرابع تصدّرت أغنية كيت بوش «Running Up That Hill» قوائم سبوتيفاي، وانضمت إليها «Master of Puppets» لفرقة ميتاليكا (المصدر نفسه).':
+        'After season four, Kate Bush\u2019s Running Up That Hill topped Spotify charts, joined by Metallica\u2019s Master of Puppets (same source).',
+      'أغنيتان عمرهما نحو أربعة عقود، تتصدران قوائم جيل لم يكن قد وُلد عند صدورهما.':
+        'Two songs nearly four decades old top the charts of a generation that was not yet born when they were released.',
+      'وهذه ليست صدفة.': 'And this is no accident.',
+      'هذه هي الوصفة: ثوب ثم شعر ثم أغنية ثم لعبة قديمة، وكلها تقول لك الشيء نفسه: تعال، هذا البيت لك.':
+        'This is the recipe: a garment, then hair, then a song, then an old game — and they all say the same thing to you: come, this house is yours.',
+      'ماذا يقول العلماء؟': 'What do the scientists say?',
+      'ثلاثة أصوات تشرح لنا هذا السحر.': 'Three voices explain this magic for us.',
+      'الأول: الحنين يمنحنا الانتماء.': 'First: nostalgia gives us belonging.',
+      'وصف عالما النفس كونستانتين سيديكيدس وتيم فيلدشوت من جامعة ساوثهامبتون الحنين بأنه شعور حلو ومرّ معًا، لكنه «حلو أكثر منه مرّ» (بحثهما).':
+        'Psychologists Constantine Sedikides and Tim Wildschut of the University of Southampton described nostalgia as sweet and bitter at once — yet \u201csweeter than bitter\u201d (their research).',
+      'وأظهرت دراسات فريقهما أن الحنين يرفع إحساس الناس بالمعنى في حياتهم، وأن هذا يحدث عبر شعورهم بأنهم جزء من جماعة (دراسة 2011).':
+        'Their team\u2019s studies showed that nostalgia raises people\u2019s sense of meaning in life, and that it works by making them feel part of a group (2011 study).',
+      'أي أننا لا نهرب إلى الثمانينات فقط.': 'So we do not merely escape to the eighties.',
+      'نحن نبحث عن مكان ننتمي إليه.': 'We are looking for a place to belong.',
+      'الثاني: الذاكرة المستعارة.': 'Second: borrowed memory.',
+      'تسمي عالمة النفس زهال النجار هذه الظاهرة «الحنين من الدرجة الثانية»: عاطفة تتكوّن من كثرة المشاهدة لا من التجربة.':
+        'Psychologist Zahal al-Najjar calls this phenomenon second-degree nostalgia: an emotion formed from watching often, not from living.',
+      'وتقول: «مع الوقت، قد يبدأ هذا التعرّض في أخذ مكان الذاكرة» (AUD).':
+        'She says: \u201cover time, this exposure may begin to take the place of memory\u201d (AUD).',
+      'وينقل المقال نفسه عن استطلاع هاريس 2023 أن 60% من البالغين في جيل Z قالوا إنهم يفضلون العودة إلى زمن ما قبل الاتصال الرقمي الواسع.':
+        'The same article reports a 2023 Harris poll in which 60% of Generation Z adults said they would rather return to a time before widespread digital connectivity.',
+      'الثالث: نرتدي الماضي لنتظاهر بأننا كنا فيه.':
+        'Third: we wear the past to pretend we were in it.',
+      'يسمي فان لير وأورازي هذا «الحنين الزائف».':
+        'Van Laer and Orazi call this false nostalgia.',
+      'فشباب اليوم يستهكون ثقافة الثمانينات ليعيشوا الشوق إلى ذلك الزمن، وكأنهم كانوا جزءًا منه.':
+        'Today\u2019s youth consume eighties culture to live the longing for that time, as if they had been part of it.',
+      'وقد بيعت قبعة بنفسجية نيون وسترة واقية واسعة من تعاون المسلسل مع علامة «كويكسيلفر» في أنحاء العالم.':
+        'A neon-purple cap and oversized windbreaker from the series\u2019 collaboration with Quiksilver sold worldwide.',
+      'ثم يذكّران بحقيقة مهمة: «هذه ليست الثمانينات الحقيقية» (المصدر نفسه).':
+        'Then they remind us of an important truth: \u201cthese are not the real eighties\u201d (same source).',
+      'هل كانت الثمانينات جميلة هكذا فعلًا؟': 'Were the eighties really this beautiful?',
+      'صدق؟': 'Honestly?',
+      'ليس تمامًا.': 'Not entirely.',
+      'الثمانينات في المسلسل نسخة منقّحة: ألوان جميلة وموسيقى رائعة وأصدقاء لا يفترقون.':
+        'The eighties of the series are a retouched version: lovely colors, wonderful music, friends who never part.',
+      'أما القلق والأخبار الثقيلة وملل الأيام العادية فلا مكان لها على الشاشة.':
+        'Anxiety, heavy news, and the tedium of ordinary days have no place on the screen.',
+      'ولا ينقص هذا من عبقرية الأخوين دافر.':
+        'And this does not diminish the genius of the Duffer brothers.',
+      'بل يشرحها.': 'It explains it.',
+      'هما يعرفان أن الناس لا تشتاق إلى الواقع، بل إلى الإحساس.':
+        'They know that people do not long for reality, but for the feeling.',
+      'وروس دافر نفسه يقول إن اختيار الثمانينات كان لأسباب محددة وإن الأمر «لم يكن مجرد حنين خالص» (Vice).':
+        'Ross Duffer himself says the choice of the eighties was for specific reasons, and that it \u201cwasn\u2019t just pure nostalgia\u201d (Vice).',
+      'ومن هذه الأسباب، كما قال في حوار آخر، أن الأصدقاء في تلك الأيام كانوا يلتقون بالطرق على باب الجار، وأن كل شيء كان يحتاج وقتًا أطول (Hot Press).':
+        'Among them, as he said elsewhere, friends in those days met by knocking on the neighbor\u2019s door, and everything took longer (Hot Press).',
+      'بطء جميل لا نعرفه اليوم.': 'A beautiful slowness we no longer know.',
       'ثمانيناتنا نحن': 'Our own eighties',
-      'لكن هناك ثمانينات أخرى، ليست ثمانينات هوليوود.':
-        "But there is another eighties — not Hollywood's.",
-      'افتح ألبوم العائلة: صور بألوان باهتة، وأعمام بشوارب كثيفة، وأمهات بتسريحات منتفخة، وأشرطة كاسيت مكدّسة في زاوية الغرفة.':
-        'Open the family album: faded photographs, uncles with thick mustaches, mothers with teased hairdos, and cassette tapes piled in the corner of the room.',
-      'هذه ثمانينات نعرفها من وجوه نحبها، لا من مسلسل أجنبي.':
-        'These are the eighties we know from faces we love, not from a foreign series.',
-      'وأحيانًا أظن أن شوقنا إلى ثمانينات المسلسلات هو في الحقيقة قناع لشوق أقرب: أن نرى والدينا شابَّين، وأن نعرف من كانا قبل أن نكون.':
-        'Sometimes I think our longing for the series\u2019 eighties is really a mask for a closer longing: to see our parents young, and to know who they were before we existed.',
-      'من يبيع لنا الحنين؟': 'Who sells us the longing?',
-      'لا ينبغي أن ننسى أن للحنين اليوم سوقًا.':
-        'We should not forget that nostalgia today has a market.',
-      'فلاتر تحوّل صورنا إلى صور قديمة بنقرة واحدة، وقوائم تشغيل تعلن عن «أجمل الثمانينات»، وعلامات تجارية تعيد إصدار أحذية ومعاطف من ذلك الزمن، ومسلسلات تُصنع خصيصًا لتجعلنا نشتاق.':
-        'Filters turn our photos vintage with one tap, playlists announce \u2018the best of the eighties\u2019, brands reissue shoes and coats from that era, and series are made specifically to make us ache.',
-      'لا عيب في أن نستمتع بذلك.': 'There is no harm in enjoying it.',
-      'لكن الأجدر أن نسأل: هل هذا الشوق نابع منا، أم صُنع ليُباع لنا؟':
-        'But the worthier question is: does this longing come from us, or was it manufactured to be sold to us?',
-      'هل الشوق خيانة للحاضر؟': 'Is longing a betrayal of the present?',
-      'لا أظن ذلك.': "I don't think so.",
-      'الشوق إلى زمن لم نعشه ليس هروبًا بالضرورة، بل قد يكون مرآة تخبرنا بما ينقصنا اليوم: جرأة في الشكل، وبطء في الخطى، ووجوه تلتقي وجهًا لوجه دون شاشة بينها.':
-        'Longing for a time we never lived is not necessarily an escape; it may be a mirror telling us what we lack today: boldness in appearance, slowness in pace, and faces meeting face to face with no screen between them.',
-      'ربما السؤال الأصدق ليس لماذا نشتاق إلى الثمانينات، بل ماذا نفعل بما يخبرنا به هذا الشوق.':
-        'Perhaps the sincerest question is not why we miss the eighties, but what we do with what this longing tells us.',
-      'هل نشتري القميص ونكتفي؟': 'Do we buy the shirt and settle?',
-      'أم نسأل لماذا لا نصنع، نحن، ثمانيناتنا الجديدة بالجرأة نفسها؟':
-        'Or do we ask why we, ourselves, do not craft a new eighties of our own, with the same audacity?',
+      'وفي النهاية، لكل واحد منا ثمانينات خاصة به، حتى لو لم يعشها.':
+        'In the end, each of us has an eighties of our own, even one we never lived.',
+      'افتح ألبوم صور عائلتك: ألوان باهتة، وأعمام بشوارب كثيفة، وأمهات بتسريحات منتفخة، وأشرطة كاسيت في زاوية الغرفة.':
+        'Open your family photo album: faded colors, uncles with thick mustaches, mothers with teased hair, cassette tapes in the corner of the room.',
+      'ربما شوقنا إلى ثمانينات المسلسل هو في الحقيقة قناع لشوق أقرب: أن نرى والدينا شابَّين، وأن نعرف من كانا قبل أن نكون.':
+        'Perhaps our longing for the series\u2019 eighties is really a mask for a closer longing: to see our parents young, and to know who they were before we existed.',
+      'الخلاصة': 'Conclusion',
+      'لم يكن «Stranger Things» مجرد مسلسل عن الثمانينات.':
+        'Stranger Things was not just a series about the eighties.',
+      'كان آلة تذكّر صنعها رجلان يعرفان أن القلب لا يسأل: هل كنت هناك؟':
+        'It was a memory machine built by two men who know the heart does not ask: were you there?',
+      'بل يسأل: هل شعرت بهذا من قبل؟':
+        'It asks: have you felt this before?',
+      'وأنت، بعد كل هذا، جرّب أن تسأل نفسك: ما القطعة التي ترتديها اليوم فتشعرك بزمن لم تعشه؟':
+        'And you, after all this: try asking yourself which piece you wear today that makes you feel a time you never lived?',
+      'اكتب لنا في التعليقات، وأرسل المقال لصديق يعرف هذا الشعور.':
+        'Write to us in the comments, and send this article to a friend who knows the feeling.',
+      'المراجع': 'References',
+      'الاقتباسات أعلاه مترجمة من الإنجليزية إلى العربية.':
+        'The quotes above are translated from English into Arabic.',
+      'Svetlana Boym, The Future of Nostalgia (2001)، مقتبس في ورقة UCL.':
+        'Svetlana Boym, The Future of Nostalgia (2001), quoted in a UCL paper.',
+      'Rolling Stone: ولادة الأخوين دافر عام 1984':
+        'Rolling Stone: the Duffer brothers born in 1984',
+      'NPR/WYPR: المقطع الدعائي من نحو 30 فيلمًا':
+        'NPR/WYPR: the promo cut from about 30 films',
+      'Den of Geek: حوار شون ليفي': 'Den of Geek: Shawn Levy interview',
+      'SciFiNow: حوار الأخوين دافر': 'SciFiNow: the Duffer brothers interview',
+      'Vice: روس دافر': 'Vice: Ross Duffer',
+      'Hot Press: That Eighties Show': 'Hot Press: That Eighties Show',
+      'WGN، NME، CNBC: قصة سترة دستن': 'WGN, NME, CNBC: the story of Dustin\u2019s jacket',
+      'Tyranny of Style: حوار كيمبرلي آدمز': 'Tyranny of Style: Kimberly Adams interview',
+      'Bloody Disgusting: كيم ويلكوكس وحلقة الهالوين':
+        'Bloody Disgusting: Kim Wilcox and the Halloween episode',
+      'Parade/AOL: إيمي باريس': 'Parade/AOL: Amy Paris',
+      'V&A: أفضل أزياء المسلسل': 'V&A: the series\u2019 best costumes',
+      'van Laer & Orazi, The Conversation عبر Daily Maverick (2022)':
+        'van Laer & Orazi, The Conversation via Daily Maverick (2022)',
+      'Sedikides & Wildschut, Finding Meaning in Nostalgia':
+        'Sedikides & Wildschut, Finding Meaning in Nostalgia',
+      'Routledge et al.': 'Routledge et al.',
+      '(2011), Nostalgia as an existential resource':
+        '(2011), Nostalgia as an existential resource',
+      'مركز AUD: Why Gen Z Is Nostalgic for a Past They Never Lived':
+        'AUD Center: Why Gen Z Is Nostalgic for a Past They Never Lived',
     },
   },
 };

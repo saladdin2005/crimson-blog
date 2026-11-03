@@ -60,7 +60,8 @@ const links = [
 </div>
 
 <script define:vars={{ labels }}>
-  document.querySelectorAll<HTMLButtonElement>('[data-copy-link]').forEach((btn) => {
+  // ملاحظة: سكربت define:vars يُنشر خامًا (بلا معالجة TS) — لا تستخدم أعمدة TypeScript هنا
+  document.querySelectorAll('[data-copy-link]').forEach((btn) => {
     btn.addEventListener('click', async () => {
       const url = btn.dataset.url ?? '';
       try {

@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Cover from '../components/Cover.astro';
 import Newsletter from '../components/Newsletter.astro';
-import { site, categories, partners, type Lang } from '../data/site';
+import { site, categories, type Lang } from '../data/site';
 import { ui, formatDate } from '../i18n/ui';
 
 interface Props {
@@ -74,57 +74,15 @@ const feed = all;
     </section>
   )}
 
-  <!-- ===== شريط الشركاء/العلامات ===== -->
-  <div
-    class="no-scrollbar -mx-5 mt-5 flex gap-2 overflow-x-auto px-5 py-1 sm:mx-0 sm:px-0"
-    aria-label={lang === 'ar' ? 'شركاؤنا' : 'Our partners'}
-  >
-    {partners.map((p) => (
-      <span class="shrink-0 rounded-full border border-stone-200/70 bg-stone-100/80 px-4 py-2 text-xs font-bold text-stone-600 dark:border-white/10 dark:bg-white/5 dark:text-stone-300 sm:px-5 sm:py-2.5 sm:text-sm">
-        {p}
-      </span>
-    ))}
-  </div>
-
-  <!-- ===== أخبار اليوم: قائمة أخبار + بحث ===== -->
+  <!-- ===== أخبار اليوم: قائمة أخبار ===== -->
   <section class="mt-10" aria-labelledby="today-news">
     <div class="flex flex-wrap items-center justify-between gap-3 border-b border-stone-200/70 pb-3 dark:border-white/10">
       <h2 id="today-news" class="font-display flex items-center gap-2 text-2xl text-stone-900 dark:text-white">
-        <span aria-hidden="true">🚀</span>
+        <svg aria-hidden="true" class="w-5 h-5 text-red-600 ml-1" viewBox="0 0 24 24" fill="#e11d48" stroke="none">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
         {t.todayNews}
       </h2>
-      <div class="flex min-h-[52px] w-full items-center gap-2 rounded-full border border-stone-200/70 bg-white/70 px-4 py-1 transition focus-within:border-teal-400 focus-within:ring-2 focus-within:ring-teal-500/20 dark:border-white/10 dark:bg-white/5 sm:w-auto">
-        <svg class="h-4 w-4 shrink-0 text-stone-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="8"></circle>
-          <path d="m21 21-4.3-4.3"></path>
-        </svg>
-        <input
-          data-feed-search
-          type="text"
-          enterkeyhint="search"
-          autocomplete="off"
-          placeholder={t.feedSearch}
-          aria-label={t.feedSearch}
-          class="h-11 w-full min-w-0 bg-transparent text-base text-stone-700 outline-none placeholder:text-stone-400 dark:text-stone-200 sm:w-48 sm:flex-none"
-        />
-        <button
-          type="button"
-          data-voice-search
-          data-feed-voice
-          hidden
-          aria-label={t.voiceSearch}
-          title={t.voiceSearch}
-          aria-pressed="false"
-          class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-stone-500 transition hover:bg-stone-100 hover:text-teal-700 dark:text-stone-400 dark:hover:bg-white/10 dark:hover:text-teal-400"
-        >
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-            <line x1="12" x2="12" y1="19" y2="22"/>
-          </svg>
-        </button>
-      </div>
-      <p data-feed-voice-status class="sr-only" aria-live="polite"></p>
     </div>
 
     <div class="divide-y divide-stone-200/70 dark:divide-white/10">
@@ -164,82 +122,4 @@ const feed = all;
   <div class="mt-12">
     <Newsletter lang={lang} />
   </div>
-
-  <script>
-    // تصفية قائمة الأخبار + إظهار رسالة «لا نتائج»
-    const feedInput = document.querySelector<HTMLInputElement>('[data-feed-search]');
-    const emptyMsg = document.querySelector<HTMLElement>('[data-empty]');
-    const voiceBtn = document.querySelector<HTMLButtonElement>('[data-feed-voice]');
-    const voiceStatus = document.querySelector<HTMLElement>('[data-feed-voice-status]');
-    const lang = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-
-    const applyFilter = (query: string, selector: string) => {
-      const items = Array.from(document.querySelectorAll<HTMLElement>(selector));
-      if (items.length === 0) return;
-      const q = query.trim().toLowerCase();
-      items.forEach((el) => {
-        const hay = (el.dataset.card || '').toLowerCase();
-        el.style.display = !q || hay.includes(q) ? '' : 'none';
-      });
-      if (emptyMsg) emptyMsg.hidden = items.some((el) => el.style.display !== 'none');
-    };
-
-    if (feedInput) {
-      feedInput.addEventListener('input', () => applyFilter(feedInput.value, '[data-feed]'));
-    }
-
-    // البحث الصوتي في حقل أخبار اليوم (Web Speech API)
-    const RecognitionCtor =
-      (window as unknown as { SpeechRecognition?: new () => any }).SpeechRecognition ??
-      (window as unknown as { webkitSpeechRecognition?: new () => any }).webkitSpeechRecognition;
-
-    if (voiceBtn) {
-      if (!RecognitionCtor) {
-        voiceBtn.hidden = true;
-      } else {
-        voiceBtn.hidden = false;
-        const recognition = new RecognitionCtor();
-        recognition.lang = lang === 'ar' ? 'ar-SA' : 'en-US';
-        recognition.interimResults = false;
-        recognition.maxAlternatives = 1;
-
-        const setListening = (on: boolean) => {
-          voiceBtn.classList.toggle('is-listening', on);
-          voiceBtn.setAttribute('aria-pressed', String(on));
-        };
-
-        voiceBtn.addEventListener('click', () => {
-          if (voiceBtn.getAttribute('aria-pressed') === 'true') {
-            recognition.stop();
-            return;
-          }
-          try {
-            recognition.start();
-          } catch {
-            /* بدأ الاستماع بالفعل */
-          }
-        });
-
-        recognition.addEventListener('start', () => {
-          setListening(true);
-          if (voiceStatus) voiceStatus.textContent = lang === 'ar' ? 'جارٍ الاستماع…' : 'Listening…';
-          feedInput?.focus();
-        });
-        recognition.addEventListener('result', (event: any) => {
-          const transcript = String(event.results?.[0]?.[0]?.transcript ?? '').trim();
-          if (transcript && feedInput) {
-            feedInput.value = transcript;
-            feedInput.dispatchEvent(new Event('input', { bubbles: true }));
-            if (voiceStatus) voiceStatus.textContent = transcript;
-          }
-        });
-        recognition.addEventListener('error', () => {
-          if (voiceStatus) {
-            voiceStatus.textContent = lang === 'ar' ? 'تعذّر التعرف على الصوت.' : 'Voice recognition failed.';
-          }
-        });
-        recognition.addEventListener('end', () => setListening(false));
-      }
-    }
-  </script>
 </Base>

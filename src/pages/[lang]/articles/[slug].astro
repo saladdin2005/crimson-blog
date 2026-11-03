@@ -30,7 +30,7 @@ const { Content } = await render(article);
 const t = ui[lang];
 const cat = categories[article.data.category];
 const author = authors[article.data.author];
-const pageUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://crimson.example.com').href;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://crimson-blog.netlify.app').href;
 
 const related = (await getCollection('articles'))
   .filter((a) => a.id.startsWith(`${lang}/`) && a.data.category === article.data.category && a.id !== article.id)
@@ -44,7 +44,7 @@ const normMap: Record<string, string> = {};
 for (const [k, v] of Object.entries(rawMap)) normMap[normSentence(k)] = v;
 ---
 <Base lang={lang} title={article.data.title} description={article.data.description}>
-  <article data-article class="mx-auto max-w-3xl">
+  <article data-article class={`mx-auto max-w-3xl font-variant-${slug}`}>
     <!-- بانر كلاسيكي علوي: صورة المقال إن وُجدت، وإلا لوحة القراءة العامة -->
     <div class="mb-8 overflow-hidden rounded-2xl border border-stone-200/70 shadow-sm dark:border-white/10">
       <img

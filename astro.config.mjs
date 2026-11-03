@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: 'https://crimson.example.com',
+  site: 'https://crimson-blog.netlify.app',
   // شريط أدوات Astro التطويري يغطّي شريط القراءة أسفل الشاشة على الهاتف
   devToolbar: { enabled: false },
   redirects: {

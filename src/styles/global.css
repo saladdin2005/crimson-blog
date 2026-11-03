@@ -3,8 +3,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Amiri", "Tajawal", ui-serif, Georgia, serif;
+  --font-sans: "Zain", sans-serif;
+  --font-serif: "Zain", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   /* ===== هوية قرمزية دافئة =====
      القرمزي #A61830 هو لون التمييز الأساسي (اسم الموقع)، والبنّي الدافئ للحدود/التدرّجات. */
@@ -76,12 +77,12 @@ html.dark {
 
 /* ---------- Display headlines: Amiri (classical Naskh) for AR, Playfair Display for EN ---------- */
 .font-display {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 700;
   letter-spacing: 0.01em;
 }
 html[lang="en"] .font-display {
-  font-family: "Playfair Display", var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 700;
 }
 
@@ -200,7 +201,7 @@ html.dark .article-body {
 }
 .article-body :where(p) { margin-block: 1.15rem; }
 .article-body :where(h2) {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-weight: 800;
   font-size: calc(1.6rem * var(--read-scale, 1));
   margin-block: 2.2rem 0.75rem;
