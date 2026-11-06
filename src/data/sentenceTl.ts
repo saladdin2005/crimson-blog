@@ -286,7 +286,6 @@ export const sentenceTl = {
       "(2011), Nostalgia as an Existential Resource": "(2011), Nostalgia as an existential resource",
       "AUD Center: Why Gen Z Is Nostalgic for a Past They Never Lived": "AUD Center: Why Gen Z Is Nostalgic for a Past They Never Lived",
     },
-  },
     'dune': {
       "Picture yourself in a movie theater. The Fremen raise their weapons and chant in a strange tongue. The subtitle reads: \"Long live the fighters!\"": "تخيّل أنك في صالة السينما، والمقاتلون الفريمن يرفعون أسلحتهم ويهتفون بلغة غريبة. الترجمة على الشاشة تقول: «عاش المقاتلون!».",
       "But in the original novel, published in 1965, the chant was not nearly so strange. It was written like this: Ya hya chouhada.": "لكن في الرواية الأصلية، التي صدرت عام 1965، لم يكن الهتاف غريبًا إلى هذا الحد. كان مكتوبًا هكذا: Ya hya chouhada.",
@@ -330,6 +329,7 @@ export const sentenceTl = {
       "So if you watch Part Three this month, listen closely to the words. Which of them are still Arabic? Which have disappeared? Tell us in the comments.": "المصادر",
       "Sources": "- مانفير سينغ، «Dune and the Delicate Art of Making Fictional Languages»، مجلة «نيويوركر»، 2024.\n- كارين كريستينا رايدينغ، «The Arabic of Dune»، وما نُقل عنها في «نيويورك تايمز».\n- هاريس دوراني، تعليقات وكتابات عن الجذور الإسلامية والجزائرية في «دوون».\n- «Variety»، «Dune 2 Criticized for Lack of Middle Eastern and North African Inclusion and Influences», مارس 2024.\n- بيانات «وارنر براذرز» الرسمية عن «دوون: الجزء الثالث» (الملخص وموعد العرض).\n- «Oregon Encyclopedia», مدخل «Herbert, Frank, and the Dune Series», عن رحلة هربرت إلى فلورنس عام 1957.",
     },
+  },
   ar: {
     'paper-notebook': {
       'في عصر التطبيقات والسحابة، يعود الدفتر الورقي ليذكّرنا أن أبسط الأدوات هي أحياناً الأعمق.':
