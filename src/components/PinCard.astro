@@ -14,7 +14,7 @@ interface Props {
 const { article, lang, ratio = 'aspect-[4/5]' } = Astro.props;
 const cat = categories[article.data.category];
 const author = authors[article.data.author];
-const slug = article.id.split('/').pop();
+const slug = article.data.slug ?? article.id.split('/').pop();
 const href = `/${lang}/articles/${slug}`;
 const searchable = `${article.data.title} ${article.data.description} ${cat[lang]}`;
 

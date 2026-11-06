@@ -42,7 +42,7 @@ export const sentenceTl = {
       'Use the best of what technology offers, and keep the best of what paper offers: a quiet space with no notifications, where you write by hand what you refuse to forget.':
         'استخدم أفضل ما تقدمه التقنية، واحتفظ بأفضل ما يقدمه الورق: مساحة هادئة بلا إشعارات، تكتب فيها بخط يدك ما ترفض أن تنساه.',
     },
-    'travel-journals': {
+    'december-movies': {
       'Before distances were measured in flights, they were measured in ink.':
         'قبل أن تُقاس المسافات بالرحلات الجوية، قيست بحبر دفتر.',
       'From Ibn Battuta to Hemingway, and how travel books shaped the way we see the world.':
@@ -405,7 +405,7 @@ export const sentenceTl = {
       'استخدم أفضل ما تقدمه التقنية، واحتفظ بأبسط ما تقدمه الورق: مساحة هادئة بلا إشعارات، تكتب فيها بخط يدك ما لا تريد أن تنسى.':
         "Use the best of what technology offers, and keep the simplest of what paper offers: a quiet space with no notifications, where you write by hand what you refuse to forget.",
     },
-    'travel-journals': {
+    'december-movies': {
       'قبل أن تُقاس المسافات بالطائرات، قيست بحبر دفتر.':
         'Before distances were measured in flights, they were measured in a notebook’s ink.',
       'من ابن بطوطة إلى همنغواي، وكيف صنعت كتب الرحلات نظرة الإنسان إلى العالم.':
