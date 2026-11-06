@@ -57,9 +57,6 @@ const feed = all;
             />
             <div class="pointer-events-none absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-black/85 via-black/35 to-transparent" aria-hidden="true"></div>
             <div class="pointer-events-none absolute inset-0 flex flex-col justify-end p-3 pb-7 sm:p-3.5 sm:pb-8">
-              <span class="mb-2 w-fit rounded-full bg-black/55 px-2.5 py-1 text-[11px] font-bold text-white backdrop-blur-sm">
-                {cat[lang]}
-              </span>
               <h2
                 class={`font-display line-clamp-3 font-bold leading-[1.8] text-white ${
                   wide ? 'text-lg md:text-base lg:text-lg' : 'text-base sm:text-lg'
@@ -67,6 +64,7 @@ const feed = all;
               >
                 {a.data.title}
               </h2>
+              <p class="mt-1 text-xs font-medium text-stone-200">#{cat[lang]}</p>
             </div>
           </a>
         );
@@ -102,9 +100,7 @@ const feed = all;
                 {a.data.title}
               </h3>
               <p class="mt-1.5 flex items-center gap-2 text-xs text-stone-400 dark:text-stone-500">
-                <span class="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] font-bold text-stone-500 dark:bg-white/10 dark:text-stone-400">
-                  {cat[lang]}
-                </span>
+                <span class="font-medium">#{cat[lang]}</span>
                 <span>{formatDate(a.data.date, lang)}</span>
               </p>
             </div>
