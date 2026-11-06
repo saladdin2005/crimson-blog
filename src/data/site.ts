@@ -43,8 +43,9 @@ export const categories = {
 
 export const authors = {
   you: {
-    name: { ar: 'اسمك هنا', en: 'Your Name' },
+    name: { ar: 'صلاح الدين بنمصور', en: 'Saladdin Benmansor' },
     role: { ar: 'المؤسس ورئيس التحرير', en: 'Founder & Editor-in-Chief' },
+    linkedin: 'https://www.linkedin.com/in/saladdin-benmansor-21154b447/',
     bio: {
       ar: 'كاتب ومؤسّس المجلة، يهتم بأدوات الإنتاجية وتطوّر الذات وكتابة التقنية بأسلوب عملي.',
       en: 'Writer and founder, focused on productivity tools, self-development and practical tech.',

@@ -45,6 +45,26 @@ const content = {
             <p class="font-bold text-stone-900 dark:text-white">{author.name[lang]}</p>
             <p class="text-sm font-medium text-teal-700 dark:text-teal-400">{author.role[lang]}</p>
             <p class="mt-1 text-[13px] leading-5 text-stone-500 dark:text-stone-400">{author.bio[lang]}</p>
+            {author.linkedin && (
+              <a
+                href={author.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1.5 text-[13px] text-teal-600 dark:text-teal-400 hover:underline mt-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  width="14"
+                  height="14"
+                  class="shrink-0"
+                >
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5V5c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 12.268V9h-3v9h2v-6.2c0-1.443.55-2.4 1.5-2.4 1 0 1.26.8 1.26 1.5V19h2v-6c0-2.761-2.239-5-5-5z" />
+                </svg>
+                LinkedIn
+              </a>
+            )}
           </div>
         </div>
       ))}
