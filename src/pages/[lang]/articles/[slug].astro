@@ -45,18 +45,6 @@ for (const [k, v] of Object.entries(rawMap)) normMap[normSentence(k)] = v;
 ---
 <Base lang={lang} title={article.data.title} description={article.data.description}>
   <article data-article class={`mx-auto max-w-3xl font-variant-${slug}`}>
-    <!-- بانر كلاسيكي علوي: صورة المقال إن وُجدت، وإلا لوحة القراءة العامة -->
-    <div class="mb-8 overflow-hidden rounded-2xl border border-stone-200/70 shadow-sm dark:border-white/10">
-      <img
-        src={article.data.banner ?? '/images/reading.jpg'}
-        alt=""
-        loading="eager"
-        fetchpriority="high"
-        decoding="async"
-        class="h-48 w-full object-cover object-[center_45%] sm:h-64"
-      />
-    </div>
-
     <!-- مسار التنقل -->
     <nav class="flex items-center gap-2 text-xs font-semibold text-stone-400 dark:text-stone-500">
       <a href={`/${lang}/`} class="inline-flex min-h-6 items-center transition hover:text-teal-700 dark:hover:text-teal-400">{t.home}</a>
