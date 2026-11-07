@@ -9,8 +9,10 @@
   from = "/ar/articles/travel-journals/"
   to = "/ar/articles/december-movies/"
   status = 301
+  force = true
 
 [[redirects]]
   from = "/en/articles/travel-journals/"
   to = "/en/articles/december-movies/"
   status = 301
+  force = true

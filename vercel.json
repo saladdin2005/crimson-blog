@@ -1,0 +1,25 @@
+{
+  "redirects": [
+    {
+      "source": "/ar/articles/travel-journals/",
+      "destination": "/ar/articles/december-movies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/travel-journals/",
+      "destination": "/en/articles/december-movies/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ar/articles/travel-journals",
+      "destination": "/ar/articles/december-movies",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/articles/travel-journals",
+      "destination": "/en/articles/december-movies",
+      "statusCode": 301
+    }
+  ],
+  "cleanUrls": true
+}
