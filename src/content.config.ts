@@ -9,7 +9,7 @@ const articles = defineCollection({
     lang: z.enum(['ar', 'en']),
     category: z.enum(['articles', 'art', 'langprogs']),
     date: z.coerce.date(),
-    author: z.enum(['you', 'sara']),
+    author: z.enum(['you']),
     featured: z.boolean().default(false),
     trending: z.boolean().default(false),
     tags: z.array(z.string()).default([]),

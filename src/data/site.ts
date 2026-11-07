@@ -43,20 +43,12 @@ export const categories = {
 
 export const authors = {
   you: {
-    name: { ar: 'صلاح الدين بنمصور', en: 'Saladdin Benmansor' },
+    name: { ar: 'صلاح الدين بنمصور', en: 'Saladdin Ben Mansour' },
     role: { ar: 'المؤسس ورئيس التحرير', en: 'Founder & Editor-in-Chief' },
     linkedin: 'https://www.linkedin.com/in/saladdin-benmansor-21154b447/',
     bio: {
       ar: 'كاتب ومؤسّس المجلة، يهتم بأدوات الإنتاجية وتطوّر الذات وكتابة التقنية بأسلوب عملي.',
       en: 'Writer and founder, focused on productivity tools, self-development and practical tech.',
-    },
-  },
-  sara: {
-    name: { ar: 'سارة الحربي', en: 'Sara Alharbi' },
-    role: { ar: 'محرّرة', en: 'Editor' },
-    bio: {
-      ar: 'تكتب في مجلة قرمزي بعقلية عملية بعيدة عن الضجيج.',
-      en: 'Writes for Crimson with a practical, noise-free mindset.',
     },
   },
 } as const;
