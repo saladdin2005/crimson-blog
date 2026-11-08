@@ -43,7 +43,7 @@ export const categories = {
 
 export const authors = {
   you: {
-    name: { ar: 'صلاح الدين بنمصور', en: 'Saladdin Ben Mansour' },
+    name: { ar: 'صلاح الدين بن منصور', en: 'Saladdin Ben Mansour' },
     role: { ar: 'المؤسس ورئيس التحرير', en: 'Founder & Editor-in-Chief' },
     linkedin: 'https://www.linkedin.com/in/saladdin-benmansor-21154b447/',
     bio: {
