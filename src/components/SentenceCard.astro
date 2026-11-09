@@ -170,6 +170,15 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
     autoTimer = 0;
   }
 
+  /* وضع مثبّت أسفل الشاشة: يُستخدم في اللمس، وحين لا يتسع الهامش للبطاقة */
+  function dock() {
+    root.style.width = `${Math.min(320, window.innerWidth - 40)}px`;
+    root.style.left = '50%';
+    root.style.top = 'auto';
+    root.style.bottom = 'calc(5.25rem + env(safe-area-inset-bottom, 0px))';
+    root.style.transform = 'translateX(-50%)';
+  }
+
   function position() {
     raf = 0;
     if (!curSpan) return;
@@ -177,7 +186,11 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
     if (!art) return hide();
     const artL = art.getBoundingClientRect().left;
     const w = Math.round(Math.min(300, artL - 20));
-    if (w < 220) return hide(); // شاشة ضيقة: لا هامش يكفي
+    if (w < 220) {
+      // شاشة ضيقة: لا هامش يكفي — نثبّت البطاقة أسفل الشاشة بدل إخفائها
+      dock();
+      return;
+    }
 
     root.style.width = `${w}px`;
     root.style.transform = '';
@@ -204,12 +217,8 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
     if (FINE.matches) {
       if (!raf) raf = requestAnimationFrame(position);
     } else {
-      // وضع اللمس: بطاقة بأسفل الشاشة فوق شريط أدوات القراءة
-      root.style.width = `${Math.min(320, window.innerWidth - 40)}px`;
-      root.style.left = '50%';
-      root.style.top = 'auto';
-      root.style.bottom = 'calc(5.25rem + env(safe-area-inset-bottom, 0px))';
-      root.style.transform = 'translateX(-50%)';
+      // وضع اللمس: بطاقة مثبّتة أسفل الشاشة فوق شريط أدوات القراءة
+      dock();
       autoTimer = window.setTimeout(hide, 4500);
     }
     requestAnimationFrame(() => {

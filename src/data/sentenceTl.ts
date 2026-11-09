@@ -204,65 +204,59 @@ export const sentenceTl = {
       'Share your experience in the comments.': 'شاركنا تجربتك في التعليقات.',
     },
     'december-movies': {
-      'Before distances were measured in flights, they were measured in ink.':
-        'قبل أن تُقاس المسافات بالرحلات الجوية، قيست بحبر دفتر.',
-      'From Ibn Battuta to Hemingway, and how travel books shaped the way we see the world.':
-        'من ابن بطوطة إلى همنغواي، وكيف صاغت كتب الرحلات طريقة رؤيتنا للعالم.',
-      'The Notebook Before the Airplane': 'الدفتر قبل الطائرة',
-      'Travel, once, began with ink.': 'كانت الرحلة، قديماً، تبدأ بحبر.',
-      'A wanderer would open his notebook in a café, a tent, or on the deck of a ship, and write down what he saw before the scene went cold.':
-        'يفتح الرحّال دفتره في مقهى أو خيمة أو على ظهر سفينة، ويدوّن ما رآه قبل أن يبرد المشهد.',
-      'Today we capture a photo and publish it in a second — but what remains of our journeys?':
-        'اليوم نلتقط صورة وننشرها في ثانية — لكن ما بقي من رحلاتنا؟',
-      'A photo without the smell of the road, and a memory without the patience of description.':
-        'صورة بلا رائحة الطريق، وذكرى بلا صبر الوصف.',
-      'Old travel books are not mere geographic records.':
-        'كتب الرحلات القديمة ليست مجرد سجلات جغرافية.',
-      'They are how a human looked at a world no one had seen before, and wrote it down in language that sometimes feared describing the indescribable.':
-        'إنها كيف نظر إنسان إلى عالم لم يره أحد من قبل، ودوّنه بلغة تخاف أحياناً من وصف ما لا يُوصف.',
-      'Ibn Battuta: A Man Who Did Not Write About Himself':
-        'ابن بطوطة: رجلٌ لم يكتب عن نفسه',
-      'When Ibn Battuta left Tangier in 1325 heading for the Hajj, he was not planning twenty-seven years.':
-        'حين خرج ابن بطوطة من طنجة عام 1325 نحو الحج، لم يكن يخطط لسبعٍ وعشرين سنة.',
-      "He saw Delhi and Constantinople, lived in sultan's courts and Bedouin hospitality.":
-        'رأى دِلهي وقُسطنطينية، وعاش في بلاطات السلاطنة وكرم البدو.',
-      'And at every stop, he did not write "I" — he wrote the place: its sea, its market, its rulers, and its food.':
-        'وفي كل محطة لم يكتب «أنا» — بل كتب المكان: بحره، سوقه، حكامه، وطعامه.',
-      "In his book, you can read that the man loved small details: the call to prayer from a distant minaret, or how a fish seller shouts his voice before the fish's voice.":
-        'ويمكن في كتابه أن تقرأ أن الرجل كان يحبّ التفاصيل الصغيرة: صوت الأذان من مئذنة بعيدة، أو كيف يسبق بائع السمك صراخه إلى صراخ السمك.',
-      'This is why the journey is still read after seven centuries.':
-        'لهذا ما زالت الرحلة تُقرأ بعد سبعة قرون.',
-      'Journeys are told in small details, not in big places.':
-        'الرحلة تُروى بالتفاصيل الصغيرة، لا بالأماكن الكبيرة.',
-      'Hemingway: Travel in a Short Sentence': 'همنغواي: السفر بجملة قصيرة',
-      'Six centuries after Ibn Battuta, Hemingway wrote A Farewell to Arms while in Italy.':
-        'ستة قرون بعد ابن بطوطة، كتب همنغواي «وداعاً للسلاح» وهو في إيطاليا.',
-      'He did not describe the Alps with many adjectives — he wrote one sentence about the cold, and let the reader feel it.':
-        'لم يصف جبال الألب بصفات كثيرة — كتب جملة واحدة عن البرد، وترك القارئ يشعر به.',
-      'Hemingway taught us that a short sentence can carry the weight of the road.':
-        'علّمنا همنغواي أن الجملة القصيرة قد تحمل وزن الطريق.',
-      "Describing a small Paris bistro in three words is better than a full paragraph about the neighborhood's history.":
-        'أن تصف مطعماً باريسياً صغيراً بثلاث كلمات أفضل من فقرة كاملة عن تاريخ الحي.',
-      'Travel in his writing is not a backdrop — it is a second character.':
-        'السفر في كتاباته ليس خلفية — إنه شخصية ثانية.',
-      'What Travel Books Teach Us': 'ماذا تُعلّمنا كتب الرحلات؟',
-      'That a place is seen from inside: Ibn Battuta was not a tourist — he was inside the country, eating its food and living under its laws.':
-        'أن المكان يُرى من داخله: ابن بطوطة لم يكن سائحاً — كان داخل البلد، يأكل من طعامه ويعيش تحت قوانينه.',
-      'That the pen is slower than the eye, and that is its advantage: Writing forces reflection, and reflection builds a deeper memory than the photograph.':
-        'أن القلم أبطأ من العين، وهذا ميزته: الكتابة تفرض التأمل، والتأمل يصنع ذاكرة أعمق من الصورة.',
-      'That the stranger teaches you about home: Most of what wanderers wrote was about their homeland when they returned, not about their destinations while away.':
-        'أن الغريب يعلّمك عن بيتك: أكثر ما كتبه الرحّل كان عن وطنهم حين عادوا، لا عن بلادهم حين كانوا فيها.',
-      'Your Next Journey: Notebook or Phone?': 'رحلتك القادمة: دفتر أم هاتف؟',
-      'We are not calling for abandoning technology, but for one thing: take a small notebook on your next trip.':
-        'لا ندعو إلى التخلّي عن التقنية، بل إلى شيء واحد: خذ دفتراً صغيراً في رحلتك القادمة.',
-      'Write one sentence each evening — no more.':
-        'اكتب جملة واحدة كل مساء — لا أكثر.',
-      'Years later, you will have written a truer picture of your journey than anything the camera captured.':
-        'بعد سنوات، تكون قد كتبت أصدق صورة عن رحلتك من كل ما التقطته الكاميرا.',
-      'Travel books, in the end, are not about places.':
-        'كتب الرحلات، في نهاية المطاف، ليست عن الأماكن.',
-      "They are about how the place changed the notebook's owner.":
-        'إنها عن كيف غيّر المكانُ صاحبَ الدفتر.',
+      'A collection of December movies worth watching again and again.':
+        'مجموعة من أفلام ديسمبر التي تستحق أن تعيد مشاهدتها مراراً وتكراراً.',
+      'It’s a Wonderful Life (1946)': 'It’s a Wonderful Life (1946)',
+      'George Bailey is an ambitious young man who dreams of traveling the world and building great cities, but circumstances keep forcing him to stay in his small town and run his father’s modest loan company.':
+        'جورج بيلي شاب طموح يحلم بالسفر حول العالم وبناء المدن الكبيرة، لكن الظروف تجبره مراراً على البقاء في بلدته الصغيرة وإدارة شركة والده المتواضعة للإقراض.',
+      'He gives up his dreams one after another to help his neighbors and protect them from the greed of the rich Mr.':
+        'يضحّي بأحلامه واحداً تلو الآخر ليساعد جيرانه ويحميهم من جشع الثري بوتر.',
+      'Potter.': 'يضحّي بأحلامه واحداً تلو الآخر ليساعد جيرانه ويحميهم من جشع الثري بوتر.',
+      'And on Christmas Eve, when the company’s money goes missing and he stands on the edge of despair, a guardian angel appears to him and shows him what the town would have looked like had he never been born.':
+        'وفي ليلة عيد الميلاد، حين تضيع نقود الشركة ويقف على حافة اليأس، يظهر له ملاك حارس يريه كيف كانت ستبدو البلدة لو لم يولد قط.',
+      'George discovers that his simple life was more precious than he imagined, and that the people he loved repay him in kind.':
+        'يكتشف جورج أن حياته البسيطة كانت أثمن مما تخيّل، وأن الناس الذين أحبّهم يردّون له الجميل.',
+      'Runtime: approximately 2 hours and 10 minutes.': 'المدة: ساعتان و10 دقائق تقريباً.',
+      'Home Alone (1990)': 'Home Alone (1990)',
+      'The McCallister family is busy traveling to Paris for the Christmas holiday, and in the rush of preparations they forget eight-year-old Kevin at home.':
+        'تنشغل عائلة ماكاليستر بالسفر إلى باريس لقضاء عطلة الميلاد، وفي زحمة الاستعداد ينسون الطفل كيفن ذا الثماني سنوات في المنزل.',
+      'At first he is delighted with his new freedom, but he discovers that two burglars are planning to break into the house.':
+        'في البداية يفرح بحريته الجديدة، لكنه يكتشف أن لصّين يخططان لاقتحام البيت.',
+      'Kevin decides to defend his home himself, setting up a series of clever and funny traps.':
+        'يقرر كيفن الدفاع عن منزله بنفسه، فيصنع سلسلة من الفخاخ الذكية والمضحكة.',
+      'Meanwhile, his mother tries to get back to him by any means, and the family discovers the meaning of reunion and longing.':
+        'وفي المقابل، تحاول أمه العودة إليه بأي طريقة، فتكتشف الأسرة معنى الاجتماع والاشتياق.',
+      'Runtime: approximately 1 hour and 43 minutes.': 'المدة: ساعة و43 دقيقة تقريباً.',
+      'The Holdovers (2023)': 'The Holdovers (2023)',
+      'We are in 1970, inside a boarding school in New England.':
+        'نحن في عام 1970 داخل مدرسة داخلية في نيو إنجلاند.',
+      'Paul Hunham, a strict and unpopular history teacher, is assigned to stay with the students who cannot go home for the winter break.':
+        'بول هانهام مدرّس تاريخ صارم وغير محبوب، يُكلَّف بالبقاء مع الطلاب الذين لا يستطيعون العودة لبيوتهم في عطلة الشتاء.',
+      'In the end only one student is left: Angus, an intelligent and angry young man hiding a family wound.':
+        'ينتهي الأمر بطالب واحد فقط هو أنغوس، شاب ذكي وغاضب يخفي جرحاً عائلياً.',
+      'With them is Mary, the school cook, who is grieving for her son killed in the Vietnam War.':
+        'ومعهما ماري، طاهية المدرسة التي تعيش حزناً على ابنها الذي قُتل في حرب فيتنام.',
+      'As the days pass, their shared solitude turns into a warm and human bond.':
+        'ومع مرور الأيام تتحول وحدتهم المشتركة إلى رابطة دافئة وإنسانية.',
+      'Runtime: approximately 2 hours and 13 minutes.': 'المدة: ساعتان و13 دقيقة تقريباً.',
+      'Klaus (2019)': 'Klaus (2019)',
+      'Jesper, son of a rich postal service owner, is sent to a harsh island at the far north to prove his worth, and he must deliver thousands of letters within a year.':
+        'جيسبر ابن مالك خدمة البريد الثري، يُرسل إلى جزيرة قاسية في أقصى الشمال ليثبت جدارته، وعليه توزيع آلاف الرسائل خلال سنة.',
+      'But the town is sunk in an old feud between two families, and nobody writes letters.':
+        'لكن البلدة غارقة في عداوة قديمة بين عائلتين، ولا أحد يكتب رسائل.',
+      'Jesper meets a reclusive carpenter named Klaus who owns a house full of toys.':
+        'يلتقي جيسبر بنجّار منعزل يدعى كلاوس يملك بيتاً مليئاً بالألعاب.',
+      'And when the first child sends a letter asking for a toy, a chain of gifts and good deeds begins to change everyone in the town.':
+        'وحين يبدأ الطفل الصغير بإرسال رسالة يطلب فيها لعبة، تبدأ سلسلة من الهدايا والأعمال الطيبة تغيّر أهل البلدة كلهم.',
+      'Runtime: approximately 1 hour and 36 minutes.': 'المدة: ساعة و36 دقيقة تقريباً.',
+      'Little Women (2019)': 'Little Women (2019)',
+      'The four March sisters — Jo, Meg, Beth and Amy — live in America after the Civil War.':
+        'تعيش الشقيقات الأربع مارش، جو وميغ وبيث وإيمي، في أمريكا بعد الحرب الأهلية.',
+      'Jo is a headstrong writer who dreams of independence and literary success, Meg dreams of a quiet life and honest love, Beth is a gentle musician, and Amy is an artist who wants a higher place.':
+        'جو كاتبة عنيدة تحلم بالاستقلال والنجاح الأدبي، وميغ تحلم بحياة هادئة وحب صادق، بيث موسيقية رقيقة، وإيمي فنانة تريد مكانة أعلى.',
+      'The film tells their story between past and present, tracing the love, loss, conflicts and choices that turn each of them into a different woman.':
+        'يروي الفيلم حكايتهن بين الماضي والحاضر، ويتتبع الحب والفقد والخلافات والاختيارات التي تصنع من كل واحدة منهن امرأة مختلفة.',
+      'Runtime: approximately 2 hours and 15 minutes.': 'المدة: ساعتان و15 دقيقة تقريباً.',
     },
     'ai-tools-2026': {
       'After the flood of releases, these five criteria will help you pick AI tools that add real productivity instead of new chaos.':
@@ -727,68 +721,58 @@ export const sentenceTl = {
       'شاركنا تجربتك في التعليقات.': 'Share your experience in the comments.',
     },
     'december-movies': {
-      'قبل أن تُقاس المسافات بالطائرات، قيست بحبر دفتر.':
-        'Before distances were measured in flights, they were measured in a notebook’s ink.',
-      'من ابن بطوطة إلى همنغواي، وكيف صنعت كتب الرحلات نظرة الإنسان إلى العالم.':
-        'From Ibn Battuta to Hemingway — how travel books shaped the way a human looks at the world.',
-      'الدفتر قبل الطائرة': 'The notebook before the airplane',
-      'كانت الرحلة، قديماً، تبدأ بحبر.':
-        'Once upon a time, a journey began with ink.',
-      'يفتح الرحّال دفتره في مقهى أو خيمة أو على ظهر سفينة، ويدوّن ما رأى قبل أن يبرد المشهد.':
-        'A traveler would open his notebook in a café, a tent, or on the deck of a ship, and write down what he saw before the scene went cold.',
-      'اليوم نلتقط صورة وننشرها في ثانية — لكن ما بقي من رحلاتنا؟':
-        'Today we take a photo and publish it in a second — but what remains of our journeys?',
-      'صورة بلا رائحة الطريق، وذكرى بلا صبر الوصف.':
-        'A photo without the smell of the road, and a memory without the patience of description.',
-      'كتب الرحلات القديمة ليست سجلات جغرافياً فحسب.':
-        'Old travel books are not mere geographic records.',
-      'إنها كيف نظر إنسان إلى عالم لم يره أحد من قبل، ودوّن ذلك بلغة تخاف أحياناً من وصف ما لا يُوصف.':
-        'They are how a human looked at a world no one had ever seen, and wrote it down in a language that sometimes feared describing the indescribable.',
-      'ابن بطوطة: رجلٌ لم يكتب عن نفسه':
-        'Ibn Battuta: a man who did not write about himself',
-      'حين خرج ابن بطوطة من طنجة عام ١٣٢٥ نحو الحج، لم يكن يخطط لسبعٍ وعشرين سنة.':
-        'When Ibn Battuta left Tangier in 1325 toward the Hajj, he was not planning twenty-seven years.',
-      'رأى دِلمي وقُسطنطينية ودلهي، وعاش في بلاطات سلطانة ومضيفات بدو.':
-        "He saw Delhi and Constantinople, and lived in sultans' courts and Bedouin encampments.",
-      'وفي كل محطة، لم يكتب «أنا» — بل كتب المكان: بحره، سوقه، حكامه، وطعامه.':
-        'At every stop he did not write "I" — he wrote the place: its sea, its market, its rulers, and its food.',
-      'ويمكن في كتابه «تحفة النظار» أن تقرأ أن الرجل كان يحبّ التفاصيل الصغيرة: صوت الأذان من مئذنة بعيدة، أو كيف يبيع بائع السمك صراخه قبل صراخ السمك.':
-        "In his book Tuḥfat al-Niẓẓār you can read that the man loved small details: the call to prayer from a distant minaret, or how the fish seller shouts his cry before the fish cries.",
-      'هذا ما يجعل الرحلة تُقرأ بعد سبعة قرون.':
-        'That is what keeps this journey readable seven centuries later.',
-      'الرحلة تُروى بالتفاصيل الصغيرة، لا بالأماكن الكبيرة.':
-        'Journeys are told in small details, not in big places.',
-      'همنغواي: السفر بجملة قصيرة':
-        'Hemingway: travel in a short sentence',
-      'ستة قرون بعد ابن بطوطة، كتب همنغواي «وداعاً للسلاح» وهو في إيطاليا.':
-        'Six centuries after Ibn Battuta, Hemingway wrote A Farewell to Arms while in Italy.',
-      'لم يصف جبال الألب بصفات كثيرة — كتب جملة واحدة عن البرد، وترك القارئ يشعر به.':
-        'He did not describe the Alps with many adjectives — he wrote one sentence about the cold and let the reader feel it.',
-      'همنغواي علّمنا أن الجملة القصيرة قد تحمل وزن الطريق.':
-        'Hemingway taught us that a short sentence can carry the weight of the road.',
-      'أن تصف مطعم صغير في باريس بثلاث كلمات أفضل من فقرة كاملة عن تاريخ الحي.':
-        "Describing a small Paris bistro in three words beats a full paragraph about the neighborhood's history.",
-      'السفر في أدبه ليس خلفية — إنه شخصية ثانية.':
-        'Travel in his writing is not a backdrop — it is a second character.',
-      'ماذا تُعلّمنا كتب الرحلات؟': 'What do travel books teach us?',
-      'أن المكان يُرى من داخله: ابن بطوطة لم يكن سائحاً — كان داخل البلد، يأكل من طعامه ويعيش تحت قوانينه.':
-        'That a place is seen from within: Ibn Battuta was no tourist — he lived inside the country, eating its food and living under its laws.',
-      'أن القلم أبطأ من العين، وهذا ميزته: التدوين يفرض التأمل، والتأمل يصنع ذاكرة أعمق من الصورة.':
-        'That the pen is slower than the eye — and that is its advantage: writing forces reflection, and reflection builds a deeper memory than the photograph.',
-      'أن الغريب يعلّمك عن بيتك: أكثر ما كتبه الرحّالة عن وطنهم حين عادوا، لا عن بلدانهم حين كانوا فيها.':
-        'That the stranger teaches you about home: most of what wanderers wrote was about their homeland upon return, not about their destinations while away.',
-      'رحلتك القادمة: دفتر أم هاتف؟':
-        'Your next journey: notebook or phone?',
-      'لا ندعو إلى التخلّي عن التقنية، لكن ندعو إلى شيء واحد: خذ دفتراً صغيراً في رحلتك القادمة.':
-        'We are not calling for abandoning technology — we are calling for one thing: take a small notebook on your next trip.',
-      'اكتب جملة واحدة كل مساء — لا أكثر.':
-        'Write one sentence each evening — no more.',
-      'بعد سنوات، تكون قد كتبت أصدق صورة عن رحلتك من كل ما التقطته الكاميرا.':
-        'Years later, you will have written a truer picture of your journey than anything the camera captured.',
-      'فكتب الرحلات، في نهاية المطاف، ليست عن الأماكن.':
-        'Travel books, in the end, are not about places.',
-      'إنها عن كيف تغيّر المكانُ صاحبَ الدفتر.':
-        "They are about how the place changed the notebook's owner.",
+      'مجموعة من أفلام ديسمبر التي تستحق أن تعيد مشاهدتها مراراً وتكراراً.':
+        'A collection of December movies worth watching again and again.',
+      'It’s a Wonderful Life (1946)': 'It’s a Wonderful Life (1946)',
+      'جورج بيلي شاب طموح يحلم بالسفر حول العالم وبناء المدن الكبيرة، لكن الظروف تجبره مراراً على البقاء في بلدته الصغيرة وإدارة شركة والده المتواضعة للإقراض.':
+        'George Bailey is an ambitious young man who dreams of traveling the world and building great cities, but circumstances keep forcing him to stay in his small town and run his father’s modest loan company.',
+      'يضحّي بأحلامه واحداً تلو الآخر ليساعد جيرانه ويحميهم من جشع الثري بوتر.':
+        'He gives up his dreams one after another to help his neighbors and protect them from the greed of the rich Mr. Potter.',
+      'وفي ليلة عيد الميلاد، حين تضيع نقود الشركة ويقف على حافة اليأس، يظهر له ملاك حارس يريه كيف كانت ستبدو البلدة لو لم يولد قط.':
+        'And on Christmas Eve, when the company’s money goes missing and he stands on the edge of despair, a guardian angel appears to him and shows him what the town would have looked like had he never been born.',
+      'يكتشف جورج أن حياته البسيطة كانت أثمن مما تخيّل، وأن الناس الذين أحبّهم يردّون له الجميل.':
+        'George discovers that his simple life was more precious than he imagined, and that the people he loved repay him in kind.',
+      'المدة: ساعتان و10 دقائق تقريباً.': 'Runtime: approximately 2 hours and 10 minutes.',
+      'Home Alone (1990)': 'Home Alone (1990)',
+      'تنشغل عائلة ماكاليستر بالسفر إلى باريس لقضاء عطلة الميلاد، وفي زحمة الاستعداد ينسون الطفل كيفن ذا الثماني سنوات في المنزل.':
+        'The McCallister family is busy traveling to Paris for the Christmas holiday, and in the rush of preparations they forget eight-year-old Kevin at home.',
+      'في البداية يفرح بحريته الجديدة، لكنه يكتشف أن لصّين يخططان لاقتحام البيت.':
+        'At first he is delighted with his new freedom, but he discovers that two burglars are planning to break into the house.',
+      'يقرر كيفن الدفاع عن منزله بنفسه، فيصنع سلسلة من الفخاخ الذكية والمضحكة.':
+        'Kevin decides to defend his home himself, setting up a series of clever and funny traps.',
+      'وفي المقابل، تحاول أمه العودة إليه بأي طريقة، فتكتشف الأسرة معنى الاجتماع والاشتياق.':
+        'Meanwhile, his mother tries to get back to him by any means, and the family discovers the meaning of reunion and longing.',
+      'المدة: ساعة و43 دقيقة تقريباً.': 'Runtime: approximately 1 hour and 43 minutes.',
+      'The Holdovers (2023)': 'The Holdovers (2023)',
+      'نحن في عام 1970 داخل مدرسة داخلية في نيو إنجلاند.':
+        'We are in 1970, inside a boarding school in New England.',
+      'بول هانهام مدرّس تاريخ صارم وغير محبوب، يُكلَّف بالبقاء مع الطلاب الذين لا يستطيعون العودة لبيوتهم في عطلة الشتاء.':
+        'Paul Hunham, a strict and unpopular history teacher, is assigned to stay with the students who cannot go home for the winter break.',
+      'ينتهي الأمر بطالب واحد فقط هو أنغوس، شاب ذكي وغاضب يخفي جرحاً عائلياً.':
+        'In the end only one student is left: Angus, an intelligent and angry young man hiding a family wound.',
+      'ومعهما ماري، طاهية المدرسة التي تعيش حزناً على ابنها الذي قُتل في حرب فيتنام.':
+        'With them is Mary, the school cook, who is grieving for her son killed in the Vietnam War.',
+      'ومع مرور الأيام تتحول وحدتهم المشتركة إلى رابطة دافئة وإنسانية.':
+        'As the days pass, their shared solitude turns into a warm and human bond.',
+      'المدة: ساعتان و13 دقيقة تقريباً.': 'Runtime: approximately 2 hours and 13 minutes.',
+      'Klaus (2019)': 'Klaus (2019)',
+      'جيسبر ابن مالك خدمة البريد الثري، يُرسل إلى جزيرة قاسية في أقصى الشمال ليثبت جدارته، وعليه توزيع آلاف الرسائل خلال سنة.':
+        'Jesper, son of a rich postal service owner, is sent to a harsh island at the far north to prove his worth, and he must deliver thousands of letters within a year.',
+      'لكن البلدة غارقة في عداوة قديمة بين عائلتين، ولا أحد يكتب رسائل.':
+        'But the town is sunk in an old feud between two families, and nobody writes letters.',
+      'يلتقي جيسبر بنجّار منعزل يدعى كلاوس يملك بيتاً مليئاً بالألعاب.':
+        'Jesper meets a reclusive carpenter named Klaus who owns a house full of toys.',
+      'وحين يبدأ الطفل الصغير بإرسال رسالة يطلب فيها لعبة، تبدأ سلسلة من الهدايا والأعمال الطيبة تغيّر أهل البلدة كلهم.':
+        'And when the first child sends a letter asking for a toy, a chain of gifts and good deeds begins to change everyone in the town.',
+      'المدة: ساعة و36 دقيقة تقريباً.': 'Runtime: approximately 1 hour and 36 minutes.',
+      'Little Women (2019)': 'Little Women (2019)',
+      'تعيش الشقيقات الأربع مارش، جو وميغ وبيث وإيمي، في أمريكا بعد الحرب الأهلية.':
+        'The four March sisters — Jo, Meg, Beth and Amy — live in America after the Civil War.',
+      'جو كاتبة عنيدة تحلم بالاستقلال والنجاح الأدبي، وميغ تحلم بحياة هادئة وحب صادق، بيث موسيقية رقيقة، وإيمي فنانة تريد مكانة أعلى.':
+        'Jo is a headstrong writer who dreams of independence and literary success, Meg dreams of a quiet life and honest love, Beth is a gentle musician, and Amy is an artist who wants a higher place.',
+      'يروي الفيلم حكايتهن بين الماضي والحاضر، ويتتبع الحب والفقد والخلافات والاختيارات التي تصنع من كل واحدة منهن امرأة مختلفة.':
+        'The film tells their story between past and present, tracing the love, loss, conflicts and choices that turn each of them into a different woman.',
+      'المدة: ساعتان و15 دقيقة تقريباً.': 'Runtime: approximately 2 hours and 15 minutes.',
     },
     'ai-tools-2026': {
       'بعد زحمة الإصدارات، هذه المعايير الخمسة ستساعدك على اختيار الأدوات التي تضيف إنتاجية حقيقية بدل أن تضيف فوضى جديدة.':
