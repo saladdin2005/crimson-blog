@@ -9,38 +9,199 @@
 export const sentenceTl = {
   en: {
     'paper-notebook': {
-      'In the age of apps and cloud sync, the humble notebook reminds us that the simplest tools are sometimes the deepest.':
-        'في عصر التطبيقات والسحابة، يعود الدفتر التواضع ليذكّرنا أن أبسط الأدوات هي أحياناً الأعمق.',
-      'When the hand writes differently': 'حين تكتب اليد بطريقة مختلفة',
-      'There is a documented cognitive gap between handwriting notes and typing them: the hand is slower, which forces the brain to filter what deserves to reach the paper.':
-        'هناك فجوة معرفية موثّقة بين كتابة الملاحظات بخط اليد وكتابتها بلوحة المفاتيح: اليد أبطأ، وهذا يُجبر الدماغ على ترشيح ما يستحق أن يصل إلى الورق.',
-      'What you write slowly is what you remember deeply.':
-        'ما تكتبه ببطء هو ما تتذكّره بعمق.',
-      'The app that never sleeps...':
-        'التطبيق الذي لا ينام...',
-      'and never gets reread':
-        'ولا يُقرأ بعد أسبوع',
-      'Try it yourself: open your notes app and read what you wrote a month ago.':
-        'جرّب بنفسك: افتح تطبيق ملاحظاتك واقرأ ما كتبته قبل شهر.',
-      "You'll mostly find stale task lists and forgotten links.":
-        'الأغلب ستجد قوائم مهام قديمة وروابط منسيّة.',
-      "The problem isn't the app — it's the ease of forgetting that digital grants us: everything is searchable, so why remember anything?":
-        'المشكلة ليست في التطبيق، بل في سهولة النسيان التي يمنحها الرقمي — كل شيء قابل للبحث، فلمَ نتذكّر شيئاً؟',
-      'One notebook whose only job is remembering':
-        'دفتر واحد وظيفته الوحيدة: التذكّر',
-      'Nobody is asking for digital asceticism.':
-        'لا أحد يطلب الزهادة الرقمية.',
-      'Just simplicity: one notebook next to you, one idea written each evening — no system, no tags, no emoji.':
-        'المطلوب بساطة: دفتر واحد بجانبك، تكتب فيه فكرة واحدة كل مساء — بلا تنظيم، بلا تصنيف، بلا إيموجي.',
-      'A single sentence about your day or what bothered you.':
-        'مجرد جملة واحدة تصف يومك أو ما يزعجك.',
-      "A year later, you'll flip back to the first page and discover something strange: page one belongs to someone you know intimately and see in the mirror daily — but you forgot how much they changed.":
-        'بعد سنة، ستعود إلى الصفحة الأولى وستكتشف شيئاً غريباً: صفحتك الأولى تخصّ شخصاً تعرفه جيداً وتراه كل يوم في المرآة — لكنك نسيت كم تغيّر.',
-      "Paper doesn't sync to the cloud, but it syncs with memory — which is what we actually needed.":
-        'الورق لا يُزامن السحابة، لكنه يُزامن الذاكرة — وهذا ما نحتاجه فعلاً.',
-      'Bottom line': 'خلاصة',
-      'Use the best of what technology offers, and keep the best of what paper offers: a quiet space with no notifications, where you write by hand what you refuse to forget.':
-        'استخدم أفضل ما تقدمه التقنية، واحتفظ بأفضل ما يقدمه الورق: مساحة هادئة بلا إشعارات، تكتب فيها بخط يدك ما ترفض أن تنساه.',
+      "A simple experiment: we walk with an ordinary young man, step by step, as he follows the book's advice.":
+        'تجربة بسيطة: نمشي مع شاب عادي خطوة بخطوة وهو يطبّق نصائح الكتاب.',
+      'The book tells you: “The rich make money work for them.”':
+        'الكتاب يقول لك: «الأغنياء يجعلون المال يعمل لصالحهم».',
+      'It sounds great, and we all love to hear it.': 'كلام جميل، ونحب كلنا أن نسمعه.',
+      'But if we look a little closer, the path it draws goes through almost one single door: the bank giving you money.':
+        'لكن لو دقّقنا قليلًا، نجد أن الطريق الذي يرسمه يمرّ من باب واحد تقريبًا: أن يعطيك البنك مالًا.',
+      'You take a loan, buy something that earns, and that thing pays back the loan from its profits.':
+        'تأخذ قرضًا، وتشتري به شيئًا يربح، ثم يسدّد هذا الشيء القرض من أرباحه.',
+      'And here is a simple question: what if the bank doesn’t give it to you?':
+        'وهنا سؤال بسيط: ماذا لو لم يعطك البنك؟',
+      'Let’s test it.': 'سنجرّب.',
+      'Instead of debating the book in theory, we’ll hand its advice to an ordinary young man and see what happens to him.':
+        'بدل أن نناقش الكتاب بالكلام النظري، سنعطي نصائحه لشاب عادي، ونرى ماذا يحصل له.',
+      'Meet Karim': 'نلتقي بكريم',
+      'Karim is 24.': 'كريم عمره 24 سنة.',
+      'He works as an employee on an average salary.': 'يعمل موظفًا براتب متوسط.',
+      'He pays rent for his room, helps his family now and then, and what is left at the end of the month is small.':
+        'يدفع إيجار غرفته، ويساعد أهله أحيانًا، وما يبقى له آخر الشهر قليل.',
+      'All his savings would last a few months if he lost his job.':
+        'كل مدخراته تكفيه بضعة أشهر لو فقد عمله.',
+      'He owns no house and no land.': 'لا يملك بيتًا ولا أرضًا.',
+      'He has no rich relative to vouch for him.': 'ليس له قريب غني يكفله.',
+      'And he has never taken a loan in his life, so the banks have no “history” on him.':
+        'ولم يأخذ قرضًا في حياته، فلا يوجد له «تاريخ» عند البنوك.',
+      '(Karim is a fictional person.': '(كريم شخص خيالي.',
+      'But you probably know more than one person like him.)': 'لكنك على الأرجح تعرف أكثر من واحد مثله.)',
+      'During a short vacation he read Rich Dad Poor Dad and loved it.':
+        'في إجازة قصيرة قرأ «الأب الغني والأب الفقير»، وأعجبه كثيرًا.',
+      'He felt that someone was finally talking about money clearly.':
+        'شعر أن أحدًا أخيرًا يتكلم عن المال بوضوح.',
+      'And he told himself: “I’ll start today, and I’ll follow the book to the letter.”':
+        'وقال لنفسه: «سأبدأ من اليوم، وسأطبّق ما في الكتاب حرفيًا.»',
+      'Step One: “Buy Assets”': 'الخطوة الأولى: «اشترِ أصولًا»',
+      'The most important rule in the book is easy: an asset puts money in your pocket, and a liability takes money out of your pocket.':
+        'أهم قاعدة في الكتاب سهلة: الأصل هو ما يضع مالًا في جيبك، والخصم هو ما يُخرج مالًا من جيبك.',
+      'The apartment you live in is a liability.': 'الشقة التي تسكنها خصم، والشقة التي تؤجّرها أصل.',
+      'The apartment you rent out is an asset.': 'الشقة التي تسكنها خصم، والشقة التي تؤجّرها أصل.',
+      'Karim asked himself: “What asset can I afford to buy?”':
+        'سأل كريم نفسه: «ما الأصل الذي أقدر على شرائه؟»',
+      'He opened the listing sites.': 'فتح مواقع الإعلانات.',
+      'A small apartment to rent out?': 'شقة صغيرة للإيجار؟',
+      'Its price is many times everything he has saved.': 'ثمنها أضعاف كل ما ادّخره.',
+      'A small shop?': 'محل صغير؟',
+      'Same thing.': 'نفس الشيء.',
+      'Even if he bought stocks with everything he had, the profits would be tiny.':
+        'حتى لو اشترى أسهمًا بكل ما معه، فأرباحها ستكون قليلة جدًا.',
+      'Then he remembered what the book says in this situation: use other people’s money.':
+        'ثم تذكّر ما يقوله الكتاب في هذه الحالة: استخدم أموال الآخرين.',
+      'In other words: take a loan.': 'أي: خذ قرضًا.',
+      'In the book’s eyes, the rich don’t pay from their own pockets.':
+        'الأغنياء في نظر الكتاب لا يدفعون من جيوبهم.',
+      'They borrow, buy the asset, and let it pay off the loan by itself.':
+        'يقترضون، ويشترون الأصل، ويتركونه يسدّد القرض بنفسه.',
+      'So Karim said: “Then I’ll start with the bank.”': 'فقال كريم: «إذن سأبدأ من البنك.»',
+      'Step Two: The Bank’s Door': 'الخطوة الثانية: باب البنك',
+      'Karim walked into the bank smiling and explained his idea with excitement.':
+        'دخل كريم البنك مبتسمًا وشرح فكرته بحماس.',
+      'The employee listened politely, then began asking:': 'استمع إليه الموظف بأدب، ثم بدأ يسأله:',
+      'Do you have a steady income?': 'هل لديك دخل ثابت؟',
+      'Do you have property or something else we can hold as collateral for the loan?':
+        'هل لديك عقار أو شيء آخر نضعه ضمانًا للقرض؟',
+      'Do you have a guarantor?': 'هل لديك كفيل؟',
+      'Have you taken a loan before and paid it back?': 'هل أخذت قرضًا من قبل وسدّدته؟',
+      'Do you have a study and numbers for the project?': 'هل لديك دراسة وأرقام للمشروع؟',
+      'The only question he could answer “yes” to was the first one: his salary from his job.':
+        'الجواب الوحيد الذي عنده «نعم» هو الأول: راتبه من الوظيفة.',
+      'The same job the book looks down on!': 'وهي نفسها الوظيفة التي يقلّل الكتاب من شأنها!',
+      'And this is not Karim’s problem alone.': 'وليست هذه مشكلة كريم وحده.',
+      'A survey by the World Bank and the Union of Arab Banks found that only one in five small and medium-sized companies in our region has a loan or a bank credit line.':
+        'مسح أجراه البنك الدولي مع اتحاد المصارف العربية وجد أن واحدة من كل خمس شركات صغيرة ومتوسطة في منطقتنا فقط لديها قرض أو تسهيل بنكي.',
+      'The World Bank economist Roberto Rocha said that the share of these companies’ loans in total bank lending in the region is about 7.6%.':
+        'وقال اقتصادي البنك الدولي روبرتو روشا إن حصة قروض هذه الشركات من إجمالي القروض في المنطقة تقارب 7.6%.',
+      'And experts at the International Finance Corporation (IFC) talk about a shortage of collateral and a weak financial system.':
+        'أما خبراء مؤسسة التمويل الدولية (IFC) فيتحدثون عن قلة الضمانات وضعف النظام المالي.',
+      'These numbers are not new, and later reports say progress has been slow.':
+        'هذه الأرقام ليست جديدة، والتقارير اللاحقة تقول إن التحسّن بطيء.',
+      'Note also that these numbers cover companies that already exist.':
+        'وانتبه: هذه الأرقام تخص شركات موجودة أصلًا.',
+      'A young man starting from zero is even further from the bank than they are.':
+        'أما شاب يبدأ من الصفر فهو أبعد عن البنك من هؤلاء.',
+      'The economist Hernando de Soto explained part of the problem in his book The Mystery of Capital.':
+        'والاقتصادي هيرناندو دي سوتو شرح جزءًا من المشكلة في كتابه The Mystery of Capital.',
+      'He said that poor people may own many things, but they are not legally registered, so the bank doesn’t accept them as collateral.':
+        'قال إن الفقراء قد يملكون أشياء كثيرة، لكنها غير مسجّلة قانونيًا، ولذلك لا يقبلها البنك ضمانًا.',
+      'Meaning: what you own may be worth nothing in the bank’s eyes.':
+        'يعني أن الشيء الذي تملكه قد لا يساوي شيئًا في نظر البنك.',
+      'Step Three: And After the Rejection?': 'الخطوة الثالثة: وبعد الرفض؟',
+      'Karim doesn’t give up easily.': 'كريم لا يستسلم بسهولة.',
+      'He has three roads.': 'أمامه ثلاثة طرق.',
+      'And each road has a paradox.': 'وفي كل طريق مفارقة.',
+      'Road one: a personal loan, or money from family.': 'الطريق الأول: قرض شخصي أو مال من العائلة.',
+      'He’ll take the money and start.': 'سيأخذ المال ويبدأ.',
+      'But who will pay the installment every month?': 'لكن من سيسدّد القسط كل شهر؟',
+      'His salary.': 'راتبه.',
+      'So money will leave his pocket every month, which is exactly what the book calls a “liability,” and what it warns against.':
+        'أي أن المال سيخرج من جيبه كل شهر، وهذا بالضبط ما يسمّيه الكتاب «خصمًا»، وما يحذّر منه.',
+      'Road two: courses for the wealthy.': 'الطريق الثاني: دورات الأثرياء.',
+      'He says: “I’ll learn first before I start.”': 'يقول: «سأتعلم أولًا قبل أن أبدأ».',
+      'But these courses cost money.': 'لكن هذه الدورات تكلّف مالًا.',
+      'An article in Slate magazine mentioned that seminars linked to the book’s brand drew many complaints from participants.':
+        'وقد ذكر مقال في مجلة Slate أن ندوات مرتبطة بعلامة الكتاب التجارية أثارت شكاوى كثيرة بين المشاركين.',
+      'And Karim would pay from his already small savings.': 'وكريم سيدفع من مدخراته القليلة أصلًا.',
+      'Road three: jump into a business with heavy debt.': 'الطريق الثالث: يدخل مشروعًا بدَين كبير.',
+      'This is the road the book loves.': 'وهذا هو الطريق الذي يحبّه الكتاب.',
+      'It has everything except safety.': 'فيه كل شيء إلا الأمان.',
+      'And here is an important lesson from Nassim Taleb in his book Fooled by Randomness.':
+        'وهنا درس مهم من الكاتب نسيم طالب في كتابه Fooled by Randomness.',
+      'He separates two kinds of loss: a loss you can recover from, and a loss that knocks you out of the game completely.':
+        'هو يفرّق بين نوعين من الخسارة: خسارة تستطيع تعويضها، وخسارة تُخرجك من اللعبة كلها.',
+      'A person with big money can take a fall and get back up.': 'صاحب المال الكبير يتحمّل سقطة وينهض.',
+      'But Karim, without enough savings and without a safety net, could be chasing one fall in debt for years.':
+        'أما كريم، بلا مدخرات تكفي ولا سند، فسقطة واحدة قد تعني دَينًا يلاحقه سنوات.',
+      'And even if the loan arrives, success is not guaranteed.': 'وحتى لو وصل القرض، فالنجاح ليس مضمونًا.',
+      'Economic researchers, including Abhijit Banerjee, Dean Karlan and Jonathan Zinman, ran structured experiments on small loans given to poor people to start businesses.':
+        'باحثون اقتصاديون، منهم أبهيجيت بانيرجي ودين كارلان وجوناثان زينمان، أجروا تجارب منظّمة على القروض الصغيرة التي تُعطى للفقراء لبدء مشاريع.',
+      'They found that the effect was modest on average, not a big change in families’ lives.':
+        'ووجدوا أن أثرها كان متواضعًا في المتوسط، وليس تغييرًا كبيرًا في حياة الأسر.',
+      'A loan is not a magic wand.': 'فالقرض ليس عصًا سحرية.',
+      'What Happens After a Year?': 'ماذا يحدث بعد سنة؟',
+      'Let’s imagine.': 'لنتخيّل.',
+      'Karim took a personal loan and opened a small online store without enough experience.':
+        'كريم أخذ قرضًا شخصيًا، وفتح متجرًا إلكترونيًا صغيرًا دون خبرة كافية.',
+      'Sales are weak.': 'المبيعات ضعيفة.',
+      'The monthly installment eats half his salary.': 'القسط الشهري يأكل نصف راتبه.',
+      'He starts to fall behind on payments, sleeps little, and tells himself the book tricked him.':
+        'بدأ يتأخر في الدفع، وينام قليلًا، ويقول لنفسه إن الكتاب خدعه.',
+      'This is not certain.': 'هذا ليس حتميًا.',
+      'Some people really do succeed this way.': 'بعض الناس ينجحون بهذه الطريقة فعلًا.',
+      'But it is very possible, and we rarely hear about it, because the one who fails doesn’t write a book.':
+        'لكنه محتمل جدًا، ونادرًا ما نسمع عنه، لأن من يفشل لا يكتب كتابًا.',
+      'Now let’s go back to the beginning and look at another road:':
+        'الآن لنعد إلى البداية، وننظر في طريق آخر:',
+      'Suppose Karim decided to start with no debt.': 'لنفترض أن كريم قرر أن يبدأ بلا دَين.',
+      'He stayed in his job because it pays his bills.': 'بقي في وظيفته لأنها تدفع له فواتيره.',
+      'After work he started offering a small service he’s good at to a few clients.':
+        'وبعد الدوام صار يقدّم خدمة صغيرة يجيدها لعدد قليل من الزبائن.',
+      'With his profit he bought better tools, then more clients.':
+        'ما ربحه اشترى به أدوات أفضل، ثم زبائن أكثر.',
+      'Slow?': 'بطيء؟',
+      'Yes.': 'نعم.',
+      'Boring?': 'مملّ؟',
+      'Maybe.': 'ربما.',
+      'But if he makes a mistake, he loses only a little, learns a lot, and doesn’t end up in debt.':
+        'لكن لو أخطأ، فلن يخسر إلا القليل، وسيتعلم الكثير، ولن يبقى مديونًا.',
+      'To be clear: this is my own suggestion to illustrate the idea, not from the book.':
+        'وأوضّح: هذا اقتراحي أنا لتوضيح الفكرة، وليس من الكتاب.',
+      'And the book would most likely consider it too small.': 'والكتاب، في الغالب، سيعتبره صغيرًا جدًا.',
+      'What the Book Didn’t Say': 'ما الذي لم يقله الكتاب؟',
+      'The book tells us that its author grew up next to the son of the “rich dad,” in an environment of business, connections, and opportunities.':
+        'يروي الكتاب أن كاتبه نشأ بجانب ابن «الأب الغني»، أي في بيئة فيها أعمال وعلاقات وفرص.',
+      'And this is actually a very important element in the story: a network of connections that opens doors.':
+        'وهذا في الحقيقة عنصر مهم جدًا في القصة: شبكة علاقات تفتح الأبواب.',
+      'Karim doesn’t have this network.': 'كريم لا يملك هذه الشبكة.',
+      'And he doesn’t have collateral.': 'ولا يملك ضمانات.',
+      'And the book never stops at this gap, as if everyone starts from the same line.':
+        'والكتاب لا يتوقف عند هذه الفجوة أبدًا، وكأن الجميع يبدأ من نفس الخط.',
+      'But reality isn’t like that.': 'لكن الواقع ليس هكذا.',
+      'The economist Thomas Piketty argues in his book Capital in the Twenty-First Century that those who own capital often build their wealth faster than wages grow over long periods.':
+        'فالاقتصادي توماس بيكيتي يرى في كتابه Capital in the Twenty-First Century أن من يملك رأس المال يراكم ثروته غالبًا أسرع من نمو الأجور على مدى فترات طويلة.',
+      'Meaning the starting point matters a great deal, and the one who starts with money or connections is ahead of the one who starts with nothing.':
+        'أي أن نقطة البداية مهمة جدًا، والذي يبدأ بمال أو بعلاقات يسبق الذي يبدأ بلا شيء.',
+      'The Comparison at a Glance': 'المقارنة في سطور',
+      'These columns illustrate the idea and are not a study.': 'هذه الأعمدة توضيح للفكرة وليست دراسة.',
+      'And the best alternative differs from one country to another.': 'وأفضل بديل يختلف من بلد إلى آخر.',
+      'So What Remains Useful in the Book?': 'وماذا يبقى صالحًا من الكتاب؟',
+      'We don’t want to be unfair to the book.': 'لا نريد أن نظلم الكتاب.',
+      'It has useful things for Karim that don’t require a bank:':
+        'ففيه أشياء مفيدة لكريم دون أن يحتاج إلى بنك:',
+      'Understanding the difference between income and expense, and between an asset and a liability.':
+        'أن يفهم الفرق بين الدخل والمصروف، وبين الأصل والخصم.',
+      'Stopping the habit of buying what he consumes without counting.':
+        'أن يتوقف عن شراء ما يستهلكه دون حساب.',
+      'Learning early, and talking about money without shame.':
+        'أن يتعلم مبكرًا، وأن يتحدث عن المال دون خجل.',
+      'And research supports this.': 'والبحث العلمي يؤيد هذا.',
+      'Annamaria Lusardi and Olivia Mitchell (2014) found that people who understand money better tend to make better decisions and build more wealth.':
+        'فقد وجدت آنا ماريا لوساردي وأوليفيا ميتشل (2014) أن من يفهم المال أكثر يميل إلى قرارات أفضل وثروة أكبر.',
+      'But there is a difference between two things: understanding money, and getting the money to start.':
+        'لكن هناك فرق بين شيئين: أن تفهم المال، وأن تحصل على المال لتبدأ.',
+      'And the book sometimes talks as if the first replaces the second.':
+        'والكتاب يتحدث أحيانًا كأن الأول يغني عن الثاني.',
+      'The Bottom Line': 'الخلاصة',
+      'Karim’s experiment says the book’s philosophy is not a lie, but it is written for someone who can knock on the bank’s door and have it opened.':
+        'تجربة كريم تقول إن فلسفة الكتاب ليست كذبة، لكنها مكتوبة لمن يستطيع أن يطرق باب البنك ويُفتح له.',
+      'As for the one who doesn’t yet have the key, he has to start from the other side: with a small step, little debt, and long patience.':
+        'أما من لا يملك المفتاح بعد، فعليه أن يبدأ من الجهة الأخرى: بخطوة صغيرة، ودَين قليل، وصبر طويل.',
+      'And the most important question is not “How do I get rich?”':
+        'والسؤال الأهم ليس «كيف أصبح غنيًا؟»، بل:',
+      'but:': 'بل:',
+      '“What can I start with today, with what I have?”': '«ماذا أستطيع أن أبدأ به اليوم بما أملك؟»',
+      'And you, have you ever tried to start a business?': 'وأنت، هل جرّبت أن تبدأ مشروعًا؟',
+      'Share your experience in the comments.': 'شاركنا تجربتك في التعليقات.',
     },
     'december-movies': {
       'Before distances were measured in flights, they were measured in ink.':
@@ -372,38 +533,198 @@ export const sentenceTl = {
   },
   ar: {
     'paper-notebook': {
-      'في عصر التطبيقات والسحابة، يعود الدفتر الورقي ليذكّرنا أن أبسط الأدوات هي أحياناً الأعمق.':
-        'In the age of apps and cloud sync, the humble paper notebook returns to remind us that the simplest tools are sometimes the deepest.',
-      'حين تكتب اليد ببطء': 'When the hand writes slowly',
-      'هناك فرق عصبيّ موثّق بين كتابة الملاحظات بخط اليد وكتابتها لوحة المفاتيح: اليد أبطأ، ولهذا تُجبر الدماغ على ترشيح ما يستحق قبل أن يصل إلى الورق.':
-        'There is a documented cognitive gap between handwriting notes and typing them: the hand is slower, and that is why the brain is forced to filter what deserves to reach the paper.',
-      'ما تكتبه ببطء هو ما تتذكّره بعمق.':
-        'What you write slowly is what you remember deeply.',
-      'التطبيق الذي لا ينام...':
-        'The app that never sleeps...',
-      'ولا يُقرأ بعد أسبوع':
-        'and never gets reread a week later.',
-      'جرّب بنفسك: افتح تطبيق ملاحظاتك واقرأ ما كتبته قبل شهر.':
-        'Try it yourself: open your notes app and read what you wrote a month ago.',
-      'الأغلب ستجد قوائم مهام قديمة وروابط منسيّة.':
-        "You'll mostly find stale task lists and forgotten links.",
-      'المشكلة ليست في التطبيق، بل في سهولة النسيان التي يمنحها الرقمي — كل شيء قابل للبحث، فلمَ نتذكّر شيئاً؟':
-        "The problem isn't the app — it's how easily digital lets us forget: everything is searchable, so why remember anything?",
-      'دفتر واحد وظيفته الوحيدة: التذكّر':
-        'One notebook whose only job is remembering',
-      'ليس المطلوب تبنّيراً رقمياً أو رفض التقنية.':
-        'What is asked is not digital asceticism or rejecting technology.',
-      'المطلوب بساطة: دفتر واحد بجانبك، تكتب فيه فكرة واحدة كل مساء — بلا تنظيم، بلا تصنيف، بلا إيموجي.':
-        "What is asked is simplicity: one notebook next to you — one idea written each evening, no system, no tags, no emoji.",
-      'مجرد جملة واحدة تصف يومك أو يزعجك.':
-        'Just one sentence describing your day or what bothers you.',
-      'بعد سنة، ستصفحه من الغلاف الأول وستكتشف شيئاً غريباً: صفحتك الأولى تخصّ شخصاً تعرفه جيداً وتراه كل يوم في المرآة، لكنك نسيت كم تغيّر.':
-        "A year later, you'll leaf through it from the first page and discover something strange: page one belongs to someone you know well and see in the mirror every day — but you forgot how much they changed.",
-      'الورق لا يُزامن مع السحابة، لكنه يُزامن مع الذاكرة — وهذا ما نحتاجه فعلاً.':
-        "Paper doesn't sync to the cloud, but it syncs with memory — which is what we actually need.",
-      'خلاصة': 'Bottom line',
-      'استخدم أفضل ما تقدمه التقنية، واحتفظ بأبسط ما تقدمه الورق: مساحة هادئة بلا إشعارات، تكتب فيها بخط يدك ما لا تريد أن تنسى.':
-        "Use the best of what technology offers, and keep the simplest of what paper offers: a quiet space with no notifications, where you write by hand what you refuse to forget.",
+      'تجربة بسيطة: نمشي مع شاب عادي خطوة بخطوة وهو يطبّق نصائح الكتاب.':
+        "A simple experiment: we walk with an ordinary young man, step by step, as he follows the book's advice.",
+      'الكتاب يقول لك: «الأغنياء يجعلون المال يعمل لصالحهم».':
+        'The book tells you: “The rich make money work for them.”',
+      'كلام جميل، ونحب كلنا أن نسمعه.': 'It sounds great, and we all love to hear it.',
+      'لكن لو دقّقنا قليلًا، نجد أن الطريق الذي يرسمه يمرّ من باب واحد تقريبًا: أن يعطيك البنك مالًا.':
+        'But if we look a little closer, the path it draws goes through almost one single door: the bank giving you money.',
+      'تأخذ قرضًا، وتشتري به شيئًا يربح، ثم يسدّد هذا الشيء القرض من أرباحه.':
+        'You take a loan, buy something that earns, and that thing pays back the loan from its profits.',
+      'وهنا سؤال بسيط: ماذا لو لم يعطك البنك؟':
+        'And here is a simple question: what if the bank doesn’t give it to you?',
+      'سنجرّب.': 'Let’s test it.',
+      'بدل أن نناقش الكتاب بالكلام النظري، سنعطي نصائحه لشاب عادي، ونرى ماذا يحصل له.':
+        'Instead of debating the book in theory, we’ll hand its advice to an ordinary young man and see what happens to him.',
+      'نلتقي بكريم': 'Meet Karim',
+      'كريم عمره 24 سنة.': 'Karim is 24.',
+      'يعمل موظفًا براتب متوسط.': 'He works as an employee on an average salary.',
+      'يدفع إيجار غرفته، ويساعد أهله أحيانًا، وما يبقى له آخر الشهر قليل.':
+        'He pays rent for his room, helps his family now and then, and what is left at the end of the month is small.',
+      'كل مدخراته تكفيه بضعة أشهر لو فقد عمله.':
+        'All his savings would last a few months if he lost his job.',
+      'لا يملك بيتًا ولا أرضًا.': 'He owns no house and no land.',
+      'ليس له قريب غني يكفله.': 'He has no rich relative to vouch for him.',
+      'ولم يأخذ قرضًا في حياته، فلا يوجد له «تاريخ» عند البنوك.':
+        'And he has never taken a loan in his life, so the banks have no “history” on him.',
+      '(كريم شخص خيالي.': '(Karim is a fictional person.',
+      'لكنك على الأرجح تعرف أكثر من واحد مثله.)': 'But you probably know more than one person like him.)',
+      'في إجازة قصيرة قرأ «الأب الغني والأب الفقير»، وأعجبه كثيرًا.':
+        'During a short vacation he read Rich Dad Poor Dad and loved it.',
+      'شعر أن أحدًا أخيرًا يتكلم عن المال بوضوح.':
+        'He felt that someone was finally talking about money clearly.',
+      'وقال لنفسه: «سأبدأ من اليوم، وسأطبّق ما في الكتاب حرفيًا.»':
+        'And he told himself: “I’ll start today, and I’ll follow the book to the letter.”',
+      'الخطوة الأولى: «اشترِ أصولًا»': 'Step One: “Buy Assets”',
+      'أهم قاعدة في الكتاب سهلة: الأصل هو ما يضع مالًا في جيبك، والخصم هو ما يُخرج مالًا من جيبك.':
+        'The most important rule in the book is easy: an asset puts money in your pocket, and a liability takes money out of your pocket.',
+      'الشقة التي تسكنها خصم، والشقة التي تؤجّرها أصل.':
+        'The apartment you live in is a liability. The apartment you rent out is an asset.',
+      'سأل كريم نفسه: «ما الأصل الذي أقدر على شرائه؟»':
+        'Karim asked himself: “What asset can I afford to buy?”',
+      'فتح مواقع الإعلانات.': 'He opened the listing sites.',
+      'شقة صغيرة للإيجار؟': 'A small apartment to rent out?',
+      'ثمنها أضعاف كل ما ادّخره.': 'Its price is many times everything he has saved.',
+      'محل صغير؟': 'A small shop?',
+      'نفس الشيء.': 'Same thing.',
+      'حتى لو اشترى أسهمًا بكل ما معه، فأرباحها ستكون قليلة جدًا.':
+        'Even if he bought stocks with everything he had, the profits would be tiny.',
+      'ثم تذكّر ما يقوله الكتاب في هذه الحالة: استخدم أموال الآخرين.':
+        'Then he remembered what the book says in this situation: use other people’s money.',
+      'أي: خذ قرضًا.': 'In other words: take a loan.',
+      'الأغنياء في نظر الكتاب لا يدفعون من جيوبهم.':
+        'In the book’s eyes, the rich don’t pay from their own pockets.',
+      'يقترضون، ويشترون الأصل، ويتركونه يسدّد القرض بنفسه.':
+        'They borrow, buy the asset, and let it pay off the loan by itself.',
+      'فقال كريم: «إذن سأبدأ من البنك.»': 'So Karim said: “Then I’ll start with the bank.”',
+      'الخطوة الثانية: باب البنك': 'Step Two: The Bank’s Door',
+      'دخل كريم البنك مبتسمًا وشرح فكرته بحماس.':
+        'Karim walked into the bank smiling and explained his idea with excitement.',
+      'استمع إليه الموظف بأدب، ثم بدأ يسأله:': 'The employee listened politely, then began asking:',
+      'هل لديك دخل ثابت؟': 'Do you have a steady income?',
+      'هل لديك عقار أو شيء آخر نضعه ضمانًا للقرض؟':
+        'Do you have property or something else we can hold as collateral for the loan?',
+      'هل لديك كفيل؟': 'Do you have a guarantor?',
+      'هل أخذت قرضًا من قبل وسدّدته؟': 'Have you taken a loan before and paid it back?',
+      'هل لديك دراسة وأرقام للمشروع؟': 'Do you have a study and numbers for the project?',
+      'الجواب الوحيد الذي عنده «نعم» هو الأول: راتبه من الوظيفة.':
+        'The only question he could answer “yes” to was the first one: his salary from his job.',
+      'وهي نفسها الوظيفة التي يقلّل الكتاب من شأنها!': 'The same job the book looks down on!',
+      'وليست هذه مشكلة كريم وحده.': 'And this is not Karim’s problem alone.',
+      'مسح أجراه البنك الدولي مع اتحاد المصارف العربية وجد أن واحدة من كل خمس شركات صغيرة ومتوسطة في منطقتنا فقط لديها قرض أو تسهيل بنكي.':
+        'A survey by the World Bank and the Union of Arab Banks found that only one in five small and medium-sized companies in our region has a loan or a bank credit line.',
+      'وقال اقتصادي البنك الدولي روبرتو روشا إن حصة قروض هذه الشركات من إجمالي القروض في المنطقة تقارب 7.6%.':
+        'The World Bank economist Roberto Rocha said that the share of these companies’ loans in total bank lending in the region is about 7.6%.',
+      'أما خبراء مؤسسة التمويل الدولية (IFC) فيتحدثون عن قلة الضمانات وضعف النظام المالي.':
+        'And experts at the International Finance Corporation (IFC) talk about a shortage of collateral and a weak financial system.',
+      'هذه الأرقام ليست جديدة، والتقارير اللاحقة تقول إن التحسّن بطيء.':
+        'These numbers are not new, and later reports say progress has been slow.',
+      'وانتبه: هذه الأرقام تخص شركات موجودة أصلًا.':
+        'Note also that these numbers cover companies that already exist.',
+      'أما شاب يبدأ من الصفر فهو أبعد عن البنك من هؤلاء.':
+        'A young man starting from zero is even further from the bank than they are.',
+      'والاقتصادي هيرناندو دي سوتو شرح جزءًا من المشكلة في كتابه The Mystery of Capital.':
+        'The economist Hernando de Soto explained part of the problem in his book The Mystery of Capital.',
+      'قال إن الفقراء قد يملكون أشياء كثيرة، لكنها غير مسجّلة قانونيًا، ولذلك لا يقبلها البنك ضمانًا.':
+        'He said that poor people may own many things, but they are not legally registered, so the bank doesn’t accept them as collateral.',
+      'يعني أن الشيء الذي تملكه قد لا يساوي شيئًا في نظر البنك.':
+        'Meaning: what you own may be worth nothing in the bank’s eyes.',
+      'الخطوة الثالثة: وبعد الرفض؟': 'Step Three: And After the Rejection?',
+      'كريم لا يستسلم بسهولة.': 'Karim doesn’t give up easily.',
+      'أمامه ثلاثة طرق.': 'He has three roads.',
+      'وفي كل طريق مفارقة.': 'And each road has a paradox.',
+      'الطريق الأول: قرض شخصي أو مال من العائلة.': 'Road one: a personal loan, or money from family.',
+      'سيأخذ المال ويبدأ.': 'He’ll take the money and start.',
+      'لكن من سيسدّد القسط كل شهر؟': 'But who will pay the installment every month?',
+      'راتبه.': 'His salary.',
+      'أي أن المال سيخرج من جيبه كل شهر، وهذا بالضبط ما يسمّيه الكتاب «خصمًا»، وما يحذّر منه.':
+        'So money will leave his pocket every month, which is exactly what the book calls a “liability,” and what it warns against.',
+      'الطريق الثاني: دورات الأثرياء.': 'Road two: courses for the wealthy.',
+      'يقول: «سأتعلم أولًا قبل أن أبدأ».': 'He says: “I’ll learn first before I start.”',
+      'لكن هذه الدورات تكلّف مالًا.': 'But these courses cost money.',
+      'وقد ذكر مقال في مجلة Slate أن ندوات مرتبطة بعلامة الكتاب التجارية أثارت شكاوى كثيرة بين المشاركين.':
+        'An article in Slate magazine mentioned that seminars linked to the book’s brand drew many complaints from participants.',
+      'وكريم سيدفع من مدخراته القليلة أصلًا.': 'And Karim would pay from his already small savings.',
+      'الطريق الثالث: يدخل مشروعًا بدَين كبير.': 'Road three: jump into a business with heavy debt.',
+      'وهذا هو الطريق الذي يحبّه الكتاب.': 'This is the road the book loves.',
+      'فيه كل شيء إلا الأمان.': 'It has everything except safety.',
+      'وهنا درس مهم من الكاتب نسيم طالب في كتابه Fooled by Randomness.':
+        'And here is an important lesson from Nassim Taleb in his book Fooled by Randomness.',
+      'هو يفرّق بين نوعين من الخسارة: خسارة تستطيع تعويضها، وخسارة تُخرجك من اللعبة كلها.':
+        'He separates two kinds of loss: a loss you can recover from, and a loss that knocks you out of the game completely.',
+      'صاحب المال الكبير يتحمّل سقطة وينهض.': 'A person with big money can take a fall and get back up.',
+      'أما كريم، بلا مدخرات تكفي ولا سند، فسقطة واحدة قد تعني دَينًا يلاحقه سنوات.':
+        'But Karim, without enough savings and without a safety net, could be chasing one fall in debt for years.',
+      'وحتى لو وصل القرض، فالنجاح ليس مضمونًا.': 'And even if the loan arrives, success is not guaranteed.',
+      'باحثون اقتصاديون، منهم أبهيجيت بانيرجي ودين كارلان وجوناثان زينمان، أجروا تجارب منظّمة على القروض الصغيرة التي تُعطى للفقراء لبدء مشاريع.':
+        'Economic researchers, including Abhijit Banerjee, Dean Karlan and Jonathan Zinman, ran structured experiments on small loans given to poor people to start businesses.',
+      'ووجدوا أن أثرها كان متواضعًا في المتوسط، وليس تغييرًا كبيرًا في حياة الأسر.':
+        'They found that the effect was modest on average, not a big change in families’ lives.',
+      'فالقرض ليس عصًا سحرية.': 'A loan is not a magic wand.',
+      'ماذا يحدث بعد سنة؟': 'What Happens After a Year?',
+      'لنتخيّل.': 'Let’s imagine.',
+      'كريم أخذ قرضًا شخصيًا، وفتح متجرًا إلكترونيًا صغيرًا دون خبرة كافية.':
+        'Karim took a personal loan and opened a small online store without enough experience.',
+      'المبيعات ضعيفة.': 'Sales are weak.',
+      'القسط الشهري يأكل نصف راتبه.': 'The monthly installment eats half his salary.',
+      'بدأ يتأخر في الدفع، وينام قليلًا، ويقول لنفسه إن الكتاب خدعه.':
+        'He starts to fall behind on payments, sleeps little, and tells himself the book tricked him.',
+      'هذا ليس حتميًا.': 'This is not certain.',
+      'بعض الناس ينجحون بهذه الطريقة فعلًا.': 'Some people really do succeed this way.',
+      'لكنه محتمل جدًا، ونادرًا ما نسمع عنه، لأن من يفشل لا يكتب كتابًا.':
+        'But it is very possible, and we rarely hear about it, because the one who fails doesn’t write a book.',
+      'الآن لنعد إلى البداية، وننظر في طريق آخر:':
+        'Now let’s go back to the beginning and look at another road:',
+      'لنفترض أن كريم قرر أن يبدأ بلا دَين.': 'Suppose Karim decided to start with no debt.',
+      'بقي في وظيفته لأنها تدفع له فواتيره.': 'He stayed in his job because it pays his bills.',
+      'وبعد الدوام صار يقدّم خدمة صغيرة يجيدها لعدد قليل من الزبائن.':
+        'After work he started offering a small service he’s good at to a few clients.',
+      'ما ربحه اشترى به أدوات أفضل، ثم زبائن أكثر.':
+        'With his profit he bought better tools, then more clients.',
+      'بطيء؟': 'Slow?',
+      'نعم.': 'Yes.',
+      'مملّ؟': 'Boring?',
+      'ربما.': 'Maybe.',
+      'لكن لو أخطأ، فلن يخسر إلا القليل، وسيتعلم الكثير، ولن يبقى مديونًا.':
+        'But if he makes a mistake, he loses only a little, learns a lot, and doesn’t end up in debt.',
+      'وأوضّح: هذا اقتراحي أنا لتوضيح الفكرة، وليس من الكتاب.':
+        'To be clear: this is my own suggestion to illustrate the idea, not from the book.',
+      'والكتاب، في الغالب، سيعتبره صغيرًا جدًا.': 'And the book would most likely consider it too small.',
+      'ما الذي لم يقله الكتاب؟': 'What the Book Didn’t Say',
+      'يروي الكتاب أن كاتبه نشأ بجانب ابن «الأب الغني»، أي في بيئة فيها أعمال وعلاقات وفرص.':
+        'The book tells us that its author grew up next to the son of the “rich dad,” in an environment of business, connections, and opportunities.',
+      'وهذا في الحقيقة عنصر مهم جدًا في القصة: شبكة علاقات تفتح الأبواب.':
+        'And this is actually a very important element in the story: a network of connections that opens doors.',
+      'كريم لا يملك هذه الشبكة.': 'Karim doesn’t have this network.',
+      'ولا يملك ضمانات.': 'And he doesn’t have collateral.',
+      'والكتاب لا يتوقف عند هذه الفجوة أبدًا، وكأن الجميع يبدأ من نفس الخط.':
+        'And the book never stops at this gap, as if everyone starts from the same line.',
+      'لكن الواقع ليس هكذا.': 'But reality isn’t like that.',
+      'فالاقتصادي توماس بيكيتي يرى في كتابه Capital in the Twenty-First Century أن من يملك رأس المال يراكم ثروته غالبًا أسرع من نمو الأجور على مدى فترات طويلة.':
+        'The economist Thomas Piketty argues in his book Capital in the Twenty-First Century that those who own capital often build their wealth faster than wages grow over long periods.',
+      'أي أن نقطة البداية مهمة جدًا، والذي يبدأ بمال أو بعلاقات يسبق الذي يبدأ بلا شيء.':
+        'Meaning the starting point matters a great deal, and the one who starts with money or connections is ahead of the one who starts with nothing.',
+      'المقارنة في سطور': 'The Comparison at a Glance',
+      'هذه الأعمدة توضيح للفكرة وليست دراسة.': 'These columns illustrate the idea and are not a study.',
+      'وأفضل بديل يختلف من بلد إلى آخر.': 'And the best alternative differs from one country to another.',
+      'وماذا يبقى صالحًا من الكتاب؟': 'So What Remains Useful in the Book?',
+      'لا نريد أن نظلم الكتاب.': 'We don’t want to be unfair to the book.',
+      'ففيه أشياء مفيدة لكريم دون أن يحتاج إلى بنك:':
+        'It has useful things for Karim that don’t require a bank:',
+      'أن يفهم الفرق بين الدخل والمصروف، وبين الأصل والخصم.':
+        'Understanding the difference between income and expense, and between an asset and a liability.',
+      'أن يتوقف عن شراء ما يستهلكه دون حساب.':
+        'Stopping the habit of buying what he consumes without counting.',
+      'أن يتعلم مبكرًا، وأن يتحدث عن المال دون خجل.':
+        'Learning early, and talking about money without shame.',
+      'والبحث العلمي يؤيد هذا.': 'And research supports this.',
+      'فقد وجدت آنا ماريا لوساردي وأوليفيا ميتشل (2014) أن من يفهم المال أكثر يميل إلى قرارات أفضل وثروة أكبر.':
+        'Annamaria Lusardi and Olivia Mitchell (2014) found that people who understand money better tend to make better decisions and build more wealth.',
+      'لكن هناك فرق بين شيئين: أن تفهم المال، وأن تحصل على المال لتبدأ.':
+        'But there is a difference between two things: understanding money, and getting the money to start.',
+      'والكتاب يتحدث أحيانًا كأن الأول يغني عن الثاني.':
+        'And the book sometimes talks as if the first replaces the second.',
+      'الخلاصة': 'The Bottom Line',
+      'تجربة كريم تقول إن فلسفة الكتاب ليست كذبة، لكنها مكتوبة لمن يستطيع أن يطرق باب البنك ويُفتح له.':
+        'Karim’s experiment says the book’s philosophy is not a lie, but it is written for someone who can knock on the bank’s door and have it opened.',
+      'أما من لا يملك المفتاح بعد، فعليه أن يبدأ من الجهة الأخرى: بخطوة صغيرة، ودَين قليل، وصبر طويل.':
+        'As for the one who doesn’t yet have the key, he has to start from the other side: with a small step, little debt, and long patience.',
+      'والسؤال الأهم ليس «كيف أصبح غنيًا؟»، بل:':
+        'And the most important question is not “How do I get rich?”',
+      '«ماذا أستطيع أن أبدأ به اليوم بما أملك؟»': '“What can I start with today, with what I have?”',
+      'وأنت، هل جرّبت أن تبدأ مشروعًا؟': 'And you, have you ever tried to start a business?',
+      'شاركنا تجربتك في التعليقات.': 'Share your experience in the comments.',
     },
     'december-movies': {
       'قبل أن تُقاس المسافات بالطائرات، قيست بحبر دفتر.':
