@@ -60,6 +60,8 @@ And this matters because a teenager does not live a single story at a time. He s
 
 And love here is not just a romance added to the events. It is the only warmth in the life of a boy who got used to the cold. That is why we wait for every glance and every word between the characters, because we know how much Aras needs a hand to hold his.
 
+![A young woman and a young man holding hands in a scene from “At Seventeen”](/images/daha-17-4.webp)
+
 ## A Message to Parents
 
 If there is a teenager in your house watching this series, do not treat it as if it were merely wasted time. For in the story there is something worth stopping for.
