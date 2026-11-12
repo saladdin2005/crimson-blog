@@ -202,6 +202,38 @@ export const sentenceTl = {
       '“What can I start with today, with what I have?”': '«ماذا أستطيع أن أبدأ به اليوم بما أملك؟»',
       'And you, have you ever tried to start a business?': 'وأنت، هل جرّبت أن تبدأ مشروعًا؟',
       'Share your experience in the comments.': 'شاركنا تجربتك في التعليقات.',
+      "References": "المراجع",
+      "Kiyosaki, R.": "كيوساكي، ر.",
+      "T., & Lechter, S.": "ت.، وليشتر، إس.",
+      "L.": "ل.",
+      "(1997).": "(1997).",
+      "Rich Dad Poor Dad.": "«الأب الغني والأب الفقير».",
+      "Rocha, R., Farazi, S., Khouri, R., & Pearce, D.": "روشا، ر.، وفارازي، إس.، وخوري، آر.، وبيرس، دي.",
+      "(2011).": "(2011).",
+      "The Status of Bank Lending to SMEs in the Middle East and North Africa Region.": "حالة القروض المصرفية للمنشآت الصغيرة والمتوسطة في الشرق الأوسط وشمال أفريقيا.",
+      "World Bank Policy Research Working Paper 5607.": "ورقة أبحاث سياسات البنك الدولي 5607.",
+      "International Finance Corporation (IFC), statements and reports on small and medium business financing in the region (MEED, 2013).": "الشركة الدولية للتمويل (IFC): تصريحات وتقارير عن تمويل منشآت الأعمال الصغيرة والمتوسطة في المنطقة (MEED، 2013).",
+      "De Soto, H.": "دي سوتو، إتش.",
+      "(2000).": "(2000).",
+      "The Mystery of Capital.": "لغز رأس المال.",
+      "Basic Books.": "دار بيسيك بوكس.",
+      "Taleb, N.": "طالب، إن.",
+      "N.": "إن.",
+      "(2001).": "(2001).",
+      "Fooled by Randomness.": "مقهور بالصدفة.",
+      "Banerjee, A., Karlan, D., & Zinman, J.": "بنرجي، آي.، وكارلان، دي.، وزيتمان، جي.",
+      "(2015).": "(2015).",
+      "Six Randomized Evaluations of Microcredit.": "ست تقييمات عشوائية للتمويل الأصغر.",
+      "American Economic Journal: Applied Economics, 7(1).": "المجلة الاقتصادية الأمريكية: الاقتصاد التطبيقي، 7(1).",
+      "Piketty, T.": "بيكيتي، تي.",
+      "(2014).": "(2014).",
+      "Capital in the Twenty-First Century.": "رأس المال في القرن الحادي والعشرين.",
+      "Harvard University Press.": "دار نشر جامعة هارفارد.",
+      "Lusardi, A., & Mitchell, O.": "لوسردي، آي.، وميتشل، أو.",
+      "S.": "إس.",
+      "The Economic Importance of Financial Literacy.": "الأهمية الاقتصادية للمعرفة المالية.",
+      "Journal of Economic Literature, 52(1).": "مجلة الأدبيات الاقتصادية، 52(1).",
+      "Slate, article about the book and the seminars tied to its brand (slate.com).": "سليت، مقال عن الكتاب وندواته المرتبطة بعلامته التجارية (slate.com).",
     },
     'december-movies': {
       'A collection of December movies worth watching again and again.':
@@ -727,198 +759,116 @@ export const sentenceTl = {
   },
   ar: {
     'paper-notebook': {
-      'تجربة بسيطة: نمشي مع شاب عادي خطوة بخطوة وهو يطبّق نصائح الكتاب.':
-        "A simple experiment: we walk with an ordinary young man, step by step, as he follows the book's advice.",
-      'الكتاب يقول لك: «الأغنياء يجعلون المال يعمل لصالحهم».':
-        'The book tells you: “The rich make money work for them.”',
-      'كلام جميل، ونحب كلنا أن نسمعه.': 'It sounds great, and we all love to hear it.',
-      'لكن لو دقّقنا قليلًا، نجد أن الطريق الذي يرسمه يمرّ من باب واحد تقريبًا: أن يعطيك البنك مالًا.':
-        'But if we look a little closer, the path it draws goes through almost one single door: the bank giving you money.',
-      'تأخذ قرضًا، وتشتري به شيئًا يربح، ثم يسدّد هذا الشيء القرض من أرباحه.':
-        'You take a loan, buy something that earns, and that thing pays back the loan from its profits.',
-      'وهنا سؤال بسيط: ماذا لو لم يعطك البنك؟':
-        'And here is a simple question: what if the bank doesn’t give it to you?',
-      'سنجرّب.': 'Let’s test it.',
-      'بدل أن نناقش الكتاب بالكلام النظري، سنعطي نصائحه لشاب عادي، ونرى ماذا يحصل له.':
-        'Instead of debating the book in theory, we’ll hand its advice to an ordinary young man and see what happens to him.',
-      'نلتقي بكريم': 'Meet Karim',
-      'كريم عمره 24 سنة.': 'Karim is 24.',
-      'يعمل موظفًا براتب متوسط.': 'He works as an employee on an average salary.',
-      'يدفع إيجار غرفته، ويساعد أهله أحيانًا، وما يبقى له آخر الشهر قليل.':
-        'He pays rent for his room, helps his family now and then, and what is left at the end of the month is small.',
-      'كل مدخراته تكفيه بضعة أشهر لو فقد عمله.':
-        'All his savings would last a few months if he lost his job.',
-      'لا يملك بيتًا ولا أرضًا.': 'He owns no house and no land.',
-      'ليس له قريب غني يكفله.': 'He has no rich relative to vouch for him.',
-      'ولم يأخذ قرضًا في حياته، فلا يوجد له «تاريخ» عند البنوك.':
-        'And he has never taken a loan in his life, so the banks have no “history” on him.',
-      '(كريم شخص خيالي.': '(Karim is a fictional person.',
-      'لكنك على الأرجح تعرف أكثر من واحد مثله.)': 'But you probably know more than one person like him.)',
-      'في إجازة قصيرة قرأ «الأب الغني والأب الفقير»، وأعجبه كثيرًا.':
-        'During a short vacation he read Rich Dad Poor Dad and loved it.',
-      'شعر أن أحدًا أخيرًا يتكلم عن المال بوضوح.':
-        'He felt that someone was finally talking about money clearly.',
-      'وقال لنفسه: «سأبدأ من اليوم، وسأطبّق ما في الكتاب حرفيًا.»':
-        'And he told himself: “I’ll start today, and I’ll follow the book to the letter.”',
-      'الخطوة الأولى: «اشترِ أصولًا»': 'Step One: “Buy Assets”',
-      'أهم قاعدة في الكتاب سهلة: الأصل هو ما يضع مالًا في جيبك، والخصم هو ما يُخرج مالًا من جيبك.':
-        'The most important rule in the book is easy: an asset puts money in your pocket, and a liability takes money out of your pocket.',
-      'الشقة التي تسكنها خصم، والشقة التي تؤجّرها أصل.':
-        'The apartment you live in is a liability. The apartment you rent out is an asset.',
-      'سأل كريم نفسه: «ما الأصل الذي أقدر على شرائه؟»':
-        'Karim asked himself: “What asset can I afford to buy?”',
-      'فتح مواقع الإعلانات.': 'He opened the listing sites.',
-      'شقة صغيرة للإيجار؟': 'A small apartment to rent out?',
-      'ثمنها أضعاف كل ما ادّخره.': 'Its price is many times everything he has saved.',
-      'محل صغير؟': 'A small shop?',
-      'نفس الشيء.': 'Same thing.',
-      'حتى لو اشترى أسهمًا بكل ما معه، فأرباحها ستكون قليلة جدًا.':
-        'Even if he bought stocks with everything he had, the profits would be tiny.',
-      'ثم تذكّر ما يقوله الكتاب في هذه الحالة: استخدم أموال الآخرين.':
-        'Then he remembered what the book says in this situation: use other people’s money.',
-      'أي: خذ قرضًا.': 'In other words: take a loan.',
-      'الأغنياء في نظر الكتاب لا يدفعون من جيوبهم.':
-        'In the book’s eyes, the rich don’t pay from their own pockets.',
-      'يقترضون، ويشترون الأصل، ويتركونه يسدّد القرض بنفسه.':
-        'They borrow, buy the asset, and let it pay off the loan by itself.',
-      'فقال كريم: «إذن سأبدأ من البنك.»': 'So Karim said: “Then I’ll start with the bank.”',
-      'الخطوة الثانية: باب البنك': 'Step Two: The Bank’s Door',
-      'دخل كريم البنك مبتسمًا وشرح فكرته بحماس.':
-        'Karim walked into the bank smiling and explained his idea with excitement.',
-      'استمع إليه الموظف بأدب، ثم بدأ يسأله:': 'The employee listened politely, then began asking:',
-      'هل لديك دخل ثابت؟': 'Do you have a steady income?',
-      'هل لديك عقار أو شيء آخر نضعه ضمانًا للقرض؟':
-        'Do you have property or something else we can hold as collateral for the loan?',
-      'هل لديك كفيل؟': 'Do you have a guarantor?',
-      'هل أخذت قرضًا من قبل وسدّدته؟': 'Have you taken a loan before and paid it back?',
-      'هل لديك دراسة وأرقام للمشروع؟': 'Do you have a study and numbers for the project?',
-      'الجواب الوحيد الذي عنده «نعم» هو الأول: راتبه من الوظيفة.':
-        'The only question he could answer “yes” to was the first one: his salary from his job.',
-      'وهي نفسها الوظيفة التي يقلّل الكتاب من شأنها!': 'The same job the book looks down on!',
-      'وليست هذه مشكلة كريم وحده.': 'And this is not Karim’s problem alone.',
-      'مسح أجراه البنك الدولي مع اتحاد المصارف العربية وجد أن واحدة من كل خمس شركات صغيرة ومتوسطة في منطقتنا فقط لديها قرض أو تسهيل بنكي.':
-        'A survey by the World Bank and the Union of Arab Banks found that only one in five small and medium-sized companies in our region has a loan or a bank credit line.',
-      'وقال اقتصادي البنك الدولي روبرتو روشا إن حصة قروض هذه الشركات من إجمالي القروض في المنطقة تقارب 7.6%.':
-        'The World Bank economist Roberto Rocha said that the share of these companies’ loans in total bank lending in the region is about 7.6%.',
-      'أما خبراء مؤسسة التمويل الدولية (IFC) فيتحدثون عن قلة الضمانات وضعف النظام المالي.':
-        'And experts at the International Finance Corporation (IFC) talk about a shortage of collateral and a weak financial system.',
-      'هذه الأرقام ليست جديدة، والتقارير اللاحقة تقول إن التحسّن بطيء.':
-        'These numbers are not new, and later reports say progress has been slow.',
-      'وانتبه: هذه الأرقام تخص شركات موجودة أصلًا.':
-        'Note also that these numbers cover companies that already exist.',
-      'أما شاب يبدأ من الصفر فهو أبعد عن البنك من هؤلاء.':
-        'A young man starting from zero is even further from the bank than they are.',
-      'والاقتصادي هيرناندو دي سوتو شرح جزءًا من المشكلة في كتابه The Mystery of Capital.':
-        'The economist Hernando de Soto explained part of the problem in his book The Mystery of Capital.',
-      'قال إن الفقراء قد يملكون أشياء كثيرة، لكنها غير مسجّلة قانونيًا، ولذلك لا يقبلها البنك ضمانًا.':
-        'He said that poor people may own many things, but they are not legally registered, so the bank doesn’t accept them as collateral.',
-      'يعني أن الشيء الذي تملكه قد لا يساوي شيئًا في نظر البنك.':
-        'Meaning: what you own may be worth nothing in the bank’s eyes.',
-      'الخطوة الثالثة: وبعد الرفض؟': 'Step Three: And After the Rejection?',
-      'كريم لا يستسلم بسهولة.': 'Karim doesn’t give up easily.',
-      'أمامه ثلاثة طرق.': 'He has three roads.',
-      'وفي كل طريق مفارقة.': 'And each road has a paradox.',
-      'الطريق الأول: قرض شخصي أو مال من العائلة.': 'Road one: a personal loan, or money from family.',
-      'سيأخذ المال ويبدأ.': 'He’ll take the money and start.',
-      'لكن من سيسدّد القسط كل شهر؟': 'But who will pay the installment every month?',
-      'راتبه.': 'His salary.',
-      'أي أن المال سيخرج من جيبه كل شهر، وهذا بالضبط ما يسمّيه الكتاب «خصمًا»، وما يحذّر منه.':
-        'So money will leave his pocket every month, which is exactly what the book calls a “liability,” and what it warns against.',
-      'الطريق الثاني: دورات الأثرياء.': 'Road two: courses for the wealthy.',
-      'يقول: «سأتعلم أولًا قبل أن أبدأ».': 'He says: “I’ll learn first before I start.”',
-      'لكن هذه الدورات تكلّف مالًا.': 'But these courses cost money.',
-      'وقد ذكر مقال في مجلة Slate أن ندوات مرتبطة بعلامة الكتاب التجارية أثارت شكاوى كثيرة بين المشاركين.':
-        'An article in Slate magazine mentioned that seminars linked to the book’s brand drew many complaints from participants.',
-      'وكريم سيدفع من مدخراته القليلة أصلًا.': 'And Karim would pay from his already small savings.',
-      'الطريق الثالث: يدخل مشروعًا بدَين كبير.': 'Road three: jump into a business with heavy debt.',
-      'وهذا هو الطريق الذي يحبّه الكتاب.': 'This is the road the book loves.',
-      'فيه كل شيء إلا الأمان.': 'It has everything except safety.',
-      'وهنا درس مهم من الكاتب نسيم طالب في كتابه Fooled by Randomness.':
-        'And here is an important lesson from Nassim Taleb in his book Fooled by Randomness.',
-      'هو يفرّق بين نوعين من الخسارة: خسارة تستطيع تعويضها، وخسارة تُخرجك من اللعبة كلها.':
-        'He separates two kinds of loss: a loss you can recover from, and a loss that knocks you out of the game completely.',
-      'صاحب المال الكبير يتحمّل سقطة وينهض.': 'A person with big money can take a fall and get back up.',
-      'أما كريم، بلا مدخرات تكفي ولا سند، فسقطة واحدة قد تعني دَينًا يلاحقه سنوات.':
-        'But Karim, without enough savings and without a safety net, could be chasing one fall in debt for years.',
-      'وحتى لو وصل القرض، فالنجاح ليس مضمونًا.': 'And even if the loan arrives, success is not guaranteed.',
-      'باحثون اقتصاديون، منهم أبهيجيت بانيرجي ودين كارلان وجوناثان زينمان، أجروا تجارب منظّمة على القروض الصغيرة التي تُعطى للفقراء لبدء مشاريع.':
-        'Economic researchers, including Abhijit Banerjee, Dean Karlan and Jonathan Zinman, ran structured experiments on small loans given to poor people to start businesses.',
-      'ووجدوا أن أثرها كان متواضعًا في المتوسط، وليس تغييرًا كبيرًا في حياة الأسر.':
-        'They found that the effect was modest on average, not a big change in families’ lives.',
-      'فالقرض ليس عصًا سحرية.': 'A loan is not a magic wand.',
-      'ماذا يحدث بعد سنة؟': 'What Happens After a Year?',
-      'لنتخيّل.': 'Let’s imagine.',
-      'كريم أخذ قرضًا شخصيًا، وفتح متجرًا إلكترونيًا صغيرًا دون خبرة كافية.':
-        'Karim took a personal loan and opened a small online store without enough experience.',
-      'المبيعات ضعيفة.': 'Sales are weak.',
-      'القسط الشهري يأكل نصف راتبه.': 'The monthly installment eats half his salary.',
-      'بدأ يتأخر في الدفع، وينام قليلًا، ويقول لنفسه إن الكتاب خدعه.':
-        'He starts to fall behind on payments, sleeps little, and tells himself the book tricked him.',
-      'هذا ليس حتميًا.': 'This is not certain.',
-      'بعض الناس ينجحون بهذه الطريقة فعلًا.': 'Some people really do succeed this way.',
-      'لكنه محتمل جدًا، ونادرًا ما نسمع عنه، لأن من يفشل لا يكتب كتابًا.':
-        'But it is very possible, and we rarely hear about it, because the one who fails doesn’t write a book.',
-      'الآن لنعد إلى البداية، وننظر في طريق آخر:':
-        'Now let’s go back to the beginning and look at another road:',
-      'لنفترض أن كريم قرر أن يبدأ بلا دَين.': 'Suppose Karim decided to start with no debt.',
-      'بقي في وظيفته لأنها تدفع له فواتيره.': 'He stayed in his job because it pays his bills.',
-      'وبعد الدوام صار يقدّم خدمة صغيرة يجيدها لعدد قليل من الزبائن.':
-        'After work he started offering a small service he’s good at to a few clients.',
-      'ما ربحه اشترى به أدوات أفضل، ثم زبائن أكثر.':
-        'With his profit he bought better tools, then more clients.',
-      'بطيء؟': 'Slow?',
-      'نعم.': 'Yes.',
-      'مملّ؟': 'Boring?',
-      'ربما.': 'Maybe.',
-      'لكن لو أخطأ، فلن يخسر إلا القليل، وسيتعلم الكثير، ولن يبقى مديونًا.':
-        'But if he makes a mistake, he loses only a little, learns a lot, and doesn’t end up in debt.',
-      'وأوضّح: هذا اقتراحي أنا لتوضيح الفكرة، وليس من الكتاب.':
-        'To be clear: this is my own suggestion to illustrate the idea, not from the book.',
-      'والكتاب، في الغالب، سيعتبره صغيرًا جدًا.': 'And the book would most likely consider it too small.',
-      'ما الذي لم يقله الكتاب؟': 'What the Book Didn’t Say',
-      'يروي الكتاب أن كاتبه نشأ بجانب ابن «الأب الغني»، أي في بيئة فيها أعمال وعلاقات وفرص.':
-        'The book tells us that its author grew up next to the son of the “rich dad,” in an environment of business, connections, and opportunities.',
-      'وهذا في الحقيقة عنصر مهم جدًا في القصة: شبكة علاقات تفتح الأبواب.':
-        'And this is actually a very important element in the story: a network of connections that opens doors.',
-      'كريم لا يملك هذه الشبكة.': 'Karim doesn’t have this network.',
-      'ولا يملك ضمانات.': 'And he doesn’t have collateral.',
-      'والكتاب لا يتوقف عند هذه الفجوة أبدًا، وكأن الجميع يبدأ من نفس الخط.':
-        'And the book never stops at this gap, as if everyone starts from the same line.',
-      'لكن الواقع ليس هكذا.': 'But reality isn’t like that.',
-      'فالاقتصادي توماس بيكيتي يرى في كتابه Capital in the Twenty-First Century أن من يملك رأس المال يراكم ثروته غالبًا أسرع من نمو الأجور على مدى فترات طويلة.':
-        'The economist Thomas Piketty argues in his book Capital in the Twenty-First Century that those who own capital often build their wealth faster than wages grow over long periods.',
-      'أي أن نقطة البداية مهمة جدًا، والذي يبدأ بمال أو بعلاقات يسبق الذي يبدأ بلا شيء.':
-        'Meaning the starting point matters a great deal, and the one who starts with money or connections is ahead of the one who starts with nothing.',
-      'المقارنة في سطور': 'The Comparison at a Glance',
-      'هذه الأعمدة توضيح للفكرة وليست دراسة.': 'These columns illustrate the idea and are not a study.',
-      'وأفضل بديل يختلف من بلد إلى آخر.': 'And the best alternative differs from one country to another.',
-      'وماذا يبقى صالحًا من الكتاب؟': 'So What Remains Useful in the Book?',
-      'لا نريد أن نظلم الكتاب.': 'We don’t want to be unfair to the book.',
-      'ففيه أشياء مفيدة لكريم دون أن يحتاج إلى بنك:':
-        'It has useful things for Karim that don’t require a bank:',
-      'أن يفهم الفرق بين الدخل والمصروف، وبين الأصل والخصم.':
-        'Understanding the difference between income and expense, and between an asset and a liability.',
-      'أن يتوقف عن شراء ما يستهلكه دون حساب.':
-        'Stopping the habit of buying what he consumes without counting.',
-      'أن يتعلم مبكرًا، وأن يتحدث عن المال دون خجل.':
-        'Learning early, and talking about money without shame.',
-      'والبحث العلمي يؤيد هذا.': 'And research supports this.',
-      'فقد وجدت آنا ماريا لوساردي وأوليفيا ميتشل (2014) أن من يفهم المال أكثر يميل إلى قرارات أفضل وثروة أكبر.':
-        'Annamaria Lusardi and Olivia Mitchell (2014) found that people who understand money better tend to make better decisions and build more wealth.',
-      'لكن هناك فرق بين شيئين: أن تفهم المال، وأن تحصل على المال لتبدأ.':
-        'But there is a difference between two things: understanding money, and getting the money to start.',
-      'والكتاب يتحدث أحيانًا كأن الأول يغني عن الثاني.':
-        'And the book sometimes talks as if the first replaces the second.',
-      'الخلاصة': 'The Bottom Line',
-      'تجربة كريم تقول إن فلسفة الكتاب ليست كذبة، لكنها مكتوبة لمن يستطيع أن يطرق باب البنك ويُفتح له.':
-        'Karim’s experiment says the book’s philosophy is not a lie, but it is written for someone who can knock on the bank’s door and have it opened.',
-      'أما من لا يملك المفتاح بعد، فعليه أن يبدأ من الجهة الأخرى: بخطوة صغيرة، ودَين قليل، وصبر طويل.':
-        'As for the one who doesn’t yet have the key, he has to start from the other side: with a small step, little debt, and long patience.',
-      'والسؤال الأهم ليس «كيف أصبح غنيًا؟»، بل:':
-        'And the most important question is not “How do I get rich?”',
-      '«ماذا أستطيع أن أبدأ به اليوم بما أملك؟»': '“What can I start with today, with what I have?”',
-      'وأنت، هل جرّبت أن تبدأ مشروعًا؟': 'And you, have you ever tried to start a business?',
-      'شاركنا تجربتك في التعليقات.': 'Share your experience in the comments.',
+      "قراءة نقدية هادئة وصريحة لأشهر كتاب مالي في العالم: أين الحقيقة، وأين التسويق، وأين الخطر": "A calm, candid critical reading of the world's most famous finance book: where the truth is, where the marketing is, and where the danger is",
+      "لو سألتَ أي شخص: «هل سمعتَ بكتاب الأب الغني والأب الفقير؟»": "If you asked anyone: “Have you heard of the book Rich Dad Poor Dad?”",
+      "فالأرجح أنه سيقول نعم.": "The odds are they would say yes.",
+      "ولو سألتَه: «هل تعرف شخصًا صار غنيًّا بسبب هذا الكتاب؟»": "And if you asked them: “Do you know anyone who got rich because of this book?”",
+      "فالأرجح أنه سيسكت قليلاً.": "The odds are they would fall silent for a moment.",
+      "هذا السكوت هو موضوع مقالنا.": "That silence is the subject of our article.",
+      "لا نكتب هنا لنهاجم أحدًا، ولا لنطفئ حماس من أحبّ الكتاب.": "We are not writing here to attack anyone, nor to dampen the enthusiasm of those who loved the book.",
+      "نكتب لنفعل ما يفعله القارئ الناضج مع أي كتاب مؤثر: أن نفصل بين الإلهام والدليل.": "We write to do what the mature reader does with any influential book: separate inspiration from evidence.",
+      "أولًا: من هو «الأب الغني»؟": "First: who is the “rich dad”?",
+      "كل الكتاب قائم على شخصية واحدة: رجل ثري يعلّم الصبي الصغير أسرار المال.": "The entire book rests on a single character: a rich man who teaches the little boy the secrets of money.",
+      "لكن هذه الشخصية هي أضعف ما في الكتاب من ناحية التوثيق.": "But this character is the weakest part of the book when it comes to documentation.",
+      "المستثمر العقاري جون ت.": "Real-estate investor John T.",
+      "ريد، وهو حاصل على ماجستير إدارة الأعمال من هارفارد، نشر تحليلًا مطوّلًا للكتاب على موقعه، وأشار فيه إلى أن روايات الكاتب عن «أفضل معلّم في حياته» تغيّرت من نصٍّ إلى آخر؛ فقد وصف أباه الحقيقي في كتابات سابقة بأنه أفضل معلّم عرفه، ثم صار «الأب الغني» هو ذلك المعلّم في كتاب 1997.": "Reed, who holds an MBA from Harvard, published a lengthy analysis of the book on his site, pointing out that the author's accounts of “the best teacher of his life” changed from one text to another: in earlier writings he described his own father as the best teacher he had known, and by the 1997 book that teacher had become the “rich dad.”",
+      "وتساءلت مقالات صحفية، منها مقال في مجلة Slate، عن وجود هذا الرجل أصلًا.": "And newspaper articles, including one in Slate, questioned whether this man existed at all.",
+      "ولا يعني هذا أن الشخصية مختلقة بالضرورة.": "This does not necessarily mean the character was invented.",
+      "لكنه يعني أن القارئ لا يملك دليلًا مستقلًا يتحقق به من القصة التي بُني عليها كل شيء.": "But it means the reader has no independent evidence with which to verify the story everything was built on.",
+      "وهذا مهم، لأن الكتاب لا يعدك بحكاية فقط، بل يطلب منك أن تغيّر حياتك بناءً عليه.": "And this matters, because the book does not just promise you a story — it asks you to change your life based on it.",
+      "ثانيًا: كتاب بلا خريطة": "Second: a book with no map",
+      "يقول لك الكتاب: «اشترِ أصولًا».": "The book tells you: “buy assets.”",
+      "ممتاز.": "Excellent.",
+      "لكن:": "But:",
+      "كم تدّخر شهريًّا؟": "How much do you save each month?",
+      "أين تضع أول مبلغ؟": "Where do you put the first amount?",
+      "كيف تقيّم صفقة ما قبل أن تدفع فيها؟": "How do you evaluate a deal before paying into it?",
+      "ماذا تفعل إذا خسرت؟": "What do you do if you lose?",
+      "لا إجابة.": "No answer.",
+      "ما تخرج به هو اتجاه وليس خطة.": "What you come away with is a direction, not a plan.",
+      "ويصف ريد الكتاب بعبارة قاسية، فيقول (بترجمة تقريبية) إنه يحتوي على نصائح خاطئة كثيرة وسيئة كثيرة وبعضها خطير، وتكاد تخلو من النصح الجيد.": "Reed describes the book harshly, saying (in approximate translation) that it contains a great deal of wrong advice, a great deal of bad advice, some of it dangerous, and is nearly devoid of good guidance.",
+      "وهي عبارة يختلف معها كثيرون، وقد وصفها بعضهم بالمبالغة، لكن نقطة غياب التفاصيل العملية يتفق عليها حتى بعض المعجبين.": "Many disagree with that wording, and some have called it an exaggeration — yet even some of its fans agree on the absence of practical detail.",
+      "ثالثًا: المخاطرة التي غابت": "Third: the risk that was missing",
+      "يمجّد الكتاب الاستدانة والعقارات والمشاريع، ويقدّمها طريقًا للحرية.": "The book glorifies borrowing, real estate, and businesses, and presents them as the road to freedom.",
+      "لكنه يتحدث قليلًا جدًّا عن الوجه الآخر: ماذا لو انهار السعر؟": "Yet it says very little about the other side: what if the price collapses?",
+      "ماذا لو ارتفعت الفائدة؟": "What if interest rates rise?",
+      "ماذا لو توقف الدخل وبقيت الأقساط؟": "What if the income stops but the installments remain?",
+      "وهنا يحضر الكاتب نسيم طالب في كتابه Fooled by Randomness، إذ يحذّر من «انحياز الناجين»: نسمع قصة من نجح، ولا نسمع عمّن جازف مثله وسقط.": "Here the author Nassim Taleb enters, in his book Fooled by Randomness, warning of “survivorship bias”: we hear the story of someone who succeeded, not of someone who took the same gamble and fell.",
+      "فنظنّ أن الطريق مضمون، وهو في الحقيقة مجرد حظ مع جرأة.": "So we think the road is guaranteed, when in truth it is nothing but luck with boldness.",
+      "والكاتب مورغان هاوزل يقول في The Psychology of Money إن البقاء في اللعبة لسنوات طويلة أهم من تحقيق أرباح كبيرة بسرعة.": "And writer Morgan Housel says in The Psychology of Money that staying in the game for many years matters more than making big profits quickly.",
+      "وهذه فكرة ليست محورية في كتاب كيوساكي.": "And this is not an idea central to Kiyosaki's book.",
+      "رابعًا: «البيت ليس أصلًا»…": "Fourth: “a house is not an asset”…",
+      "نصف حقيقة": "Half a truth",
+      "من أشهر ما قاله الكتاب أن بيتك الذي تسكنه خصم لا أصل.": "Among the most famous statements in the book is that the house you live in is a liability, not an asset.",
+      "وهذا صحيح من زاوية محاسبية ضيقة: البيت يكلّفك ولا يدرّ عليك دخلًا نقديًّا.": "And that is true from a narrow accounting angle: the house costs you money and earns you no cash income.",
+      "لكنه يهمل أن البيت يوفّر عليك الإيجار، ويمنحك استقرارًا، وهو لكثير من الأسر أكبر مدخراتها.": "But it ignores that a house saves you rent, gives you stability, and for many families is their largest savings.",
+      "القضية تعتمد على المدينة والسعر والظروف، لا على قاعدة مطلقة.": "The case depends on the city, the price, and the circumstances — not on an absolute rule.",
+      "خامسًا: التقليل من التعليم والوظيفة": "Fifth: downplaying education and the job",
+      "يترك الكتاب انطباعًا بأن الشهادة والوظيفة طريق الفقراء.": "The book leaves the impression that the degree and the job are the road of the poor.",
+      "لكن الأبحاث في اقتصاد العمل تقول منذ عقود إن التعليم يرفع الدخل في المتوسط على المدى الطويل.": "But labor-economics research has said for decades that education raises income on average over the long run.",
+      "والوظيفة المستقرة ليست عيبًا، بل هي في الغالب مصدر رأس المال الذي يُستثمر لاحقًا.": "And a steady job is not a flaw; it is usually the source of the capital invested later.",
+      "والمفارقة أن أبحاث آنا ماريا لوساردي وأوليفيا ميتشل تقول إن ما ينقص الناس فعلًا هو الثقافة المالية؛ أي أن المشكلة ليست في الوظيفة، بل في أن الناس لا يعرفون ماذا يفعلون بدخلها.": "And the irony is that research by Annamaria Lusardi and Olivia Mitchell says what people actually lack is financial literacy — the problem is not the job, but that people do not know what to do with their income.",
+      "سادسًا: حين يتحول الكتاب إلى باب للبيع": "Sixth: when the book becomes a doorway for selling",
+      "نجاح الكتاب فتح لصاحبه عالَمًا كاملًا: ندوات، ودورات، وألعابًا، وكتبًا متتالية، وعلامة تجارية تُمنح لجهات أخرى.": "The book's success opened a whole world for its author: seminars, courses, games, successive books, and a brand licensed to others.",
+      "وفي عام 2012 أعلنت شركة Rich Global LLC المرتبطة بعلامته التجارية إفلاسها (الفصل 7) في ولاية وايومنغ الأمريكية، بعد أن حكمت هيئة محلفين في نيويورك لصالح شركة Learning Annex بنحو 23.7 مليون دولار، بحسب تقارير صحفية متعددة منها ABA Journal وNBC News.": "In 2012, Rich Global LLC, tied to his brand, filed for bankruptcy (Chapter 7) in the state of Wyoming, after a New York jury ruled in favor of Learning Annex for about $23.7 million, according to multiple press reports including ABA Journal and NBC News.",
+      "وللإنصاف: قال المسؤول التنفيذي في شركة كيوساكي إن الشركة كانت خاملة منذ سنوات، وإن الإفلاس لا يعني إفلاس الكاتب شخصيًّا.": "In fairness: an executive at Kiyosaki's company said the company had been dormant for years, and that the bankruptcy does not mean the author went bankrupt personally.",
+      "وهذا صحيح، فهو إفلاس شركة لا إفلاس فرد.": "And that is true: it was a company's bankruptcy, not an individual's.",
+      "لكن السؤال الذي يطرحه النقّاد مشروع: حين يبيع كاتبٌ كتابًا عن الذكاء المالي وتتورط شركاته في نزاعات قانونية بهذا الحجم، ألا يحق لنا أن نتساءل عن صورة «الخبير» التي بُنيت على الغلاف؟": "But the question the critics raise is a fair one: when an author sells a book about financial wisdom and his companies become embroiled in legal disputes of this size, are we not entitled to question the “expert” image built on the cover?",
+      "سابعًا: هل هو كتاب سيئ؟": "Seventh: is it a bad book?",
+      "لا.": "No.",
+      "وهذا ما يجب قوله بوضوح.": "And this is what must be said clearly.",
+      "الكتاب مكتوب بأسلوب بسيط، وفتح الحديث عن المال أمام ملايين لم يتجرأوا عليه.": "The book is written in a simple style, and opened the conversation about money to millions who had never dared to have it.",
+      "وهو يشجّع على القراءة والتعلم والتفكير، وهذه خدمة حقيقية.": "And it encourages reading, learning, and thinking — and that is a real service.",
+      "لكن المشكلة ليست في الكتاب نفسه، بل في الطريقة التي نقرؤه بها.": "But the problem is not the book itself; it is the way we read it.",
+      "إذا قرأتَه كقصة مُلهمة، فهو ناجح.": "If you read it as an inspiring story, it succeeds.",
+      "وإذا قرأتَه كدليل استثماري، فأنت تقامر بأموالك على حكاية.": "And if you read it as an investment guide, you are gambling your money on a tale.",
+      "وتحذّر الكاتبة باربرا إيرنرايك في كتابها Bright-Sided من ثقافة «فكّر بإيجابية وستنجح»، لأنها قد تحمّل الفرد وحده مسؤولية نتائج تتحكم فيها عوامل أكبر منه.": "And writer Barbara Ehrenreich warns in Bright-Sided against the “think positive and you will succeed” culture, because it can place the burden of outcomes — which are governed by forces larger than the individual — on that individual alone.",
+      "وجزء من رسالة كتاب كيوساكي ينتمي إلى هذه الثقافة.": "And part of Kiyosaki's message belongs to this culture.",
+      "الخلاصة: ماذا نفعل؟": "The bottom line: what should we do?",
+      "اقرأه لتتحرر من الخوف من الحديث عن المال.": "Read it to free yourself from the fear of talking about money.",
+      "لا تبني عليه قرارًا استثماريًّا واحدًا.": "Do not base a single investment decision on it.",
+      "اسأل دائمًا: أين الأرقام؟": "Always ask: where are the numbers?",
+      "وأين الخسارة المحتملة؟": "And where is the potential loss?",
+      "وهل يناسب هذا بلدي وظروفي وقوانيني؟": "And does this suit my country, my circumstances, and my laws?",
+      "أكمل بكتب أعمق، مثل The Intelligent Investor لبنجامين غراهام، فهو يعلّمك الحذر قبل الطموح.": "Go deeper with stronger books, such as Benjamin Graham's The Intelligent Investor, which teaches caution before ambition.",
+      "«الأب الغني والأب الفقير» ليس خريطة، لكنه ليس كذبة كاملة أيضًا.": "Rich Dad Poor Dad is not a map, but neither is it a complete lie.",
+      "هو شرارة، وما تفعله بها بعد ذلك مسؤوليتك أنت.": "It is a spark; what you do with it afterward is your own responsibility.",
+      "وأنت، هل قرأته؟": "And you — have you read it?",
+      "وهل أفادك أم خيّب أملك؟": "Did it help you, or let you down?",
+      "شاركنا في التعليقات.": "Share with us in the comments.",
+      "المراجع": "References",
+      "Reed, J.": "Reed, J.",
+      "T.": "T.",
+      "تحليل كتاب «Rich Dad, Poor Dad» (الأجزاء 1–3)، موقع johntreed.com.": "Analysis of the book “Rich Dad, Poor Dad” (parts 1–3), johntreed.com.",
+      "Slate، مقال عن الكتاب وشخصية «الأب الغني» (slate.com).": "Slate, an article about the book and the “rich dad” character (slate.com).",
+      "ABA Journal، «Self-Help Guru Who Authored Rich Dad, Poor Dad Hit with $24M Judgment» (2012).": "ABA Journal, “Self-Help Guru Who Authored Rich Dad, Poor Dad Hit with $24M Judgment” (2012).",
+      "NBC News، «Rich Dad Poor Dad author files for bankruptcy» (2012).": "NBC News, “Rich Dad Poor Dad author files for bankruptcy” (2012).",
+      "ABI Journal، «Rich Dad Broke Dad?».": "ABI Journal, “Rich Dad Broke Dad?”",
+      "Taleb, N.": "Taleb, N.",
+      "N.": "N.",
+      "(2001).": "(2001).",
+      "Fooled by Randomness.": "Fooled by Randomness.",
+      "Housel, M.": "Housel, M.",
+      "(2020).": "(2020).",
+      "The Psychology of Money.": "The Psychology of Money.",
+      "Harriman House.": "Harriman House.",
+      "Ehrenreich, B.": "Ehrenreich, B.",
+      "(2009).": "(2009).",
+      "Bright-Sided.": "Bright-Sided.",
+      "Metropolitan Books.": "Metropolitan Books.",
+      "Lusardi, A., & Mitchell, O.": "Lusardi, A., & Mitchell, O.",
+      "S.": "S.",
+      "(2014).": "(2014).",
+      "The Economic Importance of Financial Literacy: Theory and Evidence.": "The Economic Importance of Financial Literacy: Theory and Evidence.",
+      "Journal of Economic Literature, 52(1).": "Journal of Economic Literature, 52(1).",
+      "Graham, B.": "Graham, B.",
+      "(1949).": "(1949).",
+      "The Intelligent Investor.": "The Intelligent Investor.",
+      "Kiyosaki, R.": "Kiyosaki, R.",
+      "T., & Lechter, S.": "T., & Lechter, S.",
+      "L.": "L.",
+      "(1997).": "(1997).",
+      "Rich Dad Poor Dad.": "Rich Dad Poor Dad.",
     },
     'december-movies': {
       'مجموعة من أفلام ديسمبر التي تستحق أن تعيد مشاهدتها مراراً وتكراراً.':

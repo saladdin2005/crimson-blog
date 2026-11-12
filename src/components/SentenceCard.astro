@@ -204,6 +204,7 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
 
   function show(tr: string, span: HTMLElement) {
     window.clearTimeout(hideTimer);
+    hideTimer = 0; // يجب تصفيره وإلا بقي معرّفًا قديمًا فيمنع mouseout من جدولة إخفاء جديد
     window.clearTimeout(autoTimer);
     autoTimer = 0;
     curSpan = span;
@@ -242,6 +243,13 @@ const label = lang === 'ar' ? 'الترجمة' : 'Translation';
         const t = (e.target as HTMLElement | null)?.closest?.('.sent') as HTMLElement | null;
         if (!t) return;
         if (!hideTimer) hideTimer = window.setTimeout(hide, 160);
+      });
+
+      // نقرة الفأرة في أي مكان خارج البطاقة = إخفاؤها فوراً
+      // (البطاقة نفسها pointer-events-none فلا تلتقط النقرات، والفحص لحماية مستقبلية)
+      document.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement | null)?.closest?.('#sentence-card')) return;
+        hide();
       });
 
       window.addEventListener(
