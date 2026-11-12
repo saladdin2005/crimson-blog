@@ -510,6 +510,7 @@ export const sentenceTl = {
       "The critics answer with a different argument.": "لكن النقاد يردون بحجة مختلفة.",
       "The scholar Haris Durrani, who has written on Dune's relationship to Islamic history, argues that removing the Algerian chant erases a specific historical inspiration on which Herbert drew.": "فالباحث هاريس دوراني، الذي كتب عن علاقة «دوون» بالتاريخ الإسلامي، يرى أن حذف الهتاف الجزائري يمحو إلهامًا تاريخيًا محددًا استند إليه هربرت.",
       "In his view, the novel's brilliance lies precisely in our ability to recognize traces of our own past within it, not in the future being wholly alien.": "وبرأيه فإن جمال الرواية أصلًا في أننا نتعرف داخلها على آثار من ماضينا، لا في أن المستقبل غريب تمامًا.",
+      "In simpler terms: Peterson wants a world that is coherent from within, while Durrani and Singh want a world that remembers where it came from.": "بمعنى أبسط: بيترسون يريد عالمًا متسقًا من الداخل، بينما يريد دوراني وسينغ عالمًا يتذكر من أين جاء.",
       "The irony is that some words did survive.": "والمفارقة أن بعض الكلمات بقيت.",
       "According to Variety, \"Mahdi\" and \"Lisan al-Gaib\" can still be heard in the script of Part Two.": "فبحسب «فارايتي»، لا تزال «مهدي» و«لسان الغيب» تُسمعان في سيناريو الجزء الثاني.",
       "In other words, the films kept from Arabic whatever lends the story the aura of prophecy, and left out what ties it to a real act of resistance.": "أي أن الأفلام أخذت من العربية ما يمنح الحكاية هيبة النبوءة، وتركت منها ما يربطها بمقاومة حقيقية.",
