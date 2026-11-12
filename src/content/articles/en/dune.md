@@ -11,6 +11,8 @@ tags: [cinema, dune, arab, culture, "Film Culture"]
 readTime: 6
 ---
 
+![Close-up of Paul Atreides with blue eyes in a stillsuit, desert behind him](/images/dune-paul-still.webp)
+
 Picture yourself in a movie theater. The Fremen raise their weapons and chant in a strange tongue. The subtitle reads: "Long live the fighters!"
 
 But in the original novel, published in 1965, the chant was not nearly so strange. It was written like this: **Ya hya chouhada**.
