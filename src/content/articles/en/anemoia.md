@@ -13,6 +13,8 @@ readTime: 6
 
 *From the "Cultural Reflection" series*
 
+![Billy with his mullet haircut and denim jacket in a scene from “Stranger Things”](/images/80s-billy-mullet.webp)
+
 Billy steps out of his car slowly. Short hair in front, long in back, a confident look, and three girls who can't take their eyes off him.
 
 A brief moment, but you feel something. You don't know its name exactly. It's not admiration for Billy himself — he's not the kindest character in the show. It's a strange longing for a time you never lived.
