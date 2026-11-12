@@ -54,6 +54,8 @@ But the myth alone is not enough to make us love a character. We love Aras becau
 
 If the series had stopped at the search for the brother, it would have been a good story, but it would have remained a single line. What gives it depth is the web of relationships around Aras. His relationship with Leyla is one of the work's main axes, and she is the one who begins to uncover his secrets. And in return the wealthy family stands against him, while characters like Tuman, Hakan, and Nuray enter the story from different angles.
 
+![Two young men in a scene from the series “At Seventeen”](/images/daha-17-3.webp)
+
 And this matters because a teenager does not live a single story at a time. He searches for his family, falls in love, builds friendships, and tries to protect himself against people stronger than him. And when the viewer sees these threads together, they feel they are looking at a full life, not a manufactured plot.
 
 And love here is not just a romance added to the events. It is the only warmth in the life of a boy who got used to the cold. That is why we wait for every glance and every word between the characters, because we know how much Aras needs a hand to hold his.
