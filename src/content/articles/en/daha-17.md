@@ -58,6 +58,8 @@ If the series had stopped at the search for the brother, it would have been a go
 
 And this matters because a teenager does not live a single story at a time. He searches for his family, falls in love, builds friendships, and tries to protect himself against people stronger than him. And when the viewer sees these threads together, they feel they are looking at a full life, not a manufactured plot.
 
+![A young woman and two young men inside a car in a scene from the series “At Seventeen”](/images/daha-17-6.webp)
+
 And love here is not just a romance added to the events. It is the only warmth in the life of a boy who got used to the cold. That is why we wait for every glance and every word between the characters, because we know how much Aras needs a hand to hold his.
 
 ![A young woman and a young man holding hands in a scene from “At Seventeen”](/images/daha-17-4.webp)
@@ -81,6 +83,8 @@ The American psychologist Stanley Hall, in his book on adolescence published in 
 The researcher Svetlana Boym, in her book The Future of Nostalgia, distinguishes between two kinds of nostalgia: one wants to actually return to the past, and the other settles for contemplating what has gone, hurting a little, and smiling. And the series gives us the second. We do not want to be seventeen again, but we want to remember how the heart pounded when everything was new.
 
 And so, when the adult viewer cries with Aras, he is not crying only for Aras. He is crying for the boy he once was.
+
+![A young woman and a young man about to kiss in a scene from the series “At Seventeen”](/images/daha-17-5.webp)
 
 ## Fourth: What Set the Series Apart?
 
