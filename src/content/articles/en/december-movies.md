@@ -13,6 +13,8 @@ readTime: 3
 
 ## It's a Wonderful Life (1946)
 
+![George, Mary and their children in a scene from It's a Wonderful Life](/images/wonderful-life.jpg)
+
 George Bailey is an ambitious young man who dreams of traveling the world and building great cities, but circumstances keep forcing him to stay in his small town and run his father's modest loan company. He gives up his dreams one after another to help his neighbors and protect them from the greed of the rich Mr. Potter. And on Christmas Eve, when the company's money goes missing and he stands on the edge of despair, a guardian angel appears to him and shows him what the town would have looked like had he never been born. George discovers that his simple life was more precious than he imagined, and that the people he loved repay him in kind.
 
 Runtime: approximately 2 hours and 10 minutes.
@@ -30,6 +32,8 @@ We are in 1970, inside a boarding school in New England. Paul Hunham, a strict a
 Runtime: approximately 2 hours and 13 minutes.
 
 ## Klaus (2019)
+
+![Klaus movie poster](/images/klaus-poster.webp)
 
 Jesper, son of a rich postal service owner, is sent to a harsh island at the far north to prove his worth, and he must deliver thousands of letters within a year. But the town is sunk in an old feud between two families, and nobody writes letters. Jesper meets a reclusive carpenter named Klaus who owns a house full of toys. And when the first child sends a letter asking for a toy, a chain of gifts and good deeds begins to change everyone in the town.
 
