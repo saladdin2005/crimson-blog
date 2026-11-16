@@ -27,6 +27,8 @@ Runtime: approximately 1 hour and 43 minutes.
 
 ## The Holdovers (2023)
 
+![The Holdovers movie poster](/images/holdovers-poster.jpg)
+
 We are in 1970, inside a boarding school in New England. Paul Hunham, a strict and unpopular history teacher, is assigned to stay with the students who cannot go home for the winter break. In the end only one student is left: Angus, an intelligent and angry young man hiding a family wound. With them is Mary, the school cook, who is grieving for her son killed in the Vietnam War. As the days pass, their shared solitude turns into a warm and human bond.
 
 Runtime: approximately 2 hours and 13 minutes.
