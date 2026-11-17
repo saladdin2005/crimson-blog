@@ -28,6 +28,8 @@ On the fourth of March 2026, Prime Video released Young Sherlock — all eight e
 
 But this series is completely different. It has nothing to do with the old films, and it is drawn from a series of novels by Andrew Lane about Holmes in his adolescence. The lead role goes to a young British actor named Hero Fiennes Tiffin, whom Harry Potter audiences already know.
 
+![Hero Fiennes Tiffin as Sherlock Holmes at his desk in a scene from Young Sherlock](/images/young-sherlock-holmes.jpg)
+
 As for the story? I don't want to spoil anything for you here. All I will say is that you will find a rebellious young man who has just come out of prison, an older brother — Mycroft — who pays his bail and then sends him to Oxford University to keep him out of trouble. And there a crime will turn everything upside down, professors will fall one after another, and a thread of secrets will stretch from the halls of the university to a place much closer than you imagine: the family home itself.
 
 So let us stop at this point, because it is the very heart of the whole series.
@@ -92,6 +94,8 @@ But this series turns the table: Moriarty here is Holmes's close friend, played 
 
 Imagine that for a moment. Two men who will one day stand at the edge of a waterfall in Switzerland, each trying to kill the other, began their lives side by side as companions — laughing, quarrelling, and solving puzzles together.
 
+![Sherlock Holmes and Moriarty in an action scene from Young Sherlock](/images/young-sherlock-moriarty.jpg)
+
 And this is the strongest part of the series. And I think the reason is simple: we know the ending, and they do not.
 
 Every time one of them reaches out a hand to the other, your heart skips a beat. And every time they exchange an honest look, you wonder: when, do you think, will the break come? And where will the first crack be?
@@ -117,6 +121,8 @@ How beautiful it is when a new story rearranges your feelings toward an old stor
 This was no small project. It was filmed in Britain, Spain, and Wales between the summer of 2024 and early 2025; Guy Ritchie directed its first two episodes and served as executive producer, while Matthew Parkhill wrote and ran it.
 
 The cast features heavyweight names: Joseph Fiennes and Natasha McElhone as Sherlock's parents, Max Irons as his brother Mycroft, and Colin Firth as a striking guest, alongside Zin Tseng as a mysterious character at the heart of the events.
+
+![The cast of Young Sherlock in a group photo](/images/young-sherlock-cast.jpg)
 
 And note that Ritchie, known for the fast pace and wild editing of his previous Holmes films, delivered here a work that differs in form. One critic pointed out that the series hardly resembles his detective films visually. As if the man realized that young Sherlock does not need showmanship, but a heart.
 
