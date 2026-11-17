@@ -144,6 +144,8 @@ There is a simple psychological reason behind this wave of "origin" stories: we 
 
 When we see the complete Holmes, we applaud him and go back to our lives. But when we see him as a young man stumbling, making mistakes, getting angry, and losing, we draw closer to him. We tell ourselves: perhaps this confused young man I see in the mirror is also on his way to something.
 
+![Young Sherlock Holmes in a bowler hat standing in front of an omnibus](/images/young-sherlock-street.jpg)
+
 These are hope stories disguised as crime.
 
 And this is what the series, adapted from Andrew Lane's novels, was built on. The question is not how he became great. The question is what price he paid to become so. And the price each time is human: losing a friend, a family's betrayal, or a mother collapsing before his eyes.
