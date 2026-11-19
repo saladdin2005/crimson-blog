@@ -43,6 +43,8 @@ Runtime: approximately 1 hour and 36 minutes.
 
 ## Little Women (2019)
 
+![The four March sisters in a scene from Little Women](/images/little-women.jpg)
+
 The four March sisters — Jo, Meg, Beth and Amy — live in America after the Civil War. Jo is a headstrong writer who dreams of independence and literary success, Meg dreams of a quiet life and honest love, Beth is a gentle musician, and Amy is an artist who wants a higher place. The film tells their story between past and present, tracing the love, loss, conflicts and choices that turn each of them into a different woman.
 
 Runtime: approximately 2 hours and 15 minutes.
