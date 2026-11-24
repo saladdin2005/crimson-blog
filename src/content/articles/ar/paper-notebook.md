@@ -4,7 +4,7 @@ description: "قراءة نقدية هادئة وصريحة لأشهر كتاب 
 lang: ar
 category: articles
 date: 2026-09-28
-image: "/images/richdad-poordad.jpg"
+image: "/images/richdad-poordad.webp"
 author: you
 tags: [ثقافة, كتابة, ذكريات]
 readTime: 6

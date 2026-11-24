@@ -4,8 +4,8 @@ description: "As Paul Atreides prepares to return to the screen this December, a
 lang: en
 category: art
 date: 2026-11-06
-banner: "/images/Dune-thambl-image-1.jpg"
-image: "/images/Dune-thambl-image-1.jpg"
+banner: "/images/Dune-thambl-image-1.webp"
+image: "/images/Dune-thambl-image-1.webp"
 author: you
 tags: [cinema, dune, arab, culture, "Film Culture"]
 readTime: 6
@@ -21,7 +21,7 @@ Say it out loud. If you are from the Maghreb, an echo you know well will come to
 
 This is no linguistic accident. And this small phrase opens the door to a larger question: how did a piece of our collective memory find its way into one of the most celebrated epics in science fiction, and why did it not reach the screen as it was?
 
-![Timothée Chalamet as Paul Atreides](/images/duun-chalamet-smile.jpg)
+![Timothée Chalamet as Paul Atreides](/images/duun-chalamet-smile.webp)
 
 ![Dune film culture](/images/Film%20Culture.jfif)
 
@@ -55,7 +55,7 @@ In simpler terms: Peterson wants a world that is coherent from within, while Dur
 
 The irony is that some words did survive. According to *Variety*, "Mahdi" and "Lisan al-Gaib" can still be heard in the script of Part Two. In other words, the films kept from Arabic whatever lends the story the aura of prophecy, and left out what ties it to a real act of resistance.
 
-![Denis Villeneuve and Zendaya on set](/images/duun-director-actress.jfif)
+![Denis Villeneuve and Zendaya on set](/images/duun-director-actress.webp)
 
 ## The Desert Is Present… and the Arabs Are Out of Frame
 

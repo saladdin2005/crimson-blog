@@ -4,7 +4,7 @@ description: "A collection of December movies worth watching again and again."
 lang: en
 category: art
 date: 2026-10-13
-image: "/images/1077064067154767482.jfif"
+image: "/images/1077064067154767482.webp"
 author: you
 trending: true
 tags: [cinema, movies, december]
@@ -13,7 +13,7 @@ readTime: 3
 
 ## It's a Wonderful Life (1946)
 
-![George, Mary and their children in a scene from It's a Wonderful Life](/images/wonderful-life.jpg)
+![George, Mary and their children in a scene from It's a Wonderful Life](/images/wonderful-life.webp)
 
 George Bailey is an ambitious young man who dreams of traveling the world and building great cities, but circumstances keep forcing him to stay in his small town and run his father's modest loan company. He gives up his dreams one after another to help his neighbors and protect them from the greed of the rich Mr. Potter. And on Christmas Eve, when the company's money goes missing and he stands on the edge of despair, a guardian angel appears to him and shows him what the town would have looked like had he never been born. George discovers that his simple life was more precious than he imagined, and that the people he loved repay him in kind.
 
@@ -27,7 +27,7 @@ Runtime: approximately 1 hour and 43 minutes.
 
 ## The Holdovers (2023)
 
-![The Holdovers movie poster](/images/holdovers-poster.jpg)
+![The Holdovers movie poster](/images/holdovers-poster.webp)
 
 We are in 1970, inside a boarding school in New England. Paul Hunham, a strict and unpopular history teacher, is assigned to stay with the students who cannot go home for the winter break. In the end only one student is left: Angus, an intelligent and angry young man hiding a family wound. With them is Mary, the school cook, who is grieving for her son killed in the Vietnam War. As the days pass, their shared solitude turns into a warm and human bond.
 
@@ -43,7 +43,7 @@ Runtime: approximately 1 hour and 36 minutes.
 
 ## Little Women (2019)
 
-![The four March sisters in a scene from Little Women](/images/little-women.jpg)
+![The four March sisters in a scene from Little Women](/images/little-women.webp)
 
 The four March sisters — Jo, Meg, Beth and Amy — live in America after the Civil War. Jo is a headstrong writer who dreams of independence and literary success, Meg dreams of a quiet life and honest love, Beth is a gentle musician, and Amy is an artist who wants a higher place. The film tells their story between past and present, tracing the love, loss, conflicts and choices that turn each of them into a different woman.
 

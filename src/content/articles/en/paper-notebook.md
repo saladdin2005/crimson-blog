@@ -4,7 +4,7 @@ description: "A simple experiment: we walk with an ordinary young man, step by s
 lang: en
 category: articles
 date: 2026-11-08
-image: "/images/richdad-poordad.jpg"
+image: "/images/richdad-poordad.webp"
 author: you
 tags: [books, money, investing, criticism]
 readTime: 9

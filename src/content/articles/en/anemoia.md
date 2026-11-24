@@ -56,7 +56,7 @@ Think about this for a moment: a piece of fabric that appeared on screen for min
 
 And the details go deeper. In the first season, costume designer Kimberly Adams cared about the clothes' age itself. Will's clothes looked old and hand-me-down, while Mike's were newer because his mother bought them at the start of the school year (Tyranny of Style). You don't notice this consciously, but your mind picks it up and understands each child's story without a word.
 
-![Three girls in bold eighties fashion](/images/80s-three-girls.png)
+![Three girls in bold eighties fashion](/images/80s-three-girls.webp)
 
 And in the Halloween episode, Ghostbusters costumes were handmade for each character separately (Bloody Disgusting). And Amy Paris, costume designer for later seasons, uses real eighties references, including old school yearbooks (Parade). And she designed a shirt for Eddie that expresses the metal and rebellion spirit of that decade (V&A).
 

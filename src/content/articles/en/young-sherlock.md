@@ -4,7 +4,7 @@ description: "Where did Sherlock Holmes come from? A look at Guy Ritchie's Young
 lang: en
 category: articles
 date: 2026-11-16
-image: "/images/young-sherlock.jpg"
+image: "/images/young-sherlock.webp"
 author: you
 tags: [Sherlock Holmes, series, Guy Ritchie, psychology]
 readTime: 12
@@ -28,7 +28,7 @@ On the fourth of March 2026, Prime Video released Young Sherlock — all eight e
 
 But this series is completely different. It has nothing to do with the old films, and it is drawn from a series of novels by Andrew Lane about Holmes in his adolescence. The lead role goes to a young British actor named Hero Fiennes Tiffin, whom Harry Potter audiences already know.
 
-![Hero Fiennes Tiffin as Sherlock Holmes at his desk in a scene from Young Sherlock](/images/young-sherlock-holmes.jpg)
+![Hero Fiennes Tiffin as Sherlock Holmes at his desk in a scene from Young Sherlock](/images/young-sherlock-holmes.webp)
 
 As for the story? I don't want to spoil anything for you here. All I will say is that you will find a rebellious young man who has just come out of prison, an older brother — Mycroft — who pays his bail and then sends him to Oxford University to keep him out of trouble. And there a crime will turn everything upside down, professors will fall one after another, and a thread of secrets will stretch from the halls of the university to a place much closer than you imagine: the family home itself.
 
@@ -94,7 +94,7 @@ But this series turns the table: Moriarty here is Holmes's close friend, played 
 
 Imagine that for a moment. Two men who will one day stand at the edge of a waterfall in Switzerland, each trying to kill the other, began their lives side by side as companions — laughing, quarrelling, and solving puzzles together.
 
-![Sherlock Holmes and Moriarty in an action scene from Young Sherlock](/images/young-sherlock-moriarty.jpg)
+![Sherlock Holmes and Moriarty in an action scene from Young Sherlock](/images/young-sherlock-moriarty.webp)
 
 And this is the strongest part of the series. And I think the reason is simple: we know the ending, and they do not.
 
@@ -122,7 +122,7 @@ This was no small project. It was filmed in Britain, Spain, and Wales between th
 
 The cast features heavyweight names: Joseph Fiennes and Natasha McElhone as Sherlock's parents, Max Irons as his brother Mycroft, and Colin Firth as a striking guest, alongside Zin Tseng as a mysterious character at the heart of the events.
 
-![The cast of Young Sherlock in a group photo](/images/young-sherlock-cast.jpg)
+![The cast of Young Sherlock in a group photo](/images/young-sherlock-cast.webp)
 
 And note that Ritchie, known for the fast pace and wild editing of his previous Holmes films, delivered here a work that differs in form. One critic pointed out that the series hardly resembles his detective films visually. As if the man realized that young Sherlock does not need showmanship, but a heart.
 
@@ -144,7 +144,7 @@ There is a simple psychological reason behind this wave of "origin" stories: we 
 
 When we see the complete Holmes, we applaud him and go back to our lives. But when we see him as a young man stumbling, making mistakes, getting angry, and losing, we draw closer to him. We tell ourselves: perhaps this confused young man I see in the mirror is also on his way to something.
 
-![Young Sherlock Holmes in a bowler hat standing in front of an omnibus](/images/young-sherlock-street.jpg)
+![Young Sherlock Holmes in a bowler hat standing in front of an omnibus](/images/young-sherlock-street.webp)
 
 These are hope stories disguised as crime.
 

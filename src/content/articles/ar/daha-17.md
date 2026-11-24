@@ -4,7 +4,7 @@ description: "قراءة في المسلسل التركي الذي كسر الأ
 lang: ar
 category: articles
 date: 2026-11-11
-image: "/images/daha-17.jpg"
+image: "/images/daha-17.webp"
 author: you
 tags: [دراما تركية, مسلسلات, فن وإخراج, علم النفس]
 readTime: 12

@@ -4,8 +4,8 @@ description: "قبل أن يعود بول أتريديس إلى الشاشة ف�
 lang: ar
 category: art
 date: 2026-11-06
-banner: "/images/Dune-thambl-image-1.jpg"
-image: "/images/Dune-thambl-image-1.jpg"
+banner: "/images/Dune-thambl-image-1.webp"
+image: "/images/Dune-thambl-image-1.webp"
 author: you
 tags: [سينما, دوون, عرب, ثقافة, "Film Culture"]
 readTime: 6
@@ -21,7 +21,7 @@ readTime: 6
 
 هذه ليست صدفة لغوية. وهذه الجملة الصغيرة تفتح بابًا على سؤال أكبر: كيف دخل جزء من ذاكرتنا إلى واحدة من أشهر ملاحم الخيال العلمي؟ ولماذا لم يصل إلى الشاشة كما كان؟
 
-![تيموثي شالاميه في دور بول أتريديس](/images/duun-chalamet-smile.jpg)
+![تيموثي شالاميه في دور بول أتريديس](/images/duun-chalamet-smile.webp)
 
 ![فيلم دوون](/images/Film%20Culture.jfif)
 
@@ -53,7 +53,7 @@ readTime: 6
 
 والمفارقة أن بعض الكلمات بقيت. فبحسب «فارايتي»، لا تزال «مهدي» و«لسان الغيب» تُسمعان في سيناريو الجزء الثاني. أي أن الأفلام أخذت من العربية ما يمنح الحكاية هيبة النبوءة، وتركت منها ما يربطها بمقاومة حقيقية.
 
-![دينيس فيلنوف وزندايا على موقع التصوير](/images/duun-director-actress.jfif)
+![دينيس فيلنوف وزندايا على موقع التصوير](/images/duun-director-actress.webp)
 
 ## الصحراء حاضرة… والعرب خارج الكادر
 

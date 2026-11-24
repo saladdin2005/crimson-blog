@@ -4,7 +4,7 @@ description: "قراءة في كتاب «Lost in Translation» لإيفا هوف
 lang: ar
 category: art
 date: 2026-11-24
-image: "/images/lost-in-translation.jpg"
+image: "/images/lost-in-translation.webp"
 author: you
 tags: [كتب, لغات, هوية, قراءة]
 readTime: 11
@@ -16,13 +16,33 @@ readTime: 11
 
 هذا بالضبط ما حدث لفتاة اسمها إيفا هوفمان، وهي في الثالثة عشرة من عمرها.
 
+<figure>
+  <img src="/images/eva-hoffman.webp" alt="إيفا هوفمان" loading="lazy" width="432" height="462" />
+  <figcaption>إيفا هوفمان</figcaption>
+</figure>
+
 ## ثلاثة عشر عامًا… وحقيبة واحدة
 
 وُلدت إيفا عام 1945 في مدينة كراكوف البولندية. كبرت وسط الكتب والموسيقى وأحاديث العائلة، وكانت تعرف كل شيء عن عالمها: نكاته، ورائحة شوارعه، والطريقة التي تُقال بها كلمة «صديقة».
 
+<figure>
+  <img src="/images/krakow-1950s.webp" alt="شارع في بولندا في تلك الحقبة" loading="lazy" width="720" height="462" />
+  <figcaption>بولندا في تلك الحقبة</figcaption>
+</figure>
+
 ثم في عام 1959 حملت عائلتها أغراضها وهاجرت إلى كندا.
 
+<figure>
+  <img src="/images/batory-ship.webp" alt="السفينة التي ركبتها إيفا وعائلتها" loading="lazy" width="770" height="538" />
+  <figcaption>السفينة التي ركبتها إيفا وعائلتها في رحلة الهاجرة إلى كندا</figcaption>
+</figure>
+
 في المدرسة الجديدة، أول ما حدث أن المعلمة غيّرت اسمها. صارت «إيڤا» بدل «إيفا» البولندية، وأختها «ألينا» صارت «إيلين». كان تغييرًا صغيرًا على الورق، لكنه كان أول إشارة: هنا سيعيدون كتابتك من جديد.
+
+<figure>
+  <img src="/images/walter-moberly-classroom.webp" alt="فصل دراسي في مدرسة Walter Moberly، فانكوفر" loading="lazy" width="1600" height="1198" />
+  <figcaption>فصل دراسي في مدرسة Walter Moberly، فانكوفر، نحو عام 1950. أرشيف مجلس مدارس فانكوفر.</figcaption>
+</figure>
 
 ## ثلاث محطات في رحلة واحدة
 

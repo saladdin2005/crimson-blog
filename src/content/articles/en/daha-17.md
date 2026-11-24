@@ -4,7 +4,7 @@ description: "A reading of the Turkish series that broke the records… and of t
 lang: en
 category: articles
 date: 2026-11-11
-image: "/images/daha-17.jpg"
+image: "/images/daha-17.webp"
 author: you
 tags: [Turkish drama, series, directing, psychology]
 readTime: 12

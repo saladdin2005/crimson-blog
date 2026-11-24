@@ -4,7 +4,7 @@ description: "A reading of Eva Hoffman's Lost in Translation: when words are cor
 lang: en
 category: art
 date: 2026-11-24
-image: "/images/lost-in-translation.jpg"
+image: "/images/lost-in-translation.webp"
 author: you
 tags: [books, language, identity, reading]
 readTime: 11
@@ -16,13 +16,33 @@ I don't mean your speaking voice. I mean that small voice in your head — the o
 
 That is exactly what happened to a girl named Eva Hoffman, when she was thirteen.
 
+<figure>
+  <img src="/images/eva-hoffman.webp" alt="Eva Hoffman" loading="lazy" width="432" height="462" />
+  <figcaption>Eva Hoffman</figcaption>
+</figure>
+
 ## Thirteen Years Old… and One Suitcase
 
 Eva was born in 1945 in the Polish city of Kraków. She grew up among books and music and family conversations, and she knew everything about her world: its jokes, the smell of its streets, and the way the word “friend” was said.
 
+<figure>
+  <img src="/images/krakow-1950s.webp" alt="A street in Poland back then" loading="lazy" width="720" height="462" />
+  <figcaption>Poland at the time</figcaption>
+</figure>
+
 Then in 1959 her family packed their things and emigrated to Canada.
 
+<figure>
+  <img src="/images/batory-ship.webp" alt="The ship Eva and her family took" loading="lazy" width="770" height="538" />
+  <figcaption>The ship Eva and her family took to Canada</figcaption>
+</figure>
+
 At her new school, the first thing that happened was that the teacher changed her name. She became “Eva” instead of the Polish “Ewa,” and her sister Alina became “Ellen.” It was a small change on paper, but it was the first sign: here, they will write you all over again.
+
+<figure>
+  <img src="/images/walter-moberly-classroom.webp" alt="A classroom at Walter Moberly School, Vancouver" loading="lazy" width="1600" height="1198" />
+  <figcaption>A classroom at Walter Moberly School, Vancouver, around 1950. Vancouver School Board archives.</figcaption>
+</figure>
 
 ## Three Stages of One Journey
 
