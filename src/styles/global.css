@@ -437,3 +437,9 @@ html.reading-mode .reading-hide { display: none !important; }
 /* عناصر تظهر فقط داخل وضع القراءة (مثل زر الرجوع) */
 .reading-only { display: none !important; }
 html.reading-mode .reading-only { display: flex !important; }
+
+/* ---------- إعادة نشر اقتباس مع تعليق ---------- */
+/* بطاقة الترجمة لا تزاحم نافذة إعادة النشر */
+html.repost-modal-open #sentence-card { display: none !important; }
+html.reading-mode [data-repost-feed],
+html.reading-mode [data-repost-pill] { display: none !important; }

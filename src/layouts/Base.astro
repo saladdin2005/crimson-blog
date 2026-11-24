@@ -64,8 +64,12 @@ const fullTitle = title.includes(site.name[lang]) ? title : `${title} · ${site.
           <slot />
         </div>
       </main>
-      <!-- موازنة القائمة الجانبية على اليسار حتى يقع المحتوى في منتصف الشاشة تماماً -->
-      <div aria-hidden="true" class="hidden shrink-0 xl:block xl:w-52"></div>
+      <!-- الهامش الأخير: عمود فارغ افتراضياً، أو قسم إعادات القرّاء عبر المنفذ المُسمّى rail -->
+      <div class="hidden shrink-0 xl:block xl:self-stretch">
+        <slot name="rail">
+          <div aria-hidden="true" class="xl:w-52"></div>
+        </slot>
+      </div>
     </div>
     <Footer lang={lang} />
     <SearchOverlay lang={lang} />

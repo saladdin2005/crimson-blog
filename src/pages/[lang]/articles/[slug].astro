@@ -7,6 +7,7 @@ import Cover from '../../../components/Cover.astro';
 import ShareButtons from '../../../components/ShareButtons.astro';
 import ReadingToolbar from '../../../components/ReadingToolbar.astro';
 import SentenceCard from '../../../components/SentenceCard.astro';
+import RepostSelection from '../../../components/RepostSelection.astro';
 import { categories, authors, type Lang } from '../../../data/site';
 import { ui, formatDate } from '../../../i18n/ui';
 import { sentenceTl } from '../../../data/sentenceTl';
@@ -124,4 +125,6 @@ for (const [k, v] of Object.entries(rawMap)) normMap[normSentence(k)] = v;
   <!-- بطاقة ترجمة الجُمل على الهامش الأيسر -->
   <script type="application/json" is:inline id="sentence-tl-map" set:html={JSON.stringify(normMap)} />
   <SentenceCard lang={lang} />
+  <!-- إعادة نشر اقتباس مظلَّل مع تعليق (محلي بالكامل عبر localStorage) -->
+  <RepostSelection lang={lang} title={article.data.title} />
 </Base>

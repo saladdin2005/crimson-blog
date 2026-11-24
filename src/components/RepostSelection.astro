@@ -1,0 +1,286 @@
+---
+import { ui } from '../i18n/ui';
+
+interface Props {
+  lang: 'ar' | 'en';
+  title: string;
+}
+
+const { lang, title } = Astro.props;
+const t = ui[lang];
+---
+
+<!-- زر عائم يظهر بجوار النص المُظلَّل -->
+<button
+  type="button"
+  data-repost-pill
+  aria-label={t.repostPill}
+  class="fixed z-50 flex items-center gap-1.5 rounded-full border border-[#a61830]/30 bg-[#a61830] px-3.5 py-2 text-xs font-bold text-white shadow-lg shadow-stone-900/20 transition hover:bg-[#7a0f22]"
+  style="display:none"
+>
+  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="m17 2 4 4-4 4" /><path d="M3 11V9a4 4 0 0 1 4-4h14" /><path d="m7 22-4-4 4-4" /><path d="M21 13v2a4 4 0 0 1-4 4H3" />
+  </svg>
+  <span>{t.repostPill}</span>
+</button>
+
+<!-- نافذة إعادة النشر -->
+<div
+  data-repost-modal
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="repost-dialog-title"
+  class="fixed inset-0 z-[60] items-center justify-center p-3 sm:p-6"
+  style="display:none"
+>
+  <div data-repost-backdrop class="absolute inset-0 bg-stone-950/60 backdrop-blur-[2px]"></div>
+
+  <div class="relative w-full max-w-lg overflow-hidden rounded-3xl border border-stone-200/80 bg-[#faf7ee] shadow-2xl dark:border-white/10 dark:bg-stone-900">
+    <div class="flex items-start justify-between gap-3 border-b border-stone-200/70 px-5 py-4 dark:border-white/10">
+      <div class="flex items-center gap-3">
+        <span class="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-[#a61830] text-white">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m17 2 4 4-4 4" /><path d="M3 11V9a4 4 0 0 1 4-4h14" /><path d="m7 22-4-4 4-4" /><path d="M21 13v2a4 4 0 0 1-4 4H3" />
+          </svg>
+        </span>
+        <div>
+          <h2 id="repost-dialog-title" class="font-display text-lg font-bold text-stone-900 dark:text-white">{t.repostDialogTitle}</h2>
+          <p class="text-[11px] text-stone-500 dark:text-stone-400">{t.repostSubtitle}</p>
+        </div>
+      </div>
+      <button type="button" data-repost-close aria-label={t.repostCancel} class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-stone-400 transition hover:bg-stone-200/70 hover:text-stone-700 dark:hover:bg-white/10 dark:hover:text-white">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
+
+    <div class="max-h-[70vh] overflow-y-auto px-5 py-4">
+      <p class="mb-1.5 text-[11px] font-bold text-stone-500 dark:text-stone-400">{t.repostQuoteLabel}</p>
+      <blockquote
+        data-repost-quote
+        dir="auto"
+        class="line-clamp-4 rounded-2xl border-s-4 border-[#a61830] bg-white/70 px-3.5 py-3 text-[13px] leading-relaxed text-stone-700 dark:bg-white/5 dark:text-stone-200"
+      ></blockquote>
+
+      <label for="repost-nick" class="mt-4 mb-1.5 block text-[11px] font-bold text-stone-500 dark:text-stone-400">{t.repostNicknameLabel}</label>
+      <input
+        id="repost-nick"
+        data-repost-nick
+        type="text"
+        maxlength="24"
+        autocomplete="nickname"
+        placeholder={t.repostNicknamePlaceholder}
+        class="w-full rounded-xl border border-stone-200 bg-white px-3.5 py-2.5 text-sm text-stone-800 outline-none transition focus:border-[#a61830] focus:ring-2 focus:ring-[#a61830]/20 dark:border-white/10 dark:bg-stone-800 dark:text-white"
+      />
+
+      <div class="mt-4 mb-1.5 flex items-center justify-between gap-3">
+        <label for="repost-comment" class="text-[11px] font-bold text-stone-500 dark:text-stone-400">{t.repostCommentLabel}</label>
+        <span data-repost-counter class="text-[11px] font-semibold tabular-nums text-stone-400 dark:text-stone-500">0/280</span>
+      </div>
+      <textarea
+        id="repost-comment"
+        data-repost-comment
+        rows="3"
+        maxlength="280"
+        placeholder={t.repostCommentPlaceholder}
+        class="w-full resize-none rounded-xl border border-stone-200 bg-white px-3.5 py-2.5 text-sm leading-relaxed text-stone-800 outline-none transition focus:border-[#a61830] focus:ring-2 focus:ring-[#a61830]/20 dark:border-white/10 dark:bg-stone-800 dark:text-white"
+      ></textarea>
+
+      <div class="mt-2.5 flex flex-wrap items-center gap-1.5" aria-label={t.repostQuickEmojis}>
+        {['😍', '🔥', '💡', '🤔', '👏', '❤️', '😢', '✨', '📌', '🧠', '👀', '🙌'].map((e) => (
+          <button
+            type="button"
+            data-emoji={e}
+            aria-label={e}
+            class="grid h-8 w-8 place-items-center rounded-lg text-lg transition hover:bg-stone-200/70 active:scale-90 dark:hover:bg-white/10"
+          >{e}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-end gap-2 border-t border-stone-200/70 px-5 py-4 dark:border-white/10">
+      <button type="button" data-repost-cancel class="rounded-full px-4 py-2.5 text-xs font-bold text-stone-500 transition hover:bg-stone-200/60 dark:text-stone-400 dark:hover:bg-white/10">
+        {t.repostCancel}
+      </button>
+      <button type="button" data-repost-plain class="rounded-full border border-stone-300 px-4 py-2.5 text-xs font-bold text-stone-700 transition hover:border-[#a61830] hover:text-[#a61830] dark:border-white/20 dark:text-stone-200">
+        {t.repostWithoutComment}
+      </button>
+      <button type="button" data-repost-send class="rounded-full bg-[#a61830] px-5 py-2.5 text-xs font-bold text-white transition hover:bg-[#7a0f22] disabled:cursor-not-allowed disabled:opacity-40">
+        {t.repostWithComment}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- إشعار نجاح -->
+<div
+  data-repost-toast
+  role="status"
+  aria-live="polite"
+  class="fixed inset-x-0 bottom-24 z-[70] mx-auto flex w-fit items-center gap-2 rounded-full bg-stone-900 px-5 py-2.5 text-xs font-bold text-white shadow-xl dark:bg-white dark:text-stone-900"
+  style="display:none"
+>
+  <span aria-hidden="true">✓</span><span>{t.repostDone}</span>
+</div>
+
+<script type="application/json" is:inline id="repost-selection-i18n" set:html={JSON.stringify({ t, title, lang })}></script>
+
+<script>
+  import { addRepost, getNickname, setNickname } from '../scripts/reposts';
+
+  const cfg = JSON.parse(document.getElementById('repost-selection-i18n')?.textContent ?? '{}');
+  const lang: 'ar' | 'en' = cfg.lang === 'en' ? 'en' : 'ar';
+  const title: string = cfg.title ?? '';
+  const slug = location.pathname.split('/').filter(Boolean).pop() ?? '';
+
+  const pill = document.querySelector<HTMLButtonElement>('[data-repost-pill]');
+  const modal = document.querySelector<HTMLElement>('[data-repost-modal]');
+  const backdrop = document.querySelector<HTMLElement>('[data-repost-backdrop]');
+  const quoteEl = document.querySelector<HTMLElement>('[data-repost-quote]');
+  const nickEl = document.querySelector<HTMLInputElement>('[data-repost-nick]');
+  const commentEl = document.querySelector<HTMLTextAreaElement>('[data-repost-comment]');
+  const counterEl = document.querySelector<HTMLElement>('[data-repost-counter]');
+  const sendBtn = document.querySelector<HTMLButtonElement>('[data-repost-send]');
+  const plainBtn = document.querySelector<HTMLButtonElement>('[data-repost-plain]');
+  const cancelBtn = document.querySelector<HTMLButtonElement>('[data-repost-cancel]');
+  const closeBtn = document.querySelector<HTMLButtonElement>('[data-repost-close]');
+  const toast = document.querySelector<HTMLElement>('[data-repost-toast]');
+  const emojiRow = modal?.querySelectorAll<HTMLButtonElement>('[data-emoji]');
+
+  if (pill && modal && quoteEl && nickEl && commentEl && counterEl && sendBtn && toast) {
+    const norm = (s: string) => s.replace(/\s+/g, ' ').trim();
+    let currentText = '';
+    let modalOpen = false;
+    let locked = false;
+    let timer = 0;
+    let toastTimer = 0;
+
+    const hidePill = () => { pill.style.display = 'none'; };
+
+    const inArticle = (node: Node | null): boolean => {
+      if (!node) return false;
+      const el = node.nodeType === Node.ELEMENT_NODE ? (node as Element) : node.parentElement;
+      return !!el?.closest('.article-body, .article-lead');
+    };
+
+    const placePill = (rect: DOMRect) => {
+      const w = pill.offsetWidth || 160;
+      const left = Math.max(8, Math.min(rect.left + rect.width / 2 - w / 2, window.innerWidth - w - 8));
+      pill.style.left = `${left}px`;
+      pill.style.top = rect.top > 64 ? `${rect.top - 46}px` : `${rect.bottom + 10}px`;
+      pill.style.display = 'flex';
+    };
+
+    const update = () => {
+      if (modalOpen) return;
+      const sel = window.getSelection();
+      const text = sel && !sel.isCollapsed ? norm(sel.toString()) : '';
+      if (text && text !== currentText) locked = false; // تحديد جديد بعد إغلاق النافذة
+      if (locked) return;
+      if (!text || text.length < 12 || text.length > 600 || !sel || sel.rangeCount === 0 || !inArticle(sel.anchorNode) || !inArticle(sel.focusNode)) {
+        hidePill();
+        return;
+      }
+      const rect = sel.getRangeAt(0).getBoundingClientRect();
+      if (!rect.width || !rect.height) { hidePill(); return; }
+      currentText = text;
+      placePill(rect);
+    };
+
+    const schedule = () => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(update, 110);
+    };
+
+    const refreshCounter = () => {
+      const n = commentEl.value.length;
+      counterEl.textContent = `${n}/280`;
+      sendBtn.disabled = commentEl.value.trim().length === 0;
+    };
+
+    const openModal = () => {
+      if (!currentText) return;
+      locked = true;
+      modalOpen = true;
+      quoteEl.textContent = currentText;
+      nickEl.value = getNickname();
+      commentEl.value = '';
+      refreshCounter();
+      document.documentElement.classList.add('repost-modal-open');
+      modal.style.display = 'flex';
+      hidePill();
+      window.setTimeout(() => (nickEl.value ? commentEl : nickEl).focus(), 30);
+    };
+
+    const closeModal = () => {
+      modalOpen = false;
+      locked = false;
+      currentText = '';
+      modal.style.display = 'none';
+      document.documentElement.classList.remove('repost-modal-open');
+    };
+
+    const showToast = () => {
+      toast.style.display = 'flex';
+      window.clearTimeout(toastTimer);
+      toastTimer = window.setTimeout(() => { toast.style.display = 'none'; }, 2600);
+    };
+
+    const publish = (withComment: boolean) => {
+      if (!currentText) return;
+      const comment = withComment ? norm(commentEl.value) : '';
+      if (withComment && !comment) return;
+      const nickname = nickEl.value.trim();
+      setNickname(nickname);
+      addRepost({
+        lang,
+        slug,
+        title,
+        url: location.pathname,
+        quote: currentText,
+        comment,
+        author: nickname || (lang === 'ar' ? 'قارئ' : 'Reader'),
+      });
+      closeModal();
+      window.getSelection()?.removeAllRanges();
+      showToast();
+    };
+
+    pill.addEventListener('pointerdown', () => { locked = true; });
+    pill.addEventListener('mousedown', (e) => e.preventDefault());
+    pill.addEventListener('click', openModal);
+
+    document.addEventListener('selectionchange', schedule);
+    document.addEventListener('mouseup', schedule);
+    document.addEventListener('touchend', schedule);
+    window.addEventListener('scroll', () => { if (!modalOpen && currentText) update(); }, { passive: true });
+    window.addEventListener('resize', () => { if (!modalOpen) hidePill(); });
+
+    document.addEventListener('pointerdown', (e) => {
+      const target = e.target as HTMLElement;
+      if (locked && !modalOpen && !target.closest('[data-repost-pill]')) {
+        locked = false;
+        schedule();
+      }
+    });
+
+    backdrop?.addEventListener('click', closeModal);
+    closeBtn?.addEventListener('click', closeModal);
+    cancelBtn?.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modalOpen) closeModal(); });
+
+    commentEl.addEventListener('input', refreshCounter);
+    emojiRow?.forEach((b) => {
+      b.addEventListener('click', () => {
+        const emoji = b.dataset.emoji ?? '';
+        const s = commentEl.selectionStart;
+        const e = commentEl.selectionEnd;
+        if (commentEl.value.length - (e - s) + emoji.length > 280) return;
+        commentEl.setRangeText(emoji, s, e, 'end');
+        refreshCounter();
+        commentEl.focus();
+      });
+    });
+    sendBtn.addEventListener('click', () => publish(true));
+    plainBtn?.addEventListener('click', () => publish(false));
+  }
+</script>

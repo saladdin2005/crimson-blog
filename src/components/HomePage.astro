@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Cover from '../components/Cover.astro';
 import Newsletter from '../components/Newsletter.astro';
+import RepostFeed from '../components/RepostFeed.astro';
 import { site, categories, type Lang } from '../data/site';
 import { ui, formatDate } from '../i18n/ui';
 
@@ -33,6 +34,9 @@ const feed = all;
 ---
 
 <Base lang={lang} title={site.name[lang]} description={site.tagline[lang]}>
+  <!-- ===== عمود إعادات القرّاء: يسار العربية / يمين الإنجليزية ===== -->
+  <RepostFeed slot="rail" lang={lang} />
+
   <!-- ===== الهيرو: بطاقات طويلة بزوايا دائرية (نمط أراجيك) ===== -->
   {hero.length > 0 && (
     <section class={`grid grid-cols-2 gap-3 ${heroCols}`} aria-label={lang === 'ar' ? 'أبرز الأخبار' : 'Top stories'}>
@@ -112,6 +116,11 @@ const feed = all;
       {t.noResults}
     </p>
   </section>
+
+  <!-- ===== إعادات القرّاء على الشاشات الأصغر، حيث لا يوجد هامش جانبي ===== -->
+  <div class="mt-12">
+    <RepostFeed lang={lang} variant="inline" />
+  </div>
 
   <div class="mt-12">
     <Newsletter lang={lang} />
