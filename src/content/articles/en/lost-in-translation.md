@@ -32,17 +32,7 @@ Eva was born in 1945 in the Polish city of Kraków. She grew up among books and 
 
 Then in 1959 her family packed their things and emigrated to Canada.
 
-<figure>
-  <img src="/images/batory-ship.webp" alt="The ship Eva and her family took" loading="lazy" width="770" height="538" />
-  <figcaption>The ship Eva and her family took to Canada</figcaption>
-</figure>
-
 At her new school, the first thing that happened was that the teacher changed her name. She became “Eva” instead of the Polish “Ewa,” and her sister Alina became “Ellen.” It was a small change on paper, but it was the first sign: here, they will write you all over again.
-
-<figure>
-  <img src="/images/walter-moberly-classroom.webp" alt="A classroom at Walter Moberly School, Vancouver" loading="lazy" width="1600" height="1198" />
-  <figcaption>A classroom at Walter Moberly School, Vancouver, around 1950. Vancouver School Board archives.</figcaption>
-</figure>
 
 ## Three Stages of One Journey
 
@@ -51,6 +41,11 @@ Eva divided her book into three parts, as if to say that the journey has clear c
 First: Paradise. Here she returns to her childhood in Poland. She writes about a world she understood from the inside, a world where every word was in its place and every joke made her laugh without anyone having to explain a thing.
 
 Second: Exile. Here comes the shock. A new country, a new school, and a language she can catch only fragments of. She feels she is standing behind glass: she sees everyone talking and laughing, and hears nothing.
+
+<figure>
+  <img src="/images/batory-ship.webp" alt="The ship Eva and her family took" loading="lazy" width="770" height="538" />
+  <figcaption>The ship Eva and her family took to Canada</figcaption>
+</figure>
 
 Third: The New World. Here the more beautiful story begins. She does not go back, and she does not forget what she was; she builds a new place for herself between the two languages.
 
@@ -131,6 +126,11 @@ And so learning a new language is not just a way to get a job or a certificate. 
 And Eva's answer, after many years: you do not lose yourself. You expand.
 
 So if you are learning a new language now, and your words feel strange in your mouth, remember a thirteen-year-old girl who once stood in a Canadian classroom understanding only half of what was said. Years later she wrote a book the world reads.
+
+<figure>
+  <img src="/images/walter-moberly-classroom.webp" alt="A classroom at Walter Moberly School, Vancouver" loading="lazy" width="1600" height="1198" />
+  <figcaption>A classroom at Walter Moberly School, Vancouver, around 1950. Vancouver School Board archives.</figcaption>
+</figure>
 
 Your voice was never lost. It is only waiting for you to give it a new language to speak in.
 
